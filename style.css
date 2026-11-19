@@ -446,3 +446,9 @@ input[type=text]:focus, textarea:focus, select:focus { outline: none; border-col
 .tile:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--line); }
 .answer-line .tile { border-color: color-mix(in srgb, var(--primary-2) 45%, var(--line)); color: var(--primary); }
 .tile:disabled { opacity: .9; }
+
+/* ============ say to husband card ============ */
+.say-card { border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--line)); background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 9%, var(--card)), var(--card) 60%); }
+.say-card .reply { margin-top: 10px; padding: 10px 12px; border-radius: 14px; background: var(--card-2); }
+.say-card.done { border-color: var(--good); }
+.say-card.done .btn { background: var(--good-soft); color: var(--good); opacity: 1; }

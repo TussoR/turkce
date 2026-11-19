@@ -45,6 +45,7 @@ const UNITS = [
   [5, 'UNIT 2', '文をつくろう', '複数・質問・否定・所有'],
   [11, 'UNIT 3', '語尾マスター', 'で・へ・から・現在形'],
   [17, 'UNIT 4', 'いろいろな表現', '過去・未来・願望・お願い'],
+  [23, 'UNIT 5', 'もっと自然に話そう', '習慣・義務・伝聞・時・条件・比較'],
 ];
 const LEVELS = [
   [0, 'Yeni', 'はじめの一歩'], [60, 'Çaylak', '見習い'], [150, 'Öğrenci', '学生'],
@@ -121,7 +122,7 @@ const todoCounts = () => {
   const nNew = Math.min(Math.max(0, st.settings.daily - newToday()), ALL.filter(w => !st.srs[w.key]).length);
   return { due, nNew, todo: due + nNew };
 };
-function ensureDay() { if (st.day.date !== today()) st.day = { date: today(), g: false, d: false, bonus: false }; }
+function ensureDay() { if (st.day.date !== today()) st.day = { date: today(), g: false, d: false, k: false, bonus: false }; }
 
 function levelInfo(xp) {
   let i = 0; while (i + 1 < LEVELS.length && xp >= LEVELS[i + 1][0]) i++;
@@ -147,6 +148,7 @@ const BADGES = [
   ['perfect', '🏆', 'パーフェクト', () => !!st.flags.perfect],
   ['mission', '⭐', '完璧な一日', () => !!st.flags.mission],
   ['build', '🧩', '文づくり名人', () => (st.flags.builds || 0) >= 30],
+  ['say10', '💌', '夫と10回会話', () => (st.flags.said || 0) >= 10],
   ['suffix', '🔧', '語尾の達人', () => (st.flags.suffixes || 0) >= 50],
   ['lv5', '🧿', 'レベル5', () => levelInfo(st.xp).lv >= 5],
   ['lv10', '🕌', 'レベル10', () => levelInfo(st.xp).lv >= 10],
@@ -613,6 +615,16 @@ const practiceCards = () => `<div class="grid2">
   <button class="practice" data-act="start-build" style="background:${tileBg(1)}"><span class="ic">🧩</span><b>文を組み立てる</b><span>単語を並べて文を作る</span></button>
   <button class="practice" data-act="start-suffix" style="background:${tileBg(3)}"><span class="ic">🔧</span><b>語尾トレーニング</b><span>ev + で → evde</span></button></div>`;
 
+function sayCard() {
+  ensureDay();
+  const s = DAILY_SAY[dayNum() % DAILY_SAY.length], done = st.day.k;
+  return `<div class="card say-card ${done ? 'done' : ''}">
+    <div class="label">💌 今日、夫に言ってみよう</div>
+    <div class="row" style="margin-top:6px"><div class="grow"><div class="tr" style="font-size:20px;color:var(--accent)">${esc(s[0])}</div>${kana(s[0])}<div style="font-weight:800">${esc(s[1])}</div></div>${sayBtn(s[0], 'e')}</div>
+    <div class="reply row"><div class="grow"><div class="tiny muted" style="font-weight:800">夫の返事の例</div><div class="tr" style="color:var(--primary)">${esc(s[2])}</div><div class="small muted">${esc(s[3])}</div></div>${sayBtn(s[2], 'a', 'sm')}</div>
+    <button class="btn ${done ? '' : 'btn-main'} btn-block" style="margin-top:12px" data-act="said" ${done ? 'disabled' : ''}>${done ? '✓ 今日は言えた!Aferin!' : '言えた!(+10 XP)'}</button></div>`;
+}
+
 function catLine(todo) {
   const n = streakNow(), h = new Date().getHours();
   ensureDay();
@@ -665,6 +677,8 @@ function viewHome() {
     <a class="mission ${st.day.g ? 'done' : ''}" href="#/grammar/${(nextG || GRAMMAR[0]).id}"><div class="ic">📘</div><b>文法</b><span>1レッスン</span></a>
     <a class="mission ${st.day.d ? 'done' : ''}" href="#/talk/${nextD.id}"><div class="ic">💬</div><b>会話</b><span>1つ練習</span></a>
   </div>
+
+  ${sayCard()}
 
   <h2>✍️ 文をつくる練習</h2>
   ${practiceCards()}
@@ -933,6 +947,12 @@ const ACT = {
   'type-skip': () => answerWord(false, { typed: '—' }),
   next: () => { Q.idx++; Q.answered = null; viewQuiz(); },
   gquiz: id => startGQuiz(id),
+  said: () => {
+    ensureDay(); if (st.day.k) return;
+    st.day.k = true; st.flags.said = (st.flags.said || 0) + 1; save();
+    confetti(90); toast('Aferin! 💌 +10 XP');
+    gainXP(10); const y = window.scrollY; viewHome(); window.scrollTo(0, y);
+  },
   'start-build': () => startBuild(),
   'start-suffix': () => startSuffix(),
   tile: id => { const it = Q.items[Q.idx]; if (Q.answered) return; it.chosen.push(+id); viewQuiz(); },
