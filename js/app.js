@@ -683,10 +683,12 @@ function viewHome() {
   <h2>✍️ 文をつくる練習</h2>
   ${practiceCards()}
 
-  <a class="card" href="#/me" style="display:block;text-decoration:none;color:inherit">
+  <div class="card">
+    <a href="#/me" style="display:block;text-decoration:none;color:inherit">
     <div class="row" style="margin-bottom:8px"><div class="grow"><span class="label">LEVEL ${L.lv}</span><div><span class="tr" style="color:var(--primary)">${esc(L.tr)}</span> <b class="small">${esc(L.ja)}</b></div></div>
       <span class="small muted" style="font-weight:800">${st.xp - L.from} / ${L.to - L.from} XP</span></div>
     <div class="lvbar"><i style="width:${lvPct}%"></i></div></a>
+    <a class="btn btn-block notes-btn" href="#/notes" style="margin-top:12px">📒 学んだこと <span class="small muted">単語 ${learnedCount()} ・ 文法 ${grammarDone()}</span></a></div>
 
   <div class="card tile-phrase"><div class="label">💬 今日のひとこと</div>
     <div class="row"><div class="grow"><div class="tr" style="font-size:22px;color:var(--accent);margin-top:4px">${esc(ph[0])}</div>${kana(ph[0])}
@@ -762,6 +764,106 @@ const TALK_GROUPS = [
   ['outside', '🏙️ 外で', 'お店・タクシー・病院など'],
 ];
 const talkOrder = () => TALK_GROUPS.flatMap(g => DIALOGS.filter(d => d.group === g[0]));
+/* ================= notes: what I've learned ================= */
+const MEMO = {
+  g1: '語順は日本語と同じ(主語・目的語・動詞)。助詞は語尾でつける:ev → evde(家で)',
+  g2: 'c=ジ ç=チ ş=シ ğ=前の母音をのばす ı=口を横に引いたウ ö・ü=口をすぼめた音',
+  g3: '母音調和 2型 e/a(evler, kitaplar)・4型 i/ı/u/ü(evim, kızım, okulum, gözüm)',
+  g4: '〜です:-(y)im / -sin / なし / -(y)iz / -siniz / -ler → Ben öğretmenim.',
+  g5: 'bu これ / şu それ / o あれ・彼・彼女 → Bu ne?(これは何?)',
+  g6: '複数 -ler / -lar。数字の後は単数のまま:iki kitap',
+  g7: '質問は mi / mı / mu / mü を離して置く:Güzel mi? Japon musun?',
+  g8: '否定 değil:Doktor değilim.  確認「〜だよね?」= …, değil mi?',
+  g9: '私の -(i)m / あなたの -(i)n / 彼の -(s)i:evim, arabam, annesi',
+  g10: 'var ある / yok ない。持っている = 所有 + var:Arabam var. Zamanım yok.',
+  g11: 'ne 何・kim 誰・nerede どこ・ne zaman いつ・nasıl どう・neden なぜ・kaç いくつ・ne kadar いくら',
+  g12: '場所「で・に」-de / -da(f s t k ç ş h p の後は -te / -ta):evde, mutfakta',
+  g13: '方向「へ・に」-(y)e / -(y)a:eve, okula, Japonya\'ya / bana, sana',
+  g14: '起点「から」-den / -dan(-ten / -tan):evden, işten。「より」にも使う',
+  g15: '現在形 -iyor:geliyorum, yapıyorsun, okuyor(gitmek → gidiyor)',
+  g16: '否定 -m-iyor:Anlamıyorum. / 質問 -iyor mu:Geliyor musun?',
+  g17: '「〜を」-(y)i は特定のものだけ:Seni seviyorum. Kapıyı kapat.',
+  g18: '過去 -di / -ti:geldim, aldım, gittim / 否定 gelmedim / 質問 Geldin mi?',
+  g19: '未来 -ecek / -acak:geleceğim, yapacaksın(話し言葉:gelicem)',
+  g20: '〜したい:-mek istiyorum / 〜できる:-ebilirim / できない:-emem',
+  g21: '命令 Gel! / 丁寧 Gelin. / 〜しよう Gidelim! / 依頼 Verir misin?',
+  g22: '数字は大きい順:yirmi beş(25)/ Saat kaç? Saat üç buçuk. / Ne kadar?',
+  g23: '-(y)le / -(y)la「〜と一緒に・〜で」:kocamla, otobüsle, arabayla',
+  g24: '習慣・一般 -r:içerim, gelirim / 否定 içmem / 依頼 Bakar mısınız?',
+  g25: '〜しなければ:gitmeliyim / gitmem lazım / 必要ない:Gerek yok.',
+  g26: '伝聞・驚き -miş:yağacakmış(降るらしい), büyümüşsün(大きくなったね)',
+  g27: '-ken「〜のとき」:çocukken / -ince「〜したら」:eve gelince',
+  g28: '条件 -se:istersen(よかったら), yağarsa / keşke「〜ならいいのに」',
+  g29: '名詞を説明 -diği:sevdiğim yemek, annemin yaptığı mantı',
+  g30: 'daha もっと / en 一番 / A, B-den daha 〜(AはBより〜)',
+};
+let notesTab = 'words', notesFilter = 'all', notesQ = '';
+const noteMatch = (q, ...fields) => !q || fields.some(f => f && (flat(f).includes(flat(q)) || String(f).includes(q)));
+function notesWords() {
+  const learned = ALL.filter(w => st.srs[w.key]);
+  const weakOf = w => { const s = st.srs[w.key]; return s.l >= 1 || s.e < 2.3; };
+  const filt = { all: () => true, weak: weakOf, learning: w => wordStatus(w.key) === 'learning', master: w => wordStatus(w.key) === 'master' };
+  const list = learned.filter(filt[notesFilter]).filter(w => noteMatch(notesQ, w.tr, w.ja, w.ex, w.exJa));
+  const nWeak = learned.filter(weakOf).length;
+  const chips = [['all', 'すべて', learned.length], ['weak', '😣 苦手', nWeak], ['learning', '学習中', learned.filter(filt.learning).length], ['master', '💎 マスター', learned.filter(filt.master).length]]
+    .map(([k, l, n]) => `<button class="fchip ${notesFilter === k ? 'on' : ''}" data-act="nfilter" data-arg="${k}">${l} ${n}</button>`).join('');
+  if (!learned.length) return emptyNote('まだ単語を覚えていません。ホームの「今日の単語」からはじめよう!');
+  let html = `<div class="fchips">${chips}</div>`;
+  if (notesFilter === 'weak' && nWeak) html += `<button class="btn btn-alt btn-block" data-act="review-weak" style="margin:4px 0 8px">😣 苦手な単語をカードで復習(${Math.min(nWeak, 30)}語)</button>`;
+  if (!list.length) return html + `<p class="center muted small" style="margin-top:24px">見つかりませんでした</p>`;
+  WORDS.forEach(c => {
+    const ws = list.filter(w => w.cat === c.id); if (!ws.length) return;
+    html += `<div class="note-head">${c.icon} ${esc(c.name)} <span class="muted">${ws.length}</span></div><div class="card" style="margin-top:6px">` +
+      ws.map(w => `<div class="word-row"><span class="dot ${wordStatus(w.key)}"></span><div class="grow"><span class="tr" style="font-size:17px;color:var(--primary)">${esc(w.tr)}</span>${kana(w.tr)}
+        <div style="font-weight:700">${esc(w.ja)}</div>${w.ex ? `<div class="small muted"><span class="tr">${esc(w.ex)}</span> — ${esc(w.exJa)}</div>` : ''}${w.note ? `<div class="small note">💡 ${esc(w.note)}</div>` : ''}</div>${sayBtn(w.tr, 'e', 'sm')}</div>`).join('') + `</div>`;
+  });
+  return html;
+}
+function notesGrammar() {
+  const done = GRAMMAR.filter(g => (st.grammar[g.id] || {}).done);
+  if (!done.length) return emptyNote('まだ文法レッスンを完了していません。文法タブから1つやってみよう!');
+  const list = done.filter(g => noteMatch(notesQ, g.title, g.sub, MEMO[g.id], g.body.replace(/<[^>]+>/g, ' '), ...g.ex.flat()));
+  if (!list.length) return `<p class="center muted small" style="margin-top:24px">見つかりませんでした</p>`;
+  return `<p class="small muted">タップすると説明と例文が開きます。</p>` + list.map(g => {
+    const i = GRAMMAR.indexOf(g);
+    return `<details class="card note-g"><summary><div class="circle">${i + 1}</div><div class="grow"><b>${esc(g.title)}</b><div class="small memo">${esc(MEMO[g.id] || g.sub)}</div></div><span class="chev">⌄</span></summary>
+      <div class="lesson" style="margin-top:10px">${g.body}</div>
+      <div class="note-ex">${g.ex.map(e => `<div class="ex-line row"><div class="grow"><div class="tr">${esc(nameFix(e[0]))}</div>${kana(nameFix(e[0]))}<div class="small muted">${esc(nameFix(e[1]))}</div></div>${sayBtn(e[0], 'e', 'sm')}</div>`).join('')}</div>
+      <div class="row" style="margin-top:10px"><a class="btn grow btn-sm" href="#/grammar/${g.id}">レッスンを開く</a><button class="btn btn-main grow btn-sm" data-act="gquiz" data-arg="${g.id}">練習問題</button></div></details>`;
+  }).join('');
+}
+function notesTalk() {
+  const done = talkOrder().filter(d => st.dialogs[d.id]);
+  const ph = PHRASES.filter(p => noteMatch(notesQ, p[0], p[1], p[2]));
+  let html = '';
+  if (done.length) {
+    const list = done.filter(d => noteMatch(notesQ, d.title, d.desc, ...(d.tips || []).flat(), ...d.lines.map(l => l[1] + ' ' + l[2])));
+    html += `<h2>🎭 練習した会話 <span class="small muted">${done.length}</span></h2>` + list.map(d => `<div class="card">
+      <a href="#/talk/${d.id}" class="dlg-card"><div class="ic" style="background:${tileBg(DIALOGS.indexOf(d))};width:44px;height:44px;font-size:24px;border-radius:14px">${d.icon}</div><div class="grow"><b>${esc(d.title)}</b><div class="small muted">${esc(d.desc)}</div></div><div class="chev">›</div></a>
+      ${(d.tips || []).map(t => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(t[0])}</span><div class="small muted">${esc(t[1])}</div></div></div>`).join('')}</div>`).join('');
+  } else html += emptyNote('まだ会話を練習していません。会話タブで「練習した!」を押すとここに出ます。');
+  html += `<h2>✨ 決まり文句 <span class="small muted">${ph.length}</span></h2>` + ph.map(p => `<div class="card phrase row"><div class="grow"><div class="tr">${esc(p[0])}</div>${kana(p[0])}<div style="font-weight:800">${esc(p[1])}</div><div class="small muted">${esc(p[2])}</div></div>${sayBtn(p[0], 'e', 'sm')}</div>`).join('');
+  return html;
+}
+const emptyNote = msg => `<div class="center" style="margin-top:20px">${catSVG('normal')}<p class="small muted">${msg}</p></div>`;
+function notesBody() { return notesTab === 'words' ? notesWords() : notesTab === 'grammar' ? notesGrammar() : notesTalk(); }
+function viewNotes() {
+  setTab('me');
+  const tabs = [['words', '🃏 単語', learnedCount()], ['grammar', '📘 文法', grammarDone()], ['talk', '💬 会話', Object.keys(st.dialogs).length]];
+  render(`<a href="#/me" class="back">‹ 記録</a>
+  <h1 style="margin-top:8px">📒 学んだこと</h1><p class="small muted" style="margin-top:0">忘れたときは、ここで確認しよう。</p>
+  <div class="seg">${tabs.map(([k, l, n]) => `<button class="${notesTab === k ? 'on' : ''}" data-act="ntab" data-arg="${k}">${l} <span class="small">${n}</span></button>`).join('')}</div>
+  <input type="text" id="noteQ" value="${esc(notesQ)}" placeholder="🔍 検索(トルコ語・日本語)" autocomplete="off" autocapitalize="none" spellcheck="false">
+  <div id="noteList" style="margin-top:8px">${notesBody()}</div>`);
+  const q = $('#noteQ');
+  q.addEventListener('input', () => { notesQ = q.value.trim(); $('#noteList').innerHTML = notesBody(); });
+}
+function startReview(keys, title) {
+  if (!keys.length) return;
+  S = { queue: keys.map(k => ({ key: k, mode: 'review', dir: 'tr' })), idx: 0, shown: false, xp: 0, newN: 0, revN: keys.length };
+  go('#/study');
+}
+
 let talkSeg = 'dialogs';
 function viewTalk() {
   setTab('talk');
@@ -812,7 +914,8 @@ function viewMe() {
   render(`<div class="card profile">${catSVG('happy')}
     <h1 style="margin:4px 0 0">${esc(s.name || 'あなた')}</h1>
     <div><span class="tr" style="color:var(--primary);font-size:18px">Lv.${L.lv} ${esc(L.tr)}</span> <b class="small">${esc(L.ja)}</b></div>
-    <div class="lvbar" style="margin:12px 0 4px"><i style="width:${lvPct}%"></i></div><div class="small muted" style="font-weight:700">次のレベルまで ${L.to - st.xp} XP</div></div>
+    <div class="lvbar" style="margin:12px 0 4px"><i style="width:${lvPct}%"></i></div><div class="small muted" style="font-weight:700">次のレベルまで ${L.to - st.xp} XP</div>
+    <a class="btn btn-main btn-block" href="#/notes" style="margin-top:14px">📒 学んだことを見る</a></div>
   <div class="grid2">
     <div class="card stat"><b style="color:#F07A1A">🔥 ${streakNow()}</b><span>連続日数(最高 ${st.streak.best})</span></div>
     <div class="card stat"><b style="color:var(--gold)">⭐ ${st.xp}</b><span>合計 XP</span></div>
@@ -887,6 +990,7 @@ function route() {
     case 'grammar': return b ? viewLesson(b) : viewGrammarList();
     case 'talk': return b ? viewDialog(b) : viewTalk();
     case 'me': return viewMe();
+    case 'notes': return viewNotes();
     default: return viewHome();
   }
 }
@@ -947,6 +1051,12 @@ const ACT = {
   'type-skip': () => answerWord(false, { typed: '—' }),
   next: () => { Q.idx++; Q.answered = null; viewQuiz(); },
   gquiz: id => startGQuiz(id),
+  ntab: k => { notesTab = k; viewNotes(); },
+  nfilter: k => { notesFilter = k; $('#noteList').innerHTML = notesBody(); },
+  'review-weak': () => {
+    const weak = shuffle(ALL.filter(w => { const s = st.srs[w.key]; return s && (s.l >= 1 || s.e < 2.3); }).map(w => w.key)).slice(0, 30);
+    startReview(weak, '苦手な単語');
+  },
   said: () => {
     ensureDay(); if (st.day.k) return;
     st.day.k = true; st.flags.said = (st.flags.said || 0) + 1; save();
