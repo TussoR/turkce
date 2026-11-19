@@ -1,7 +1,7 @@
 // Offline cache. Bump VERSION whenever files change so phones get the update.
-const VERSION = 'merhaba-v8';
+const VERSION = 'merhaba-v9';
 const FILES = ['./', 'index.html', 'style.css', 'manifest.webmanifest',
-  'js/kana.js', 'js/data-words.js', 'js/data-grammar.js', 'js/data-grammar2.js', 'js/data-daily.js', 'js/data-talk.js', 'js/data-talk-family.js', 'js/audio-keys.js', 'js/app.js',
+  'js/kana.js', 'js/data-words.js', 'js/data-words2.js', 'js/data-words3.js', 'js/data-words4.js', 'js/data-grammar.js', 'js/data-grammar2.js', 'js/data-daily.js', 'js/data-talk.js', 'js/data-talk-family.js', 'js/audio-keys.js', 'js/app.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 self.addEventListener('install', e => {

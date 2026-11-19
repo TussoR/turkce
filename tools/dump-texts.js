@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 global.window = global;
 const js = f => require(path.join(__dirname, '..', 'js', f));
-['audio-keys.js', 'data-words.js', 'data-grammar.js', 'data-grammar2.js', 'data-daily.js', 'data-talk.js', 'data-talk-family.js'].forEach(js);
+['audio-keys.js', 'data-words.js', 'data-words2.js', 'data-words3.js', 'data-words4.js', 'data-grammar.js', 'data-grammar2.js', 'data-daily.js', 'data-talk.js', 'data-talk-family.js'].forEach(js);
 
 const out = new Map();
 const add = (text, voice = 'e') => {
