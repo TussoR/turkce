@@ -1,17 +1,25 @@
 // Offline cache. Bump VERSION whenever files change so phones get the update.
-const VERSION = 'merhaba-v2';
+const VERSION = 'merhaba-v3';
 const FILES = ['./', 'index.html', 'style.css', 'manifest.webmanifest',
   'js/kana.js', 'js/data-words.js', 'js/data-grammar.js', 'js/data-talk.js', 'js/app.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
+const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION && k !== 'fonts').map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
-// Network first (so updates arrive), cache as offline fallback.
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
+  if (e.request.method !== 'GET') return;
+  const url = new URL(e.request.url);
+  // Fonts: cache first (they never change)
+  if (FONT_HOSTS.includes(url.hostname)) {
+    e.respondWith(caches.open('fonts').then(c => c.match(e.request).then(hit => hit || fetch(e.request).then(r => { c.put(e.request, r.clone()); return r; }))));
+    return;
+  }
+  if (url.origin !== location.origin) return;
+  // App files: network first so updates arrive, cache as offline fallback
   e.respondWith(
     fetch(e.request).then(r => {
       const copy = r.clone();
