@@ -1,5 +1,5 @@
 // Offline cache. Bump VERSION whenever files change so phones get the update.
-const VERSION = 'merhaba-v5';
+const VERSION = 'merhaba-v6';
 const FILES = ['./', 'index.html', 'style.css', 'manifest.webmanifest',
   'js/kana.js', 'js/data-words.js', 'js/data-grammar.js', 'js/data-talk.js', 'js/data-talk-family.js', 'js/audio-keys.js', 'js/app.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];

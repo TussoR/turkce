@@ -146,6 +146,8 @@ const BADGES = [
   ['dall', '🗣️', '会話の達人', () => DIALOGS.every(d => st.dialogs[d.id])],
   ['perfect', '🏆', 'パーフェクト', () => !!st.flags.perfect],
   ['mission', '⭐', '完璧な一日', () => !!st.flags.mission],
+  ['build', '🧩', '文づくり名人', () => (st.flags.builds || 0) >= 30],
+  ['suffix', '🔧', '語尾の達人', () => (st.flags.suffixes || 0) >= 50],
   ['lv5', '🧿', 'レベル5', () => levelInfo(st.xp).lv >= 5],
   ['lv10', '🕌', 'レベル10', () => levelInfo(st.xp).lv >= 10],
 ];
@@ -375,6 +377,8 @@ function viewQuiz() {
   if (Q.idx >= Q.items.length) return quizDone();
   const top = sessionTop(Q.idx, Q.items.length, comboTag());
   if (Q.kind === 'grammar') return viewGQuiz(top);
+  if (Q.kind === 'build') return viewBuild(top);
+  if (Q.kind === 'suffix') return viewSuffix(top);
   const it = Q.items[Q.idx], w = it.w, a = Q.answered;
   const prompt = it.t === 'tr2ja'
     ? `<div class="label">意味はどれ?</div><div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}<div class="say-row">${sayBtn(w.tr)}</div>`
@@ -433,7 +437,7 @@ function quizDone() {
       ? (nx ? `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${nx.id}">次のレッスンへ →</a>` : '')
       : `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${g.id}">レッスンを復習する</a>`;
   } else if (Q.missed.length) {
-    extra = `<div class="card"><h3>📝 復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(w.tr)}</span><div class="small muted">${esc(w.ja)}</div></div>${sayBtn(w.tr, 'e', 'sm')}</div>`).join('')}</div>`;
+    extra = `<div class="card"><h3>📝 復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(nameFix(w.tr))}</span><div class="small muted">${esc(nameFix(w.ja))}</div></div>${w.noAudio ? '' : sayBtn(w.tr, w.voice || 'e', 'sm')}</div>`).join('')}</div>`;
   }
   const msg = r === 1 ? ['Mükemmel!', '完璧です!'] : r >= .6 ? ['Aferin!', 'よくできました'] : ['Devam!', 'この調子で続けよう'];
   render(`<div class="done-screen pop">${catSVG(r >= .6 ? 'happy' : 'normal')}<h1>${ok} / ${n} 正解</h1>
@@ -443,6 +447,139 @@ function quizDone() {
   if (r >= .7) confetti();
   checkBadges();
   checkMissions();
+}
+
+/* ================= sentence building (word order) ================= */
+const PROPER = /^(Hana|Mehmet|Ayşe|Can|Elif|Zeynep|Japonya|Türkiye|İstanbul|Tokyo|Osaka|Ankara|İzmir|Taksim|Kadıköy|Hokkaido|Türk|Japon|Türkçe|Japonca|Pazar|Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi|Sultanahmet|Boğaz)/;
+const trLower = s => s.replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase();
+function buildPool() {
+  const seen = new Set(), out = [];
+  const add = (tr, ja, voice, learned) => {
+    if (!tr || !ja || /[—"“()\/…]|\.\.\./.test(tr) || /[.!?]\s+\S/.test(tr)) return;
+    const toks = tr.replace(/[.,!?;:]/g, ' ').split(/\s+/).filter(Boolean)
+      .map(t => PROPER.test(t) || t.includes("'") ? t : trLower(t));
+    if (toks.length < 3 || toks.length > 7 || seen.has(tr)) return;
+    seen.add(tr);
+    out.push({ tr, ja, voice, learned, toks });
+  };
+  ALL.forEach(w => add(w.ex, w.exJa, 'e', !!st.srs[w.key]));
+  GRAMMAR.forEach(g => g.ex.forEach(e => add(e[0], e[1], 'e', !!(st.grammar[g.id] || {}).done)));
+  DIALOGS.forEach(d => d.lines.forEach(l => add(l[1], l[2], AUDIO.voiceFor(d, l[0]), !!st.dialogs[d.id])));
+  return out;
+}
+function startBuild() {
+  const pool = buildPool();
+  const known = shuffle(pool.filter(p => p.learned));
+  const rest = shuffle(pool.filter(p => !p.learned)).sort((a, b) => a.toks.length - b.toks.length);
+  const chosen = [...known, ...rest].slice(0, 10);
+  const items = chosen.map(p => {
+    const others = pool.filter(o => o !== p).flatMap(o => o.toks).filter(t => !p.toks.some(x => trLower(x) === trLower(t)));
+    const tiles = [...p.toks, ...pick(others, 1)].map((t, id) => ({ t: nameFix(t), id }));
+    return { ...p, bank: shuffle(tiles), chosen: [] };
+  });
+  Q = { kind: 'build', title: '文を組み立てる', items, idx: 0, ok: 0, combo: 0, answered: null, missed: [] };
+  go('#/quiz');
+}
+function viewBuild(top) {
+  const it = Q.items[Q.idx], a = Q.answered;
+  const tile = (x, act) => `<button class="tile tr" data-act="${act}" data-arg="${x.id}" ${a ? 'disabled' : ''}>${esc(x.t)}</button>`;
+  const chosen = it.chosen.map(id => it.bank.find(x => x.id === id));
+  const left = it.bank.filter(x => !it.chosen.includes(x.id));
+  const fb = a ? `<div class="feedback ${a.ok ? 'ok' : 'ng'} pop"><b>${a.ok ? pick(['⭕ 正解! Harika!', '⭕ 正解! Aferin!', '⭕ 正解! Süper!'], 1)[0] : '❌ 正しい文はこちら'}</b>
+      <div class="row" style="margin-top:6px"><div class="grow"><span class="tr">${esc(nameFix(it.tr))}</span>${kana(nameFix(it.tr))}</div>${sayBtn(it.tr, it.voice, 'sm')}</div></div>
+      <button class="btn btn-main btn-block btn-lg" style="margin-top:14px" data-act="next">次へ →</button>`
+    : `<div class="row" style="margin-top:14px"><button class="btn grow" data-act="build-clear">やり直す</button><button class="btn btn-main grow" data-act="build-check" ${it.chosen.length ? '' : 'disabled'}>答え合わせ</button></div>`;
+  render(`${top}<div class="card q-prompt pop" style="text-align:left"><div class="label">🧩 トルコ語の文を作ろう</div><div style="font-size:20px;font-weight:800;margin-top:6px">${esc(nameFix(it.ja))}</div>
+    <div class="small muted" style="margin-top:4px">${it.toks.length}語 ・ 1つは使わない単語です</div></div>
+    <div class="answer-line ${a ? (a.ok ? 'ok' : 'ng') : ''}">${chosen.map(x => tile(x, 'untile')).join('') || '<span class="muted small">下の単語をタップして並べよう</span>'}</div>
+    <div class="tile-bank">${left.map(x => tile(x, 'tile')).join('')}</div>${fb}`, true);
+  if (a) autoPlay(it.tr, it.voice);
+}
+
+/* ================= suffix drill (vowel harmony engine) ================= */
+const VOWELS = 'aeıioöuü';
+const lastV = s => { for (let i = s.length - 1; i >= 0; i--) if (VOWELS.includes(s[i])) return s[i]; return 'e'; };
+const vEnd = s => VOWELS.includes(s[s.length - 1]);
+const hardEnd = s => 'fstkçşhp'.includes(s[s.length - 1]);
+const h2 = s => 'eiöü'.includes(lastV(s)) ? 'e' : 'a';
+const h4 = s => ({ e: 'i', i: 'i', a: 'ı', ı: 'ı', o: 'u', u: 'u', ö: 'ü', ü: 'ü' })[lastV(s)];
+const SFX = {
+  loc: s => s + (hardEnd(s) ? 't' : 'd') + h2(s),
+  dat: s => s + (vEnd(s) ? 'y' : '') + h2(s),
+  abl: s => SFX.loc(s) + 'n',
+  pl: s => s + 'l' + h2(s) + 'r',
+  acc: s => s + (vEnd(s) ? 'y' : '') + h4(s),
+  p1: s => vEnd(s) ? s + 'm' : s + h4(s) + 'm',
+  ins: s => s + (vEnd(s) ? 'y' : '') + 'l' + h2(s),
+};
+const DRILLS = [
+  ['loc', '〜で・〜に(場所)', ['loc']], ['dat', '〜へ・〜に(方向)', ['dat']], ['abl', '〜から', ['abl']],
+  ['pl', '複数(〜たち・〜々)', ['pl']], ['acc', '〜を(その〜)', ['acc']], ['p1', '私の〜', ['p1']],
+  ['p1loc', '私の〜で・〜に', ['p1', 'loc']], ['p1abl', '私の〜から', ['p1', 'abl']], ['plloc', '〜(複数)で', ['pl', 'loc']],
+  ['ins', '〜と一緒に・〜で(手段)', ['ins']],
+];
+const NOUNS = ('ev oda banyo masa kapı pencere anahtar telefon halı balkon aile anne baba koca eş kız kardeş abla abi dede teyze hala amca dayı gelin arkadaş kayınvalide ' +
+  'pazar fırın eczane hastane okul banka cami restoran kafe otel istasyon deniz köprü otobüs taksi metro tren vapur araba yol para çanta elbise hediye iş öğrenci öğretmen ders kalem ' +
+  'sınav toplantı tatil çay kahve peynir yumurta pilav sebze meyve elma domates çorba salata şeker tuz kahvaltı zeytin göz el diş doktor').split(' ');
+const INS_OK = /^(anne|baba|koca|eş|kız|kardeş|abla|abi|dede|teyze|hala|amca|dayı|arkadaş|kayınvalide|otobüs|taksi|metro|tren|vapur|araba|kalem|çay|kahve|peynir|şeker|tuz)$/;
+const nounJa = n => (ALL.find(w => w.tr === n) || {}).ja || '';
+function suffixVariants(stem, sfx, allowY) {
+  const gen = wide => {
+    let vars = [''];
+    for (let i = 0; i < sfx.length; i++) {
+      const c = sfx[i];
+      const alts = 'ea'.includes(c) ? (wide ? ['e', 'a', 'i', 'ı', 'u', 'ü'] : ['e', 'a']) : 'iıuü'.includes(c) ? ['i', 'ı', 'u', 'ü'] : (i === 0 && 'dt'.includes(c)) ? ['d', 't'] : [c];
+      vars = vars.flatMap(v => alts.map(x => v + x));
+    }
+    if (allowY) vars = vars.concat(vars.map(v => v[0] === 'y' ? v.slice(1) : 'y' + v));
+    if (!/[aeıioöuü]/.test(sfx)) vars = vars.concat(['i', 'ı', 'u', 'ü'].map(v => v + sfx));
+    return [...new Set(vars)].filter(v => v !== sfx && v);
+  };
+  const v = gen(false);
+  return v.length >= 3 ? v : [...new Set([...v, ...gen(true)])];
+}
+function startSuffix() {
+  const unlocked = DRILLS.filter(d => d[0] !== 'ins' || (st.grammar.g23 || {}).done || grammarDone() >= 8);
+  const items = [...Array(10)].map(() => {
+    const [id, ja, steps] = pick(unlocked, 1)[0];
+    const nouns = id === 'ins' ? NOUNS.filter(n => INS_OK.test(n)) : NOUNS;
+    const stem = pick(nouns, 1)[0];
+    const chain = [stem]; steps.forEach(s => chain.push(SFX[s](chain[chain.length - 1])));
+    const answer = chain[chain.length - 1], sfx = answer.slice(stem.length);
+    const allowY = steps.some(s => s === 'dat' || s === 'acc' || s === 'ins');
+    const choices = shuffle([sfx, ...pick(suffixVariants(stem, sfx, allowY), 3)]);
+    return { id, ja, stem, answer, sfx, chain, choices, steps };
+  });
+  Q = { kind: 'suffix', title: '語尾トレーニング', items, idx: 0, ok: 0, combo: 0, answered: null, missed: [] };
+  go('#/quiz');
+}
+function suffixWhy(it) {
+  const notes = [];
+  let cur = it.stem;
+  for (const s of it.steps) {
+    const v = lastV(cur);
+    if (s === 'loc' || s === 'abl') notes.push(`最後の母音「${v}」→ ${h2(cur)}` + (hardEnd(cur) ? '、f s t k ç ş h p の後なので d → t' : ''));
+    else if (s === 'dat' || s === 'pl' || s === 'ins') notes.push(`最後の母音「${v}」→ ${h2(cur)}` + (s !== 'pl' && vEnd(cur) ? '、母音で終わるので y をはさむ' : ''));
+    else if (s === 'acc') notes.push(`最後の母音「${v}」→ ${h4(cur)}` + (vEnd(cur) ? '、母音で終わるので y をはさむ' : ''));
+    else if (s === 'p1') notes.push(vEnd(cur) ? '母音で終わるので -m だけ' : `最後の母音「${v}」→ -${h4(cur)}m`);
+    cur = SFX[s](cur);
+  }
+  return `<div class="small" style="margin-top:6px">${esc(it.chain.join(' → '))}</div>` + notes.map(n => `<div class="small">・${esc(n)}</div>`).join('');
+}
+function viewSuffix(top) {
+  const it = Q.items[Q.idx], a = Q.answered;
+  const choices = it.choices.map((c, i) => {
+    let cls = '';
+    if (a) { if (c === it.sfx) cls = 'right'; else if (i === a.pick) cls = 'wrong'; }
+    return `<button class="choice tr ${cls}" style="justify-content:center;font-size:20px" data-act="sanswer" data-arg="${i}" ${a ? 'disabled' : ''}>-${esc(c)}</button>`;
+  }).join('');
+  const fb = a ? `<div class="feedback ${a.ok ? 'ok' : 'ng'} pop"><b>${a.ok ? '⭕ 正解!' : '❌ 残念…'}</b> <span class="tr" style="font-size:18px">${esc(it.answer)}</span>${suffixWhy(it)}</div>
+    <button class="btn btn-main btn-block btn-lg" style="margin-top:14px" data-act="next">次へ →</button>` : '';
+  render(`${top}<div class="card q-prompt pop"><div class="label">🔧 正しい語尾は?</div>
+    <div class="big tr" style="margin-top:6px">${esc(it.stem)}<span style="color:var(--accent)">${a ? esc(it.sfx) : ' + ?'}</span></div>
+    <div class="small muted">${esc(it.stem)} = ${esc(nounJa(it.stem))}</div>
+    <div style="margin-top:10px"><span class="badge teal" style="font-size:14px">${esc(it.ja)}</span></div></div>
+    <div class="choices" style="grid-template-columns:1fr 1fr">${choices}</div>${fb}`, true);
 }
 
 /* ================= grammar quiz ================= */
@@ -471,6 +608,10 @@ function render(html, focus = false) {
   window.scrollTo(0, 0);
 }
 function setTab(name) { document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === name)); }
+
+const practiceCards = () => `<div class="grid2">
+  <button class="practice" data-act="start-build" style="background:${tileBg(1)}"><span class="ic">🧩</span><b>文を組み立てる</b><span>単語を並べて文を作る</span></button>
+  <button class="practice" data-act="start-suffix" style="background:${tileBg(3)}"><span class="ic">🔧</span><b>語尾トレーニング</b><span>ev + で → evde</span></button></div>`;
 
 function catLine(todo) {
   const n = streakNow(), h = new Date().getHours();
@@ -525,6 +666,9 @@ function viewHome() {
     <a class="mission ${st.day.d ? 'done' : ''}" href="#/talk/${nextD.id}"><div class="ic">💬</div><b>会話</b><span>1つ練習</span></a>
   </div>
 
+  <h2>✍️ 文をつくる練習</h2>
+  ${practiceCards()}
+
   <a class="card" href="#/me" style="display:block;text-decoration:none;color:inherit">
     <div class="row" style="margin-bottom:8px"><div class="grow"><span class="label">LEVEL ${L.lv}</span><div><span class="tr" style="color:var(--primary)">${esc(L.tr)}</span> <b class="small">${esc(L.ja)}</b></div></div>
       <span class="small muted" style="font-weight:800">${st.xp - L.from} / ${L.to - L.from} XP</span></div>
@@ -572,7 +716,7 @@ function viewGrammarList() {
   const done = grammarDone();
   const curIdx = GRAMMAR.findIndex(g => !(st.grammar[g.id] || {}).done);
   const offs = [0, 56, 84, 56, 0, -56, -84, -56];
-  let html = `<h1>文法 📘</h1><p class="muted small" style="margin-top:0">${done} / ${GRAMMAR.length} レッスン完了 ・ 上から順に進もう!</p>`;
+  let html = `<h1>文法 📘</h1><p class="muted small" style="margin-top:0">${done} / ${GRAMMAR.length} レッスン完了 ・ 上から順に進もう!</p>${practiceCards()}`;
   GRAMMAR.forEach((g, i) => {
     const u = UNITS.find(x => x[0] === i);
     if (u) html += `<div class="unit"><div class="tiny">${u[1]}</div><b>${esc(u[2])}</b><div class="small" style="opacity:.85">${esc(u[3])}</div></div><div class="path">`;
@@ -789,6 +933,33 @@ const ACT = {
   'type-skip': () => answerWord(false, { typed: '—' }),
   next: () => { Q.idx++; Q.answered = null; viewQuiz(); },
   gquiz: id => startGQuiz(id),
+  'start-build': () => startBuild(),
+  'start-suffix': () => startSuffix(),
+  tile: id => { const it = Q.items[Q.idx]; if (Q.answered) return; it.chosen.push(+id); viewQuiz(); },
+  untile: id => { const it = Q.items[Q.idx]; if (Q.answered) return; it.chosen = it.chosen.filter(x => x !== +id); viewQuiz(); },
+  'build-clear': () => { Q.items[Q.idx].chosen = []; viewQuiz(); },
+  'build-check': () => {
+    const it = Q.items[Q.idx]; if (Q.answered || !it.chosen.length) return;
+    const got = it.chosen.map(id => trLower(it.bank.find(x => x.id === id).t)).join(' ');
+    const want = it.toks.map(t => trLower(nameFix(t))).join(' ');
+    const ok = got === want;
+    Q.answered = { ok };
+    scoreAnswer(ok);
+    if (ok) st.flags.builds = (st.flags.builds || 0) + 1; else Q.missed.push({ tr: it.tr, ja: it.ja, voice: it.voice });
+    save();
+    viewQuiz();
+    if (ok) gainXP(4);
+  },
+  sanswer: arg => {
+    if (Q.answered) return;
+    const it = Q.items[Q.idx], ok = it.choices[+arg] === it.sfx;
+    Q.answered = { ok, pick: +arg };
+    scoreAnswer(ok);
+    if (ok) st.flags.suffixes = (st.flags.suffixes || 0) + 1; else Q.missed.push({ tr: it.answer, ja: `${it.stem} + ${it.ja}`, noAudio: true });
+    save();
+    viewQuiz();
+    if (ok) gainXP(2);
+  },
   ganswer: arg => {
     if (Q.answered) return;
     const it = Q.items[Q.idx], ok = it.choices[+arg] === it.correct;
