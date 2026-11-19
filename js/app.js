@@ -40,7 +40,7 @@ const KEY = 'merhaba-tr-v1';
 const DEFAULT = {
   srs: {}, newDay: { date: '', n: 0 }, grammar: {}, dialogs: {},
   streak: { last: '', n: 0, best: 0 }, xp: 0, log: {},
-  settings: { daily: 10, rate: 0.85, kana: true, autoplay: true, name: '' }
+  settings: { daily: 10, kana: true, name: '' }
 };
 let st;
 function load() {
@@ -72,41 +72,6 @@ const wordStatus = k => { const s = st.srs[k]; return !s ? 'new' : s.i >= 21 ? '
 const DAILY_GOAL = 50;
 const nameFix = s => st.settings.name ? s.replace(/Hana/g, st.settings.name).replace(/ハナ/g, st.settings.name) : s;
 
-/* ================= speech ================= */
-let trVoice = null;
-function pickVoice() {
-  const vs = speechSynthesis.getVoices();
-  trVoice = vs.find(v => /^tr(-|_|$)/i.test(v.lang) && /google|yelda|enhanced|premium/i.test(v.name))
-    || vs.find(v => /^tr(-|_|$)/i.test(v.lang)) || null;
-}
-if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
-function speak(text, opts = {}) {
-  if (!('speechSynthesis' in window)) { toast('この端末は音声読み上げに対応していません'); return; }
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(String(text).replace(/—/g, ','));
-  u.lang = 'tr-TR'; if (trVoice) u.voice = trVoice;
-  u.rate = opts.rate || st.settings.rate; u.pitch = opts.pitch || 1;
-  if (opts.onend) { u.onend = opts.onend; u.onerror = opts.onend; }
-  speechSynthesis.speak(u);
-}
-const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-function listen(target) {
-  if (!SR) { toast('この端末は音声認識に対応していません'); return; }
-  const r = new SR(); r.lang = 'tr-TR'; r.interimResults = false; r.maxAlternatives = 3;
-  toast('🎤 どうぞ話してください…', 4000);
-  r.onresult = e => {
-    const alts = Array.from(e.results[0]).map(a => a.transcript);
-    const best = alts.map(a => [a, similarity(a, target)]).sort((x, y) => y[1] - x[1])[0];
-    const sc = best[1];
-    const msg = sc >= .85 ? '✨ すばらしい!完璧です' : sc >= .6 ? '👍 おしい!もう少し' : '🙂 もう一度やってみよう';
-    toast(`${msg}\n「${best[0]}」`, 3500);
-    if (sc >= .6) gainXP(1);
-  };
-  r.onerror = ev => toast(ev.error === 'not-allowed' ? 'マイクの使用を許可してください' : '聞き取れませんでした');
-  try { r.start(); } catch (e) {}
-}
-const sayBtn = (text, cls = '') => `<button class="icon-btn ${cls}" data-act="say" data-say="${esc(text)}" aria-label="再生">🔊</button>`;
-const micBtn = (text, cls = '') => SR ? `<button class="icon-btn ${cls}" data-act="mic" data-say="${esc(text)}" aria-label="発音チェック">🎤</button>` : '';
 const kana = t => st.settings.kana ? `<div class="kana">${esc(toKana(t))}</div>` : '';
 
 /* ================= toast ================= */
@@ -160,9 +125,9 @@ function viewStudy() {
   const it = S.queue[S.idx], w = BYKEY[it.key];
   const pct = Math.round(S.idx / S.queue.length * 100);
   const top = `<div class="session-top"><button class="close-btn" data-act="quit">✕</button><div class="bar"><i style="width:${pct}%"></i></div><span class="small muted">${S.idx + 1}/${S.queue.length}</span></div>`;
-  const example = w.ex ? `<div class="divider"></div><div class="example"><div class="row"><div class="grow"><div class="tr">${esc(w.ex)}</div>${kana(w.ex)}<div class="small muted">${esc(w.exJa)}</div></div>${sayBtn(w.ex, 'sm')}</div></div>` : '';
+  const example = w.ex ? `<div class="divider"></div><div class="example"><div class="row"><div class="grow"><div class="tr">${esc(w.ex)}</div>${kana(w.ex)}<div class="small muted">${esc(w.exJa)}</div></div></div></div>` : '';
   const note = w.note ? `<div class="note">💡 ${esc(w.note)}</div>` : '';
-  const trBlock = `<div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}<div class="speak-row">${sayBtn(w.tr)}${micBtn(w.tr)}</div>`;
+  const trBlock = `<div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}`;
   let html;
   if (it.mode === 'new') {
     html = `${top}<div class="flash pop"><div><span class="badge">NEW ✨</span> <span class="small muted">${esc(CAT[w.cat].icon + ' ' + CAT[w.cat].name)}</span></div>
@@ -184,8 +149,6 @@ function viewStudy() {
       </div>`;
   }
   render(html, true);
-  const auto = st.settings.autoplay && (it.mode === 'new' || (it.dir !== 'ja' && !S.shown) || (it.dir === 'ja' && S.shown));
-  if (auto) setTimeout(() => speak(w.tr), 250);
 }
 function ivl(key, r) {
   const s = st.srs[key] || { i: 0, e: 2.5 };
@@ -193,7 +156,6 @@ function ivl(key, r) {
   return i < 30 ? `${i}日後` : i < 365 ? `${Math.round(i / 30)}か月後` : `${(i / 365).toFixed(1)}年後`;
 }
 function studyDone() {
-  speechSynthesis && speechSynthesis.cancel();
   const msg = S.xp >= 30 ? 'Harika! すばらしい!' : 'Aferin! よくできました!';
   const more = ALL.some(w => !st.srs[w.key]);
   render(`<div class="done-screen pop"><div class="emoji">🎉</div><h1>${msg}</h1>
@@ -205,11 +167,11 @@ function studyDone() {
 }
 
 /* ================= word quiz ================= */
-const QTYPES = { tr2ja: 'トルコ語 → 日本語', ja2tr: '日本語 → トルコ語', listen: '聞き取り', type: '書き取り' };
+const QTYPES = { tr2ja: 'トルコ語 → 日本語', ja2tr: '日本語 → トルコ語', type: '書き取り' };
 function startQuiz(pool, type, title) {
   if (pool.length < 4) { toast('まず単語を4つ以上覚えましょう'); return; }
   const items = pick(pool, Math.min(10, pool.length)).map(w => {
-    const t = type === 'mix' ? pick(['tr2ja', 'ja2tr', 'listen', 'tr2ja'], 1)[0] : type;
+    const t = type === 'mix' ? pick(['tr2ja', 'ja2tr', 'tr2ja', 'type'], 1)[0] : type;
     return { w, t, choices: t === 'type' ? null : makeChoices(w, t) };
   });
   Q = { kind: 'word', title, items, idx: 0, ok: 0, answered: null, missed: [] };
@@ -231,8 +193,7 @@ function viewQuiz() {
   if (Q.kind === 'grammar') return viewGQuiz(top);
   const it = Q.items[Q.idx], w = it.w, a = Q.answered;
   let prompt;
-  if (it.t === 'tr2ja') prompt = `<div class="small muted">意味はどれ?</div><div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}<div class="speak-row">${sayBtn(w.tr)}</div>`;
-  else if (it.t === 'listen') prompt = `<div class="small muted">聞こえた言葉の意味は?</div><div class="speak-row"><button class="icon-btn" style="width:84px;height:84px;font-size:38px" data-act="say" data-say="${esc(w.tr)}">🔊</button></div>${a ? `<div class="big tr">${esc(w.tr)}</div>` : ''}`;
+  if (it.t === 'tr2ja') prompt = `<div class="small muted">意味はどれ?</div><div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}`;
   else prompt = `<div class="small muted">トルコ語で言うと?</div><div class="big">${esc(w.ja)}</div>`;
   let body;
   if (it.t === 'type') {
@@ -250,18 +211,16 @@ function viewQuiz() {
   let fb = '';
   if (a) {
     fb = `<div class="feedback ${a.ok ? 'ok' : 'ng'} pop"><b>${a.ok ? (a.close ? '⭕ 正解(つづりに注意!)' : '⭕ 正解!') : '❌ 残念…'}</b>
-      <div class="row" style="margin-top:6px"><div class="grow"><span class="tr">${esc(w.tr)}</span> = ${esc(w.ja)}${a.typed ? `<div class="small muted">あなたの答え:${esc(a.typed)}</div>` : ''}</div>${sayBtn(w.tr, 'sm')}</div></div>
+      <div class="row" style="margin-top:6px"><div class="grow"><span class="tr">${esc(w.tr)}</span> = ${esc(w.ja)}${a.typed ? `<div class="small muted">あなたの答え:${esc(a.typed)}</div>` : ''}</div></div></div>
       <button class="btn btn-main btn-block btn-lg" style="margin-top:14px" data-act="next">次へ →</button>`;
   }
   render(`${top}<div class="card q-prompt pop">${prompt}</div>${body}${fb}`, true);
-  if (!a && (it.t === 'listen' || (it.t === 'tr2ja' && st.settings.autoplay))) setTimeout(() => speak(w.tr), 250);
   if (!a && it.t === 'type') setTimeout(() => { const i = $('#typed'); i && i.focus(); }, 100);
 }
 function answerWord(ok, extra = {}) {
   const it = Q.items[Q.idx];
   Q.answered = Object.assign({ ok }, extra);
   if (ok) { Q.ok++; gainXP(3); } else { Q.missed.push(it.w); if (st.srs[it.w.key]) { st.srs[it.w.key].d = today(); save(); } }
-  if (!ok || it.t !== 'listen') speak(it.w.tr);
   viewQuiz();
 }
 function quizDone() {
@@ -278,7 +237,7 @@ function quizDone() {
       ? (nx ? `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${nx.id}">次のレッスンへ →</a>` : '')
       : `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${g.id}">レッスンを復習する</a>`;
   } else if (Q.missed.length) {
-    extra = `<div class="card"><h3>復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr">${esc(w.tr)}</span><div class="small muted">${esc(w.ja)}</div></div>${sayBtn(w.tr, 'sm')}</div>`).join('')}</div>`;
+    extra = `<div class="card"><h3>復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr">${esc(w.tr)}</span><div class="small muted">${esc(w.ja)}</div></div></div>`).join('')}</div>`;
   }
   render(`<div class="done-screen pop"><div class="emoji">${emoji}</div><h1>${ok} / ${n} 正解</h1>
     <p class="muted">${rate === 1 ? 'Mükemmel! 完璧です!' : rate >= .6 ? 'Aferin! よくできました' : 'Devam! この調子で続けよう'}</p></div>
@@ -343,11 +302,11 @@ function viewHome() {
 
   <div class="card"><div class="small muted">今日のひとこと</div>
     <div class="row" style="margin-top:4px"><div class="grow"><div class="tr" style="font-size:20px">${esc(ph[0])}</div>${kana(ph[0])}
-      <div><b>${esc(ph[1])}</b></div><div class="small muted">${esc(ph[2])}</div></div>${sayBtn(ph[0])}</div></div>
+      <div><b>${esc(ph[1])}</b></div><div class="small muted">${esc(ph[2])}</div></div></div></div>
 
   <div class="card"><div class="small muted">今日の単語ピックアップ</div>
     <div class="row" style="margin-top:4px"><div class="grow"><div class="tr" style="font-size:20px">${esc(wod.tr)}</div>${kana(wod.tr)}<div><b>${esc(wod.ja)}</b></div>
-    ${wod.ex ? `<div class="small" style="margin-top:6px"><span class="tr">${esc(wod.ex)}</span><br><span class="muted">${esc(wod.exJa)}</span></div>` : ''}</div>${sayBtn(wod.ex || wod.tr)}</div></div>
+    ${wod.ex ? `<div class="small" style="margin-top:6px"><span class="tr">${esc(wod.ex)}</span><br><span class="muted">${esc(wod.exJa)}</span></div>` : ''}</div></div></div>
 
   <div class="grid2">
     <a class="card stat" href="#/words" style="text-decoration:none;color:inherit"><b>${learnedCount()}</b><span>覚えた単語 / ${ALL.length}</span></a>
@@ -383,7 +342,7 @@ function viewCategory(id) {
   <p class="small muted" style="margin-top:12px"><span class="dot" style="display:inline-block"></span> 未学習 <span class="dot learning" style="display:inline-block;margin-left:8px"></span> 学習中 <span class="dot master" style="display:inline-block;margin-left:8px"></span> マスター</p>
   <div class="card">${ws.map(w => `<div class="word-row"><span class="dot ${wordStatus(w.key)}"></span>
     <div class="grow"><span class="tr" style="font-size:17px">${esc(w.tr)}</span>${kana(w.tr)}<div class="small">${esc(w.ja)}</div>
-    ${w.ex ? `<div class="small muted"><span class="tr">${esc(w.ex)}</span> — ${esc(w.exJa)}</div>` : ''}</div>${sayBtn(w.tr, 'sm')}</div>`).join('')}</div>`);
+    ${w.ex ? `<div class="small muted"><span class="tr">${esc(w.ex)}</span> — ${esc(w.exJa)}</div>` : ''}</div></div>`).join('')}</div>`);
 }
 
 function viewGrammarList() {
@@ -402,7 +361,7 @@ function viewLesson(id) {
   render(`<a href="#/grammar" class="small muted" style="text-decoration:none">‹ 文法</a>
   <div class="small muted" style="margin-top:8px">レッスン ${i + 1}</div><h1>${esc(g.title)}</h1>
   <div class="card lesson">${g.body}</div>
-  <h2>例文</h2><div class="card">${g.ex.map(e => `<div class="ex-line"><div class="grow"><div class="tr" style="font-size:17px">${esc(nameFix(e[0]))}</div>${kana(nameFix(e[0]))}<div class="small muted">${esc(nameFix(e[1]))}</div></div>${sayBtn(nameFix(e[0]), 'sm')}</div>`).join('')}</div>
+  <h2>例文</h2><div class="card">${g.ex.map(e => `<div class="ex-line"><div class="grow"><div class="tr" style="font-size:17px">${esc(nameFix(e[0]))}</div>${kana(nameFix(e[0]))}<div class="small muted">${esc(nameFix(e[1]))}</div></div></div>`).join('')}</div>
   <button class="btn btn-main btn-block btn-lg" data-act="gquiz" data-arg="${g.id}">練習問題(${g.quiz.length}問)▶</button>
   <div class="row" style="margin-top:12px">${i > 0 ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i - 1].id}">‹ 前へ</a>` : ''}${GRAMMAR[i + 1] ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i + 1].id}">次へ ›</a>` : ''}</div>`);
 }
@@ -415,7 +374,7 @@ function viewTalk() {
   if (talkSeg === 'dialogs') {
     body = DIALOGS.map(d => `<a class="item" href="#/talk/${d.id}"><div class="emoji">${d.icon}</div><div class="grow"><b>${esc(d.title)}</b><div class="small muted">${esc(d.desc)}</div></div>${st.dialogs[d.id] ? '<span class="badge teal">練習済</span>' : ''}<div class="chev">›</div></a>`).join('');
   } else {
-    body = `<p class="small muted">トルコ人がよく使う、場面ごとの決まり文句。覚えると一気に「トルコ通」に!</p><div class="card">${PHRASES.map(p => `<div class="word-row"><div class="grow"><span class="tr" style="font-size:17px">${esc(p[0])}</span>${kana(p[0])}<div><b>${esc(p[1])}</b></div><div class="small muted">${esc(p[2])}</div></div>${sayBtn(p[0], 'sm')}</div>`).join('')}</div>`;
+    body = `<p class="small muted">トルコ人がよく使う、場面ごとの決まり文句。覚えると一気に「トルコ通」に!</p><div class="card">${PHRASES.map(p => `<div class="word-row"><div class="grow"><span class="tr" style="font-size:17px">${esc(p[0])}</span>${kana(p[0])}<div><b>${esc(p[1])}</b></div><div class="small muted">${esc(p[2])}</div></div></div>`).join('')}</div>`;
   }
   render(`<h1>会話</h1>${seg}${body}`);
 }
@@ -430,31 +389,13 @@ function viewDialog(id) {
       <span class="tr">${esc(nameFix(l[1]))}</span>${kana(nameFix(l[1]))}<span class="ja">${esc(nameFix(l[2]))}</span></button>`;
   }).join('');
   render(`<a href="#/talk" class="small muted" style="text-decoration:none">‹ 会話</a>
-  <h1>${d.icon} ${esc(d.title)}</h1><p class="small muted">吹き出しをタップすると読み上げます。</p>
-  <div class="row"><button class="btn btn-teal grow" data-act="playall">▶ 全部再生</button>${SR ? '' : ''}</div>
-  <div class="seg"><button class="${dlgHide === 'none' ? 'on' : ''}" data-act="hide" data-arg="none">全部表示</button><button class="${dlgHide === 'tr' ? 'on' : ''}" data-act="hide" data-arg="tr">自分のセリフを隠す</button><button class="${dlgHide === 'ja' ? 'on' : ''}" data-act="hide" data-arg="ja">日本語を隠す</button></div>
+  <h1>${d.icon} ${esc(d.title)}</h1>  <div class="seg"><button class="${dlgHide === 'none' ? 'on' : ''}" data-act="hide" data-arg="none">全部表示</button><button class="${dlgHide === 'tr' ? 'on' : ''}" data-act="hide" data-arg="tr">自分のセリフを隠す</button><button class="${dlgHide === 'ja' ? 'on' : ''}" data-act="hide" data-arg="ja">日本語を隠す</button></div>
   ${dlgHide === 'tr' ? '<p class="small muted">🎭 ロールプレイ:緑のセリフを自分で言ってから、タップして答え合わせ!</p>' : ''}
   <div class="bubbles">${lines}</div>
   ${d.tips && d.tips.length ? `<h2>ポイント</h2><div class="card">${d.tips.map(t => `<div class="word-row"><div class="grow"><span class="tr">${esc(t[0])}</span><div class="small muted">${esc(t[1])}</div></div></div>`).join('')}</div>` : ''}
   <button class="btn btn-main btn-block btn-lg" data-act="dlg-done" data-arg="${d.id}">練習した!(+10 XP)</button>`);
 }
-let playing = null;
-function playAll(d) {
-  stopPlay();
-  let i = 0; const token = playing = {};
-  const next = () => {
-    if (playing !== token) return;
-    document.querySelectorAll('.bubble.playing').forEach(b => b.classList.remove('playing'));
-    if (i >= d.lines.length) { playing = null; return; }
-    const el = $('#ln' + i); if (!el) { playing = null; return; }
-    el.classList.add('playing'); el.classList.remove('hide-tr');
-    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
-    const l = d.lines[i++];
-    speak(nameFix(l[1]), { pitch: l[0] === 'B' ? 1.15 : .9, onend: () => setTimeout(next, 500) });
-  };
-  next();
-}
-function stopPlay() { playing = null; if ('speechSynthesis' in window) speechSynthesis.cancel(); }
+
 
 function viewMe() {
   setTab('me');
@@ -462,8 +403,6 @@ function viewMe() {
   const max = Math.max(DAILY_GOAL, ...days.map(d => st.log[d] || 0));
   const s = st.settings;
   const sw = (key, label, sub = '') => `<div class="setting"><div><b>${label}</b>${sub ? `<div class="small muted">${sub}</div>` : ''}</div><label class="switch"><input type="checkbox" data-set="${key}" ${s[key] ? 'checked' : ''}><span></span></label></div>`;
-  const voiceMsg = !('speechSynthesis' in window) ? '⚠️ この端末は音声読み上げ非対応です'
-    : trVoice ? `🔊 音声:${esc(trVoice.name)}` : '⚠️ トルコ語の音声が見つかりません。iPhone:設定 → アクセシビリティ → 読み上げコンテンツ → 声 → トルコ語 を追加してください。';
   render(`<h1>記録</h1>
   <div class="grid2">
     <div class="card stat"><b>🔥 ${streakNow()}</b><span>連続日数(最高 ${st.streak.best})</span></div>
@@ -479,11 +418,7 @@ function viewMe() {
     <div class="setting"><div><b>あなたの名前</b><div class="small muted">会話の例文の「Hana」があなたの名前になります</div></div></div>
     <input type="text" id="nameIn" value="${esc(s.name)}" placeholder="例:Yuki" maxlength="20">
     <div class="setting"><div><b>1日の新しい単語</b></div><select data-set="daily">${[5, 10, 15, 20].map(n => `<option value="${n}" ${s.daily === n ? 'selected' : ''}>${n}語</option>`).join('')}</select></div>
-    <div class="setting"><div><b>読み上げの速さ</b></div><select data-set="rate">${[[.6, 'とてもゆっくり'], [.75, 'ゆっくり'], [.85, 'ふつう(学習向け)'], [1, '自然な速さ']].map(([v, l]) => `<option value="${v}" ${s.rate === v ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
     ${sw('kana', 'カタカナ読みを表示', '発音の目安です')}
-    ${sw('autoplay', '自動で読み上げる', 'カードを開いたときに再生')}
-    <p class="small muted">${voiceMsg}</p>
-    <button class="btn btn-sm" data-act="say" data-say="Merhaba! Türkçe öğreniyorum.">🔊 音声テスト</button>
   </div>
 
   <h2>アプリとして使う</h2>
@@ -514,7 +449,6 @@ function go(hash, replace) {
   else location.hash = hash;
 }
 function route() {
-  stopPlay();
   const h = location.hash.replace(/^#\/?/, '').split('/');
   const [a, b] = h;
   if (a !== 'study' && S && S.idx < S.queue.length) S = null;
@@ -533,10 +467,8 @@ window.addEventListener('hashchange', route);
 
 /* ================= actions ================= */
 const ACT = {
-  say: (_, el) => speak(el.dataset.say),
-  mic: (_, el) => listen(el.dataset.say),
   home: () => go('#/'),
-  quit: () => { S = null; Q = null; stopPlay(); history.length > 1 ? history.back() : go('#/', true); },
+  quit: () => { S = null; Q = null; history.length > 1 ? history.back() : go('#/', true); },
   daily: () => startDaily(),
   'daily-more': () => startDaily(5),
   learned: () => {
@@ -586,10 +518,8 @@ const ACT = {
   hide: h => { dlgHide = h; viewDialog(location.hash.split('/')[2]); },
   line: (i, el) => {
     const d = DIALOGS.find(x => x.id === location.hash.split('/')[2]); const l = d.lines[+i];
-    stopPlay(); el.classList.remove('hide-tr', 'hide-ja');
-    speak(nameFix(l[1]), { pitch: l[0] === 'B' ? 1.15 : .9 });
+    el.classList.remove('hide-tr', 'hide-ja');
   },
-  playall: () => playAll(DIALOGS.find(x => x.id === location.hash.split('/')[2])),
   'dlg-done': id => { if (!st.dialogs[id]) { st.dialogs[id] = true; save(); } gainXP(10); toast('Aferin! +10 XP 🎉'); setTimeout(() => go('#/talk'), 700); },
   export: async () => {
     const data = btoa(unescape(encodeURIComponent(JSON.stringify(st))));
