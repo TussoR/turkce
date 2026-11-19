@@ -1,7 +1,7 @@
 // Offline cache. Bump VERSION whenever files change so phones get the update.
-const VERSION = 'merhaba-v3';
+const VERSION = 'merhaba-v4';
 const FILES = ['./', 'index.html', 'style.css', 'manifest.webmanifest',
-  'js/kana.js', 'js/data-words.js', 'js/data-grammar.js', 'js/data-talk.js', 'js/app.js',
+  'js/kana.js', 'js/data-words.js', 'js/data-grammar.js', 'js/data-talk.js', 'js/data-talk-family.js', 'js/app.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 self.addEventListener('install', e => {

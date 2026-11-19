@@ -461,7 +461,7 @@ function viewHome() {
   const { due, nNew, todo } = todoCounts();
   const pct = Math.min(1, xpToday / DAILY_GOAL), C = 2 * Math.PI * 30;
   const nextG = GRAMMAR.find(g => !(st.grammar[g.id] || {}).done);
-  const nextD = DIALOGS.find(d => !st.dialogs[d.id]) || DIALOGS[dayNum() % DIALOGS.length];
+  const nextD = talkOrder().find(d => !st.dialogs[d.id]) || DIALOGS[dayNum() % DIALOGS.length];
   const ph = PHRASES[dayNum() % PHRASES.length];
   const wod = ALL[(dayNum() * 7) % ALL.length];
   const hour = new Date().getHours();
@@ -568,14 +568,25 @@ function viewLesson(id) {
   <div class="row" style="margin-top:14px">${i > 0 ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i - 1].id}">‹ 前へ</a>` : ''}${GRAMMAR[i + 1] ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i + 1].id}">次へ ›</a>` : ''}</div>`);
 }
 
+const TALK_GROUPS = [
+  ['family', '👨‍👩‍👧 義理の家族', 'お義母さん・お義父さん・親戚との会話'],
+  ['couple', '💑 夫婦', 'ふたりの毎日の会話'],
+  ['outside', '🏙️ 外で', 'お店・タクシー・病院など'],
+];
+const talkOrder = () => TALK_GROUPS.flatMap(g => DIALOGS.filter(d => d.group === g[0]));
 let talkSeg = 'dialogs';
 function viewTalk() {
   setTab('talk');
   const seg = `<div class="seg"><button class="${talkSeg === 'dialogs' ? 'on' : ''}" data-act="seg" data-arg="dialogs">🎭 場面別の会話</button><button class="${talkSeg === 'phrases' ? 'on' : ''}" data-act="seg" data-arg="phrases">✨ 決まり文句</button></div>`;
   let body;
   if (talkSeg === 'dialogs') {
-    body = DIALOGS.map((d, i) => `<a class="card dlg-card" href="#/talk/${d.id}"><div class="ic" style="background:${tileBg(i)}">${d.icon}</div>
-      <div class="grow"><b>${esc(d.title)}</b><div class="small muted">${esc(d.desc)}</div>${st.dialogs[d.id] ? '<span class="badge teal">✓ 練習済</span>' : ''}</div><div class="chev">›</div></a>`).join('');
+    body = TALK_GROUPS.map(([gid, name, sub]) => {
+      const ds = DIALOGS.filter(d => d.group === gid);
+      const n = ds.filter(d => st.dialogs[d.id]).length;
+      return `<h2>${name} <span class="small muted">${n} / ${ds.length}</span></h2><p class="small muted" style="margin-top:-6px">${sub}</p>` +
+        ds.map(d => `<a class="card dlg-card" href="#/talk/${d.id}"><div class="ic" style="background:${tileBg(DIALOGS.indexOf(d))}">${d.icon}</div>
+        <div class="grow"><b>${esc(d.title)}</b><div class="small muted">${esc(d.desc)} ・ ${d.lines.length}行</div>${st.dialogs[d.id] ? '<span class="badge teal">✓ 練習済</span>' : ''}</div><div class="chev">›</div></a>`).join('');
+    }).join('');
   } else {
     body = `<p class="small muted">トルコ人がよく使う決まり文句。覚えると一気に「トルコ通」に!</p>${PHRASES.map(p => `<div class="card phrase"><div class="tr">${esc(p[0])}</div>${kana(p[0])}<div style="font-weight:800">${esc(p[1])}</div><div class="small muted">${esc(p[2])}</div></div>`).join('')}`;
   }
