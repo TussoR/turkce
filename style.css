@@ -406,3 +406,19 @@ input[type=text]:focus, textarea:focus, select:focus { outline: none; border-col
 @keyframes pop { 0% { transform: scale(.92); opacity: .3; } 100% { transform: scale(1); opacity: 1; } }
 .stack > * + * { margin-top: 10px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* ============ audio buttons ============ */
+.say {
+  width: 46px; height: 46px; padding: 0; border-radius: 50%; flex: none; font-size: 20px;
+  background: color-mix(in srgb, var(--primary-2) 16%, var(--card)); color: var(--primary-2);
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--primary-2) 35%, transparent);
+}
+.say:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--primary-2) 35%, transparent); }
+.say.sm { width: 36px; height: 36px; font-size: 15px; box-shadow: 0 3px 0 color-mix(in srgb, var(--primary-2) 35%, transparent); }
+.say.huge { width: 96px; height: 96px; font-size: 42px; background: var(--hero); color: #fff; box-shadow: var(--shadow-lg); }
+.say.playing { animation: ring 1s ease-in-out infinite; background: var(--primary-2); color: #fff; }
+.say.huge.playing { background: var(--hero); }
+@keyframes ring { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary-2) 45%, transparent); } 50% { box-shadow: 0 0 0 10px transparent; } }
+.say-row { display: flex; justify-content: center; gap: 10px; margin: 8px 0 2px; }
+.bubble.playing { outline: 3px solid var(--gold); outline-offset: 2px; }
+.flash .example.row { display: flex; }

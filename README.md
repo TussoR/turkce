@@ -2,12 +2,22 @@
 
 日本語で学ぶトルコ語学習アプリ(スマホ向け・インストール不要)。
 
-- 🃏 **単語** — 毎日の新しい単語 + 間隔反復(SRS)の復習、3種類のクイズ(約385語)
+- 🃏 **単語** — 毎日の新しい単語 + 間隔反復(SRS)の復習、4種類のクイズ(約385語)
 - 📘 **文法** — 23レッスン、日本語との比較つき解説と練習問題
 - 💬 **会話** — 27の場面別会話(義理の家族・夫婦・外で)(ロールプレイ・全部再生)と決まり文句
-- カタカナ読みつき
+- 🔊 自然なトルコ語音声(全単語・例文・会話)、カタカナ読みつき
 - 📲 ホーム画面に追加するとオフラインでも使えます
 
 学習記録は端末のブラウザ(localStorage)に保存されます。
 
 ファイルを更新したら `sw.js` の `VERSION` を上げてください。
+
+## 音声 / Ses dosyaları
+
+`audio/` の mp3 は Microsoft Edge のニューラル音声(tr-TR-EmelNeural / AhmetNeural)で生成しています。
+İçerik eklendikten sonra eksik sesleri üretmek için:
+
+```bash
+node tools/dump-texts.js
+python tools/make-audio.py
+```

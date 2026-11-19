@@ -1,0 +1,6632 @@
+[
+ {
+  "file": "audio/acc5ec16.mp3",
+  "voice": "e",
+  "text": "Merhaba",
+  "spoken": "Merhaba"
+ },
+ {
+  "file": "audio/090cb9e5.mp3",
+  "voice": "e",
+  "text": "Merhaba! Nasılsın?",
+  "spoken": "Merhaba! Nasılsın?"
+ },
+ {
+  "file": "audio/229d25c1.mp3",
+  "voice": "e",
+  "text": "Günaydın",
+  "spoken": "Günaydın"
+ },
+ {
+  "file": "audio/e11a69fc.mp3",
+  "voice": "e",
+  "text": "Günaydın anne!",
+  "spoken": "Günaydın anne!"
+ },
+ {
+  "file": "audio/6be4e6e3.mp3",
+  "voice": "e",
+  "text": "İyi akşamlar",
+  "spoken": "İyi akşamlar"
+ },
+ {
+  "file": "audio/828d964c.mp3",
+  "voice": "e",
+  "text": "İyi akşamlar, hoş geldiniz.",
+  "spoken": "İyi akşamlar, hoş geldiniz."
+ },
+ {
+  "file": "audio/04cc49f9.mp3",
+  "voice": "e",
+  "text": "İyi geceler",
+  "spoken": "İyi geceler"
+ },
+ {
+  "file": "audio/e8828021.mp3",
+  "voice": "e",
+  "text": "İyi geceler, tatlı rüyalar.",
+  "spoken": "İyi geceler, tatlı rüyalar."
+ },
+ {
+  "file": "audio/ee24b1be.mp3",
+  "voice": "e",
+  "text": "Evet",
+  "spoken": "Evet"
+ },
+ {
+  "file": "audio/e5ce085e.mp3",
+  "voice": "e",
+  "text": "Evet, anlıyorum.",
+  "spoken": "Evet, anlıyorum."
+ },
+ {
+  "file": "audio/d9878771.mp3",
+  "voice": "e",
+  "text": "Hayır",
+  "spoken": "Hayır"
+ },
+ {
+  "file": "audio/2d7c6d6d.mp3",
+  "voice": "e",
+  "text": "Hayır, teşekkürler.",
+  "spoken": "Hayır, teşekkürler."
+ },
+ {
+  "file": "audio/812e3c60.mp3",
+  "voice": "e",
+  "text": "Nasılsın?",
+  "spoken": "Nasılsın?"
+ },
+ {
+  "file": "audio/3c5322d9.mp3",
+  "voice": "e",
+  "text": "Merhaba Ayşe, nasılsın?",
+  "spoken": "Merhaba Ayşe, nasılsın?"
+ },
+ {
+  "file": "audio/b2f7fff3.mp3",
+  "voice": "e",
+  "text": "Nasılsınız?",
+  "spoken": "Nasılsınız?"
+ },
+ {
+  "file": "audio/fa15fb7e.mp3",
+  "voice": "e",
+  "text": "Günaydın, nasılsınız?",
+  "spoken": "Günaydın, nasılsınız?"
+ },
+ {
+  "file": "audio/6c915603.mp3",
+  "voice": "e",
+  "text": "İyiyim",
+  "spoken": "İyiyim"
+ },
+ {
+  "file": "audio/dd97f18e.mp3",
+  "voice": "e",
+  "text": "İyiyim, teşekkürler. Sen?",
+  "spoken": "İyiyim, teşekkürler. Sen?"
+ },
+ {
+  "file": "audio/fc264fe1.mp3",
+  "voice": "e",
+  "text": "Teşekkür ederim",
+  "spoken": "Teşekkür ederim"
+ },
+ {
+  "file": "audio/9f0ea363.mp3",
+  "voice": "e",
+  "text": "Yardımınız için teşekkür ederim.",
+  "spoken": "Yardımınız için teşekkür ederim."
+ },
+ {
+  "file": "audio/864be9ea.mp3",
+  "voice": "e",
+  "text": "Teşekkürler",
+  "spoken": "Teşekkürler"
+ },
+ {
+  "file": "audio/24c87d8d.mp3",
+  "voice": "e",
+  "text": "Çok teşekkürler!",
+  "spoken": "Çok teşekkürler!"
+ },
+ {
+  "file": "audio/f9e452f4.mp3",
+  "voice": "e",
+  "text": "Sağ ol",
+  "spoken": "Sağ ol"
+ },
+ {
+  "file": "audio/f8c7bc13.mp3",
+  "voice": "e",
+  "text": "Sağ ol canım!",
+  "spoken": "Sağ ol canım!"
+ },
+ {
+  "file": "audio/16e586d7.mp3",
+  "voice": "e",
+  "text": "Rica ederim",
+  "spoken": "Rica ederim"
+ },
+ {
+  "file": "audio/f7136648.mp3",
+  "voice": "e",
+  "text": "— Teşekkürler! — Rica ederim.",
+  "spoken": "Teşekkürler! , Rica ederim."
+ },
+ {
+  "file": "audio/d449d042.mp3",
+  "voice": "e",
+  "text": "Lütfen",
+  "spoken": "Lütfen"
+ },
+ {
+  "file": "audio/9e8ff523.mp3",
+  "voice": "e",
+  "text": "Bir çay, lütfen.",
+  "spoken": "Bir çay, lütfen."
+ },
+ {
+  "file": "audio/bcc1ede0.mp3",
+  "voice": "e",
+  "text": "Özür dilerim",
+  "spoken": "Özür dilerim"
+ },
+ {
+  "file": "audio/f86373fa.mp3",
+  "voice": "e",
+  "text": "Geç kaldım, özür dilerim.",
+  "spoken": "Geç kaldım, özür dilerim."
+ },
+ {
+  "file": "audio/700e240c.mp3",
+  "voice": "e",
+  "text": "Pardon",
+  "spoken": "Pardon"
+ },
+ {
+  "file": "audio/f0529ad3.mp3",
+  "voice": "e",
+  "text": "Pardon, tuvalet nerede?",
+  "spoken": "Pardon, tuvalet nerede?"
+ },
+ {
+  "file": "audio/f718a8fe.mp3",
+  "voice": "e",
+  "text": "Affedersiniz",
+  "spoken": "Affedersiniz"
+ },
+ {
+  "file": "audio/8f4bb02f.mp3",
+  "voice": "e",
+  "text": "Affedersiniz, bakar mısınız?",
+  "spoken": "Affedersiniz, bakar mısınız?"
+ },
+ {
+  "file": "audio/32d21d78.mp3",
+  "voice": "e",
+  "text": "Hoş geldin",
+  "spoken": "Hoş geldin"
+ },
+ {
+  "file": "audio/5ea766af.mp3",
+  "voice": "e",
+  "text": "Hoş geldin canım!",
+  "spoken": "Hoş geldin canım!"
+ },
+ {
+  "file": "audio/11aacfca.mp3",
+  "voice": "e",
+  "text": "Hoş bulduk",
+  "spoken": "Hoş bulduk"
+ },
+ {
+  "file": "audio/b5a35b6a.mp3",
+  "voice": "e",
+  "text": "— Hoş geldiniz! — Hoş bulduk.",
+  "spoken": "Hoş geldiniz! , Hoş bulduk."
+ },
+ {
+  "file": "audio/fca14ec9.mp3",
+  "voice": "e",
+  "text": "Memnun oldum",
+  "spoken": "Memnun oldum"
+ },
+ {
+  "file": "audio/e2c4fec3.mp3",
+  "voice": "e",
+  "text": "Tanıştığımıza memnun oldum.",
+  "spoken": "Tanıştığımıza memnun oldum."
+ },
+ {
+  "file": "audio/abd4b2fb.mp3",
+  "voice": "e",
+  "text": "Görüşürüz",
+  "spoken": "Görüşürüz"
+ },
+ {
+  "file": "audio/72262f6d.mp3",
+  "voice": "e",
+  "text": "Yarın görüşürüz!",
+  "spoken": "Yarın görüşürüz!"
+ },
+ {
+  "file": "audio/0428c2ae.mp3",
+  "voice": "e",
+  "text": "Hoşça kal",
+  "spoken": "Hoşça kal"
+ },
+ {
+  "file": "audio/40279bdd.mp3",
+  "voice": "e",
+  "text": "Hoşça kal, kendine iyi bak.",
+  "spoken": "Hoşça kal, kendine iyi bak."
+ },
+ {
+  "file": "audio/2817c2a8.mp3",
+  "voice": "e",
+  "text": "Güle güle",
+  "spoken": "Güle güle"
+ },
+ {
+  "file": "audio/87554c9c.mp3",
+  "voice": "e",
+  "text": "— Hoşça kal! — Güle güle!",
+  "spoken": "Hoşça kal! , Güle güle!"
+ },
+ {
+  "file": "audio/482fdc51.mp3",
+  "voice": "e",
+  "text": "ben",
+  "spoken": "ben"
+ },
+ {
+  "file": "audio/1d68c2a9.mp3",
+  "voice": "e",
+  "text": "Ben Japonum.",
+  "spoken": "Ben Japonum."
+ },
+ {
+  "file": "audio/e5319e6a.mp3",
+  "voice": "e",
+  "text": "sen",
+  "spoken": "sen"
+ },
+ {
+  "file": "audio/6075eb03.mp3",
+  "voice": "e",
+  "text": "Sen çok güzelsin.",
+  "spoken": "Sen çok güzelsin."
+ },
+ {
+  "file": "audio/81b12c21.mp3",
+  "voice": "e",
+  "text": "o",
+  "spoken": "o"
+ },
+ {
+  "file": "audio/15ecb127.mp3",
+  "voice": "e",
+  "text": "O benim kocam.",
+  "spoken": "O benim kocam."
+ },
+ {
+  "file": "audio/543a7c91.mp3",
+  "voice": "e",
+  "text": "biz",
+  "spoken": "biz"
+ },
+ {
+  "file": "audio/5e104c74.mp3",
+  "voice": "e",
+  "text": "Biz İstanbul'da yaşıyoruz.",
+  "spoken": "Biz İstanbul'da yaşıyoruz."
+ },
+ {
+  "file": "audio/f94fd2fa.mp3",
+  "voice": "e",
+  "text": "siz",
+  "spoken": "siz"
+ },
+ {
+  "file": "audio/9692fe67.mp3",
+  "voice": "e",
+  "text": "Siz nerelisiniz?",
+  "spoken": "Siz nerelisiniz?"
+ },
+ {
+  "file": "audio/fce4e2fc.mp3",
+  "voice": "e",
+  "text": "onlar",
+  "spoken": "onlar"
+ },
+ {
+  "file": "audio/10083f5c.mp3",
+  "voice": "e",
+  "text": "Onlar benim arkadaşlarım.",
+  "spoken": "Onlar benim arkadaşlarım."
+ },
+ {
+  "file": "audio/81dc0295.mp3",
+  "voice": "e",
+  "text": "bu",
+  "spoken": "bu"
+ },
+ {
+  "file": "audio/defe2767.mp3",
+  "voice": "e",
+  "text": "Bu ne?",
+  "spoken": "Bu ne?"
+ },
+ {
+  "file": "audio/1bc2fcb3.mp3",
+  "voice": "e",
+  "text": "şu",
+  "spoken": "şu"
+ },
+ {
+  "file": "audio/7f520041.mp3",
+  "voice": "e",
+  "text": "Şu kitabı verir misin?",
+  "spoken": "Şu kitabı verir misin?"
+ },
+ {
+  "file": "audio/dbdaf21b.mp3",
+  "voice": "e",
+  "text": "burada",
+  "spoken": "burada"
+ },
+ {
+  "file": "audio/3d6e7f8b.mp3",
+  "voice": "e",
+  "text": "Ben buradayım.",
+  "spoken": "Ben buradayım."
+ },
+ {
+  "file": "audio/db9a1b8f.mp3",
+  "voice": "e",
+  "text": "orada",
+  "spoken": "orada"
+ },
+ {
+  "file": "audio/e81512eb.mp3",
+  "voice": "e",
+  "text": "Market orada.",
+  "spoken": "Market orada."
+ },
+ {
+  "file": "audio/d22003b5.mp3",
+  "voice": "e",
+  "text": "var",
+  "spoken": "var"
+ },
+ {
+  "file": "audio/3eadcb98.mp3",
+  "voice": "e",
+  "text": "Evde ekmek var.",
+  "spoken": "Evde ekmek var."
+ },
+ {
+  "file": "audio/7046c839.mp3",
+  "voice": "e",
+  "text": "yok",
+  "spoken": "yok"
+ },
+ {
+  "file": "audio/f93099ee.mp3",
+  "voice": "e",
+  "text": "Param yok.",
+  "spoken": "Param yok."
+ },
+ {
+  "file": "audio/675f8d24.mp3",
+  "voice": "e",
+  "text": "tamam",
+  "spoken": "tamam"
+ },
+ {
+  "file": "audio/aece81d6.mp3",
+  "voice": "e",
+  "text": "Tamam, yarın gidelim.",
+  "spoken": "Tamam, yarın gidelim."
+ },
+ {
+  "file": "audio/b2a8770b.mp3",
+  "voice": "e",
+  "text": "belki",
+  "spoken": "belki"
+ },
+ {
+  "file": "audio/ac9b255f.mp3",
+  "voice": "e",
+  "text": "Belki yarın gelirim.",
+  "spoken": "Belki yarın gelirim."
+ },
+ {
+  "file": "audio/63211f30.mp3",
+  "voice": "e",
+  "text": "çok",
+  "spoken": "çok"
+ },
+ {
+  "file": "audio/30cc5418.mp3",
+  "voice": "e",
+  "text": "Çok güzel!",
+  "spoken": "Çok güzel!"
+ },
+ {
+  "file": "audio/765612b6.mp3",
+  "voice": "e",
+  "text": "biraz",
+  "spoken": "biraz"
+ },
+ {
+  "file": "audio/6ad4840f.mp3",
+  "voice": "e",
+  "text": "Biraz Türkçe konuşuyorum.",
+  "spoken": "Biraz Türkçe konuşuyorum."
+ },
+ {
+  "file": "audio/71aa4c99.mp3",
+  "voice": "e",
+  "text": "ve",
+  "spoken": "ve"
+ },
+ {
+  "file": "audio/4a7ba77f.mp3",
+  "voice": "e",
+  "text": "Çay ve simit",
+  "spoken": "Çay ve simit"
+ },
+ {
+  "file": "audio/d8bb2005.mp3",
+  "voice": "e",
+  "text": "ama",
+  "spoken": "ama"
+ },
+ {
+  "file": "audio/0eec9a7f.mp3",
+  "voice": "e",
+  "text": "Yorgunum ama mutluyum.",
+  "spoken": "Yorgunum ama mutluyum."
+ },
+ {
+  "file": "audio/b0756e4f.mp3",
+  "voice": "e",
+  "text": "değil",
+  "spoken": "değil"
+ },
+ {
+  "file": "audio/bbb36dab.mp3",
+  "voice": "e",
+  "text": "Bu kahve değil, çay.",
+  "spoken": "Bu kahve değil, çay."
+ },
+ {
+  "file": "audio/823c51a5.mp3",
+  "voice": "e",
+  "text": "şimdi",
+  "spoken": "şimdi"
+ },
+ {
+  "file": "audio/1287348f.mp3",
+  "voice": "e",
+  "text": "Şimdi geliyorum.",
+  "spoken": "Şimdi geliyorum."
+ },
+ {
+  "file": "audio/73aa8b05.mp3",
+  "voice": "e",
+  "text": "sonra",
+  "spoken": "sonra"
+ },
+ {
+  "file": "audio/ce98130e.mp3",
+  "voice": "e",
+  "text": "Sonra konuşuruz.",
+  "spoken": "Sonra konuşuruz."
+ },
+ {
+  "file": "audio/371dd469.mp3",
+  "voice": "e",
+  "text": "de / da",
+  "spoken": "de, da"
+ },
+ {
+  "file": "audio/e05be82d.mp3",
+  "voice": "e",
+  "text": "Ben de geliyorum.",
+  "spoken": "Ben de geliyorum."
+ },
+ {
+  "file": "audio/d947315f.mp3",
+  "voice": "e",
+  "text": "her şey",
+  "spoken": "her şey"
+ },
+ {
+  "file": "audio/5074302b.mp3",
+  "voice": "e",
+  "text": "Her şey yolunda.",
+  "spoken": "Her şey yolunda."
+ },
+ {
+  "file": "audio/52a3bb51.mp3",
+  "voice": "e",
+  "text": "hiç",
+  "spoken": "hiç"
+ },
+ {
+  "file": "audio/b7ba5c3f.mp3",
+  "voice": "e",
+  "text": "Hiç anlamadım.",
+  "spoken": "Hiç anlamadım."
+ },
+ {
+  "file": "audio/81e68ff1.mp3",
+  "voice": "e",
+  "text": "ne",
+  "spoken": "ne"
+ },
+ {
+  "file": "audio/188b27f3.mp3",
+  "voice": "e",
+  "text": "kim",
+  "spoken": "kim"
+ },
+ {
+  "file": "audio/a8e66c1f.mp3",
+  "voice": "e",
+  "text": "O kim?",
+  "spoken": "O kim?"
+ },
+ {
+  "file": "audio/9e56b02f.mp3",
+  "voice": "e",
+  "text": "nerede",
+  "spoken": "nerede"
+ },
+ {
+  "file": "audio/e4543faf.mp3",
+  "voice": "e",
+  "text": "Tuvalet nerede?",
+  "spoken": "Tuvalet nerede?"
+ },
+ {
+  "file": "audio/a24e67b6.mp3",
+  "voice": "e",
+  "text": "nereye",
+  "spoken": "nereye"
+ },
+ {
+  "file": "audio/c266deaa.mp3",
+  "voice": "e",
+  "text": "Nereye gidiyorsun?",
+  "spoken": "Nereye gidiyorsun?"
+ },
+ {
+  "file": "audio/83777653.mp3",
+  "voice": "e",
+  "text": "nereden",
+  "spoken": "nereden"
+ },
+ {
+  "file": "audio/f02ed64f.mp3",
+  "voice": "e",
+  "text": "Nereden geliyorsun?",
+  "spoken": "Nereden geliyorsun?"
+ },
+ {
+  "file": "audio/28a12e12.mp3",
+  "voice": "e",
+  "text": "ne zaman",
+  "spoken": "ne zaman"
+ },
+ {
+  "file": "audio/bf891542.mp3",
+  "voice": "e",
+  "text": "Ne zaman geliyorsun?",
+  "spoken": "Ne zaman geliyorsun?"
+ },
+ {
+  "file": "audio/9affa077.mp3",
+  "voice": "e",
+  "text": "nasıl",
+  "spoken": "nasıl"
+ },
+ {
+  "file": "audio/d21a43bf.mp3",
+  "voice": "e",
+  "text": "Bu nasıl yapılır?",
+  "spoken": "Bu nasıl yapılır?"
+ },
+ {
+  "file": "audio/afb07a90.mp3",
+  "voice": "e",
+  "text": "neden",
+  "spoken": "neden"
+ },
+ {
+  "file": "audio/d799df0c.mp3",
+  "voice": "e",
+  "text": "Neden üzgünsün?",
+  "spoken": "Neden üzgünsün?"
+ },
+ {
+  "file": "audio/19f92c23.mp3",
+  "voice": "e",
+  "text": "niye",
+  "spoken": "niye"
+ },
+ {
+  "file": "audio/a1a67abd.mp3",
+  "voice": "e",
+  "text": "Niye gülüyorsun?",
+  "spoken": "Niye gülüyorsun?"
+ },
+ {
+  "file": "audio/3cdc4066.mp3",
+  "voice": "e",
+  "text": "kaç",
+  "spoken": "kaç"
+ },
+ {
+  "file": "audio/f603fdb5.mp3",
+  "voice": "e",
+  "text": "Kaç yaşındasın?",
+  "spoken": "Kaç yaşındasın?"
+ },
+ {
+  "file": "audio/5d4a2722.mp3",
+  "voice": "e",
+  "text": "ne kadar",
+  "spoken": "ne kadar"
+ },
+ {
+  "file": "audio/9d97c2da.mp3",
+  "voice": "e",
+  "text": "Bu ne kadar?",
+  "spoken": "Bu ne kadar?"
+ },
+ {
+  "file": "audio/e9472f8f.mp3",
+  "voice": "e",
+  "text": "hangi",
+  "spoken": "hangi"
+ },
+ {
+  "file": "audio/be979fd6.mp3",
+  "voice": "e",
+  "text": "Hangi otobüs?",
+  "spoken": "Hangi otobüs?"
+ },
+ {
+  "file": "audio/1f25f500.mp3",
+  "voice": "e",
+  "text": "kimin",
+  "spoken": "kimin"
+ },
+ {
+  "file": "audio/1cc15a26.mp3",
+  "voice": "e",
+  "text": "Bu çanta kimin?",
+  "spoken": "Bu çanta kimin?"
+ },
+ {
+  "file": "audio/70d07980.mp3",
+  "voice": "e",
+  "text": "Nerelisin?",
+  "spoken": "Nerelisin?"
+ },
+ {
+  "file": "audio/562245a2.mp3",
+  "voice": "e",
+  "text": "— Nerelisin? — Japonyalıyım.",
+  "spoken": "Nerelisin? , Japonyalıyım."
+ },
+ {
+  "file": "audio/6b7c466f.mp3",
+  "voice": "e",
+  "text": "sıfır",
+  "spoken": "sıfır"
+ },
+ {
+  "file": "audio/4c3a6ff9.mp3",
+  "voice": "e",
+  "text": "bir",
+  "spoken": "bir"
+ },
+ {
+  "file": "audio/4e474b64.mp3",
+  "voice": "e",
+  "text": "Bir dakika lütfen.",
+  "spoken": "Bir dakika lütfen."
+ },
+ {
+  "file": "audio/437f2cd7.mp3",
+  "voice": "e",
+  "text": "iki",
+  "spoken": "iki"
+ },
+ {
+  "file": "audio/8f90f428.mp3",
+  "voice": "e",
+  "text": "İki çay lütfen.",
+  "spoken": "İki çay lütfen."
+ },
+ {
+  "file": "audio/582bf48d.mp3",
+  "voice": "e",
+  "text": "üç",
+  "spoken": "üç"
+ },
+ {
+  "file": "audio/fff1c5aa.mp3",
+  "voice": "e",
+  "text": "Üç çocuğum var.",
+  "spoken": "Üç çocuğum var."
+ },
+ {
+  "file": "audio/932ec05b.mp3",
+  "voice": "e",
+  "text": "dört",
+  "spoken": "dört"
+ },
+ {
+  "file": "audio/b2c879ed.mp3",
+  "voice": "e",
+  "text": "beş",
+  "spoken": "beş"
+ },
+ {
+  "file": "audio/a9bbf5b5.mp3",
+  "voice": "e",
+  "text": "Beş dakika sonra.",
+  "spoken": "Beş dakika sonra."
+ },
+ {
+  "file": "audio/c39d0368.mp3",
+  "voice": "e",
+  "text": "altı",
+  "spoken": "altı"
+ },
+ {
+  "file": "audio/8e07542d.mp3",
+  "voice": "e",
+  "text": "yedi",
+  "spoken": "yedi"
+ },
+ {
+  "file": "audio/1759b076.mp3",
+  "voice": "e",
+  "text": "sekiz",
+  "spoken": "sekiz"
+ },
+ {
+  "file": "audio/433a6f12.mp3",
+  "voice": "e",
+  "text": "Saat sekizde kalkarım.",
+  "spoken": "Saat sekizde kalkarım."
+ },
+ {
+  "file": "audio/fce74b2d.mp3",
+  "voice": "e",
+  "text": "dokuz",
+  "spoken": "dokuz"
+ },
+ {
+  "file": "audio/78e8c05d.mp3",
+  "voice": "e",
+  "text": "on",
+  "spoken": "on"
+ },
+ {
+  "file": "audio/578caf89.mp3",
+  "voice": "e",
+  "text": "On lira.",
+  "spoken": "On lira."
+ },
+ {
+  "file": "audio/dbefae12.mp3",
+  "voice": "e",
+  "text": "yirmi",
+  "spoken": "yirmi"
+ },
+ {
+  "file": "audio/1311385c.mp3",
+  "voice": "e",
+  "text": "otuz",
+  "spoken": "otuz"
+ },
+ {
+  "file": "audio/843f3b31.mp3",
+  "voice": "e",
+  "text": "Otuz yaşındayım.",
+  "spoken": "Otuz yaşındayım."
+ },
+ {
+  "file": "audio/ffcf634d.mp3",
+  "voice": "e",
+  "text": "kırk",
+  "spoken": "kırk"
+ },
+ {
+  "file": "audio/decb53be.mp3",
+  "voice": "e",
+  "text": "elli",
+  "spoken": "elli"
+ },
+ {
+  "file": "audio/ca503315.mp3",
+  "voice": "e",
+  "text": "altmış",
+  "spoken": "altmış"
+ },
+ {
+  "file": "audio/9e5b4358.mp3",
+  "voice": "e",
+  "text": "yetmiş",
+  "spoken": "yetmiş"
+ },
+ {
+  "file": "audio/7e618a75.mp3",
+  "voice": "e",
+  "text": "seksen",
+  "spoken": "seksen"
+ },
+ {
+  "file": "audio/f3707088.mp3",
+  "voice": "e",
+  "text": "doksan",
+  "spoken": "doksan"
+ },
+ {
+  "file": "audio/227ec70e.mp3",
+  "voice": "e",
+  "text": "yüz",
+  "spoken": "yüz"
+ },
+ {
+  "file": "audio/14f5bcc2.mp3",
+  "voice": "e",
+  "text": "Yüz lira çok pahalı!",
+  "spoken": "Yüz lira çok pahalı!"
+ },
+ {
+  "file": "audio/683a9c0d.mp3",
+  "voice": "e",
+  "text": "bin",
+  "spoken": "bin"
+ },
+ {
+  "file": "audio/623a2492.mp3",
+  "voice": "e",
+  "text": "Bin teşekkürler!",
+  "spoken": "Bin teşekkürler!"
+ },
+ {
+  "file": "audio/54eb6bee.mp3",
+  "voice": "e",
+  "text": "yarım",
+  "spoken": "yarım"
+ },
+ {
+  "file": "audio/1e95193e.mp3",
+  "voice": "e",
+  "text": "Yarım kilo peynir lütfen.",
+  "spoken": "Yarım kilo peynir lütfen."
+ },
+ {
+  "file": "audio/57e843ef.mp3",
+  "voice": "e",
+  "text": "buçuk",
+  "spoken": "buçuk"
+ },
+ {
+  "file": "audio/d87cf971.mp3",
+  "voice": "e",
+  "text": "Saat üç buçuk.",
+  "spoken": "Saat üç buçuk."
+ },
+ {
+  "file": "audio/77861ccd.mp3",
+  "voice": "e",
+  "text": "aile",
+  "spoken": "aile"
+ },
+ {
+  "file": "audio/a3b4feac.mp3",
+  "voice": "e",
+  "text": "Ailem çok kalabalık.",
+  "spoken": "Ailem çok kalabalık."
+ },
+ {
+  "file": "audio/26622bc6.mp3",
+  "voice": "e",
+  "text": "anne",
+  "spoken": "anne"
+ },
+ {
+  "file": "audio/cc70ea3a.mp3",
+  "voice": "e",
+  "text": "Annem çok güzel yemek yapar.",
+  "spoken": "Annem çok güzel yemek yapar."
+ },
+ {
+  "file": "audio/018f1c40.mp3",
+  "voice": "e",
+  "text": "baba",
+  "spoken": "baba"
+ },
+ {
+  "file": "audio/03c9e062.mp3",
+  "voice": "e",
+  "text": "Babam emekli.",
+  "spoken": "Babam emekli."
+ },
+ {
+  "file": "audio/73fa74da.mp3",
+  "voice": "e",
+  "text": "koca",
+  "spoken": "koca"
+ },
+ {
+  "file": "audio/eedb08f9.mp3",
+  "voice": "e",
+  "text": "Kocam Türk.",
+  "spoken": "Kocam Türk."
+ },
+ {
+  "file": "audio/d7989db7.mp3",
+  "voice": "e",
+  "text": "eş",
+  "spoken": "eş"
+ },
+ {
+  "file": "audio/31cef9fb.mp3",
+  "voice": "e",
+  "text": "Eşim Japon.",
+  "spoken": "Eşim Japon."
+ },
+ {
+  "file": "audio/89eda184.mp3",
+  "voice": "e",
+  "text": "çocuk",
+  "spoken": "çocuk"
+ },
+ {
+  "file": "audio/51d21262.mp3",
+  "voice": "e",
+  "text": "Kaç çocuğunuz var?",
+  "spoken": "Kaç çocuğunuz var?"
+ },
+ {
+  "file": "audio/06195819.mp3",
+  "voice": "e",
+  "text": "oğul",
+  "spoken": "oğul"
+ },
+ {
+  "file": "audio/f1ca329f.mp3",
+  "voice": "e",
+  "text": "Oğlum okula gidiyor.",
+  "spoken": "Oğlum okula gidiyor."
+ },
+ {
+  "file": "audio/64dd875c.mp3",
+  "voice": "e",
+  "text": "kız",
+  "spoken": "kız"
+ },
+ {
+  "file": "audio/48adf3e8.mp3",
+  "voice": "e",
+  "text": "Kızım çok tatlı.",
+  "spoken": "Kızım çok tatlı."
+ },
+ {
+  "file": "audio/844f2e9d.mp3",
+  "voice": "e",
+  "text": "kardeş",
+  "spoken": "kardeş"
+ },
+ {
+  "file": "audio/267de670.mp3",
+  "voice": "e",
+  "text": "İki kardeşim var.",
+  "spoken": "İki kardeşim var."
+ },
+ {
+  "file": "audio/39c18be0.mp3",
+  "voice": "e",
+  "text": "abla",
+  "spoken": "abla"
+ },
+ {
+  "file": "audio/f01224e4.mp3",
+  "voice": "e",
+  "text": "Ablam Ankara'da oturuyor.",
+  "spoken": "Ablam Ankara'da oturuyor."
+ },
+ {
+  "file": "audio/00d7357a.mp3",
+  "voice": "e",
+  "text": "abi",
+  "spoken": "abi"
+ },
+ {
+  "file": "audio/3be9884e.mp3",
+  "voice": "e",
+  "text": "Abim doktor.",
+  "spoken": "Abim doktor."
+ },
+ {
+  "file": "audio/7a35635c.mp3",
+  "voice": "e",
+  "text": "dede",
+  "spoken": "dede"
+ },
+ {
+  "file": "audio/4a87fff4.mp3",
+  "voice": "e",
+  "text": "Dedem bahçede.",
+  "spoken": "Dedem bahçede."
+ },
+ {
+  "file": "audio/b7af85d8.mp3",
+  "voice": "e",
+  "text": "anneanne",
+  "spoken": "anneanne"
+ },
+ {
+  "file": "audio/b6019774.mp3",
+  "voice": "e",
+  "text": "Anneannem İzmir'de yaşıyor.",
+  "spoken": "Anneannem İzmir'de yaşıyor."
+ },
+ {
+  "file": "audio/05ec718a.mp3",
+  "voice": "e",
+  "text": "babaanne",
+  "spoken": "babaanne"
+ },
+ {
+  "file": "audio/c73c7b68.mp3",
+  "voice": "e",
+  "text": "Babaannem çok komik.",
+  "spoken": "Babaannem çok komik."
+ },
+ {
+  "file": "audio/ebc7d613.mp3",
+  "voice": "e",
+  "text": "kayınvalide",
+  "spoken": "kayınvalide"
+ },
+ {
+  "file": "audio/b1dc2859.mp3",
+  "voice": "e",
+  "text": "Kayınvalidem çok misafirperver.",
+  "spoken": "Kayınvalidem çok misafirperver."
+ },
+ {
+  "file": "audio/5d78c50c.mp3",
+  "voice": "e",
+  "text": "kayınpeder",
+  "spoken": "kayınpeder"
+ },
+ {
+  "file": "audio/4636470f.mp3",
+  "voice": "e",
+  "text": "Kayınpederim çay seviyor.",
+  "spoken": "Kayınpederim çay seviyor."
+ },
+ {
+  "file": "audio/9addac67.mp3",
+  "voice": "e",
+  "text": "teyze",
+  "spoken": "teyze"
+ },
+ {
+  "file": "audio/b2f24e11.mp3",
+  "voice": "e",
+  "text": "Teyzem bize geliyor.",
+  "spoken": "Teyzem bize geliyor."
+ },
+ {
+  "file": "audio/c6e5e7e8.mp3",
+  "voice": "e",
+  "text": "hala",
+  "spoken": "hala"
+ },
+ {
+  "file": "audio/c68e3f1a.mp3",
+  "voice": "e",
+  "text": "amca",
+  "spoken": "amca"
+ },
+ {
+  "file": "audio/49fc9209.mp3",
+  "voice": "e",
+  "text": "Amca, ekmek var mı?",
+  "spoken": "Amca, ekmek var mı?"
+ },
+ {
+  "file": "audio/5c23a33d.mp3",
+  "voice": "e",
+  "text": "dayı",
+  "spoken": "dayı"
+ },
+ {
+  "file": "audio/db88f111.mp3",
+  "voice": "e",
+  "text": "bebek",
+  "spoken": "bebek"
+ },
+ {
+  "file": "audio/77021f78.mp3",
+  "voice": "e",
+  "text": "Bebek uyuyor.",
+  "spoken": "Bebek uyuyor."
+ },
+ {
+  "file": "audio/de497508.mp3",
+  "voice": "e",
+  "text": "akraba",
+  "spoken": "akraba"
+ },
+ {
+  "file": "audio/88364b0c.mp3",
+  "voice": "e",
+  "text": "Bayramda akrabaları ziyaret ederiz.",
+  "spoken": "Bayramda akrabaları ziyaret ederiz."
+ },
+ {
+  "file": "audio/9a8ad717.mp3",
+  "voice": "e",
+  "text": "gelin",
+  "spoken": "gelin"
+ },
+ {
+  "file": "audio/46881ee7.mp3",
+  "voice": "e",
+  "text": "Japon gelinimiz çok tatlı!",
+  "spoken": "Japon gelinimiz çok tatlı!"
+ },
+ {
+  "file": "audio/0138d180.mp3",
+  "voice": "e",
+  "text": "arkadaş",
+  "spoken": "arkadaş"
+ },
+ {
+  "file": "audio/2befe110.mp3",
+  "voice": "e",
+  "text": "O benim en iyi arkadaşım.",
+  "spoken": "O benim en iyi arkadaşım."
+ },
+ {
+  "file": "audio/4d1a3a8f.mp3",
+  "voice": "e",
+  "text": "ekmek",
+  "spoken": "ekmek"
+ },
+ {
+  "file": "audio/6fabc3b3.mp3",
+  "voice": "e",
+  "text": "Fırından ekmek aldım.",
+  "spoken": "Fırından ekmek aldım."
+ },
+ {
+  "file": "audio/7db72b70.mp3",
+  "voice": "e",
+  "text": "su",
+  "spoken": "su"
+ },
+ {
+  "file": "audio/783c228d.mp3",
+  "voice": "e",
+  "text": "Bir şişe su lütfen.",
+  "spoken": "Bir şişe su lütfen."
+ },
+ {
+  "file": "audio/591c9244.mp3",
+  "voice": "e",
+  "text": "çay",
+  "spoken": "çay"
+ },
+ {
+  "file": "audio/3e35b4e7.mp3",
+  "voice": "e",
+  "text": "Çay içer misin?",
+  "spoken": "Çay içer misin?"
+ },
+ {
+  "file": "audio/e70c3849.mp3",
+  "voice": "e",
+  "text": "kahve",
+  "spoken": "kahve"
+ },
+ {
+  "file": "audio/8078e51b.mp3",
+  "voice": "e",
+  "text": "Türk kahvesi çok sert.",
+  "spoken": "Türk kahvesi çok sert."
+ },
+ {
+  "file": "audio/a135ab3a.mp3",
+  "voice": "e",
+  "text": "süt",
+  "spoken": "süt"
+ },
+ {
+  "file": "audio/ac1e41a1.mp3",
+  "voice": "e",
+  "text": "Sütlü kahve istiyorum.",
+  "spoken": "Sütlü kahve istiyorum."
+ },
+ {
+  "file": "audio/0c5e3533.mp3",
+  "voice": "e",
+  "text": "peynir",
+  "spoken": "peynir"
+ },
+ {
+  "file": "audio/a921a17f.mp3",
+  "voice": "e",
+  "text": "Kahvaltıda peynir yeriz.",
+  "spoken": "Kahvaltıda peynir yeriz."
+ },
+ {
+  "file": "audio/e553a7d1.mp3",
+  "voice": "e",
+  "text": "yumurta",
+  "spoken": "yumurta"
+ },
+ {
+  "file": "audio/4dac31e3.mp3",
+  "voice": "e",
+  "text": "İki yumurta pişirdim.",
+  "spoken": "İki yumurta pişirdim."
+ },
+ {
+  "file": "audio/82cf3835.mp3",
+  "voice": "e",
+  "text": "et",
+  "spoken": "et"
+ },
+ {
+  "file": "audio/c05394b9.mp3",
+  "voice": "e",
+  "text": "Et yemiyorum.",
+  "spoken": "Et yemiyorum."
+ },
+ {
+  "file": "audio/ea02028f.mp3",
+  "voice": "e",
+  "text": "tavuk",
+  "spoken": "tavuk"
+ },
+ {
+  "file": "audio/77b9ae70.mp3",
+  "voice": "e",
+  "text": "Tavuk çok lezzetli.",
+  "spoken": "Tavuk çok lezzetli."
+ },
+ {
+  "file": "audio/e564cd31.mp3",
+  "voice": "e",
+  "text": "balık",
+  "spoken": "balık"
+ },
+ {
+  "file": "audio/03831d25.mp3",
+  "voice": "e",
+  "text": "Akşam balık yiyelim.",
+  "spoken": "Akşam balık yiyelim."
+ },
+ {
+  "file": "audio/617dfb8a.mp3",
+  "voice": "e",
+  "text": "pilav",
+  "spoken": "pilav"
+ },
+ {
+  "file": "audio/d85e584e.mp3",
+  "voice": "e",
+  "text": "Pilav ister misin?",
+  "spoken": "Pilav ister misin?"
+ },
+ {
+  "file": "audio/4f00b003.mp3",
+  "voice": "e",
+  "text": "sebze",
+  "spoken": "sebze"
+ },
+ {
+  "file": "audio/a41acc17.mp3",
+  "voice": "e",
+  "text": "Sebze çorbası yaptım.",
+  "spoken": "Sebze çorbası yaptım."
+ },
+ {
+  "file": "audio/4300c1e8.mp3",
+  "voice": "e",
+  "text": "meyve",
+  "spoken": "meyve"
+ },
+ {
+  "file": "audio/e07027f4.mp3",
+  "voice": "e",
+  "text": "Meyve çok taze.",
+  "spoken": "Meyve çok taze."
+ },
+ {
+  "file": "audio/f2c934a3.mp3",
+  "voice": "e",
+  "text": "elma",
+  "spoken": "elma"
+ },
+ {
+  "file": "audio/5e31c432.mp3",
+  "voice": "e",
+  "text": "Bir elma yedim.",
+  "spoken": "Bir elma yedim."
+ },
+ {
+  "file": "audio/ee192d29.mp3",
+  "voice": "e",
+  "text": "domates",
+  "spoken": "domates"
+ },
+ {
+  "file": "audio/785e37d6.mp3",
+  "voice": "e",
+  "text": "Türk domatesi çok tatlı.",
+  "spoken": "Türk domatesi çok tatlı."
+ },
+ {
+  "file": "audio/2acd833e.mp3",
+  "voice": "e",
+  "text": "çorba",
+  "spoken": "çorba"
+ },
+ {
+  "file": "audio/4c7cb281.mp3",
+  "voice": "e",
+  "text": "Mercimek çorbası lütfen.",
+  "spoken": "Mercimek çorbası lütfen."
+ },
+ {
+  "file": "audio/151740cc.mp3",
+  "voice": "e",
+  "text": "salata",
+  "spoken": "salata"
+ },
+ {
+  "file": "audio/babe8801.mp3",
+  "voice": "e",
+  "text": "Salata da alalım.",
+  "spoken": "Salata da alalım."
+ },
+ {
+  "file": "audio/3f1ecfe4.mp3",
+  "voice": "e",
+  "text": "tatlı",
+  "spoken": "tatlı"
+ },
+ {
+  "file": "audio/08fac8fe.mp3",
+  "voice": "e",
+  "text": "Baklava çok tatlı.",
+  "spoken": "Baklava çok tatlı."
+ },
+ {
+  "file": "audio/6f5f95ef.mp3",
+  "voice": "e",
+  "text": "şeker",
+  "spoken": "şeker"
+ },
+ {
+  "file": "audio/10a60146.mp3",
+  "voice": "e",
+  "text": "Şekersiz lütfen.",
+  "spoken": "Şekersiz lütfen."
+ },
+ {
+  "file": "audio/0123196f.mp3",
+  "voice": "e",
+  "text": "tuz",
+  "spoken": "tuz"
+ },
+ {
+  "file": "audio/979b11c9.mp3",
+  "voice": "e",
+  "text": "Tuzu verir misin?",
+  "spoken": "Tuzu verir misin?"
+ },
+ {
+  "file": "audio/3199051e.mp3",
+  "voice": "e",
+  "text": "kahvaltı",
+  "spoken": "kahvaltı"
+ },
+ {
+  "file": "audio/bd522bf9.mp3",
+  "voice": "e",
+  "text": "Türk kahvaltısı harika!",
+  "spoken": "Türk kahvaltısı harika!"
+ },
+ {
+  "file": "audio/8ee7980b.mp3",
+  "voice": "e",
+  "text": "öğle yemeği",
+  "spoken": "öğle yemeği"
+ },
+ {
+  "file": "audio/96a025dd.mp3",
+  "voice": "e",
+  "text": "Öğle yemeği yedin mi?",
+  "spoken": "Öğle yemeği yedin mi?"
+ },
+ {
+  "file": "audio/14d25722.mp3",
+  "voice": "e",
+  "text": "akşam yemeği",
+  "spoken": "akşam yemeği"
+ },
+ {
+  "file": "audio/eeee9afb.mp3",
+  "voice": "e",
+  "text": "Akşam yemeği hazır!",
+  "spoken": "Akşam yemeği hazır!"
+ },
+ {
+  "file": "audio/09d4d895.mp3",
+  "voice": "e",
+  "text": "lezzetli",
+  "spoken": "lezzetli"
+ },
+ {
+  "file": "audio/36fa1379.mp3",
+  "voice": "e",
+  "text": "Çok lezzetli olmuş!",
+  "spoken": "Çok lezzetli olmuş!"
+ },
+ {
+  "file": "audio/1e52d9c3.mp3",
+  "voice": "e",
+  "text": "acı",
+  "spoken": "acı"
+ },
+ {
+  "file": "audio/e2de72af.mp3",
+  "voice": "e",
+  "text": "Bu çok acı mı?",
+  "spoken": "Bu çok acı mı?"
+ },
+ {
+  "file": "audio/11e79099.mp3",
+  "voice": "e",
+  "text": "aç",
+  "spoken": "aç"
+ },
+ {
+  "file": "audio/a8149a8d.mp3",
+  "voice": "e",
+  "text": "Çok açım.",
+  "spoken": "Çok açım."
+ },
+ {
+  "file": "audio/10142682.mp3",
+  "voice": "e",
+  "text": "tok",
+  "spoken": "tok"
+ },
+ {
+  "file": "audio/d6fc1e5c.mp3",
+  "voice": "e",
+  "text": "Tokum, teşekkürler.",
+  "spoken": "Tokum, teşekkürler."
+ },
+ {
+  "file": "audio/79322267.mp3",
+  "voice": "e",
+  "text": "zeytin",
+  "spoken": "zeytin"
+ },
+ {
+  "file": "audio/4e0eabb8.mp3",
+  "voice": "e",
+  "text": "Siyah zeytin severim.",
+  "spoken": "Siyah zeytin severim."
+ },
+ {
+  "file": "audio/6627112f.mp3",
+  "voice": "e",
+  "text": "bal",
+  "spoken": "bal"
+ },
+ {
+  "file": "audio/b6651bb2.mp3",
+  "voice": "e",
+  "text": "Bal ve kaymak",
+  "spoken": "Bal ve kaymak"
+ },
+ {
+  "file": "audio/76c98eaf.mp3",
+  "voice": "e",
+  "text": "gelmek",
+  "spoken": "gelmek"
+ },
+ {
+  "file": "audio/53034944.mp3",
+  "voice": "e",
+  "text": "Yarın geliyorum.",
+  "spoken": "Yarın geliyorum."
+ },
+ {
+  "file": "audio/68c1e4fb.mp3",
+  "voice": "e",
+  "text": "gitmek",
+  "spoken": "gitmek"
+ },
+ {
+  "file": "audio/fea2f638.mp3",
+  "voice": "e",
+  "text": "Markete gidiyorum.",
+  "spoken": "Markete gidiyorum."
+ },
+ {
+  "file": "audio/b0d38785.mp3",
+  "voice": "e",
+  "text": "yemek",
+  "spoken": "yemek"
+ },
+ {
+  "file": "audio/0dbb9488.mp3",
+  "voice": "e",
+  "text": "Ne yemek istersin?",
+  "spoken": "Ne yemek istersin?"
+ },
+ {
+  "file": "audio/bbc94918.mp3",
+  "voice": "e",
+  "text": "içmek",
+  "spoken": "içmek"
+ },
+ {
+  "file": "audio/d5d294c6.mp3",
+  "voice": "e",
+  "text": "Su içiyorum.",
+  "spoken": "Su içiyorum."
+ },
+ {
+  "file": "audio/015a8151.mp3",
+  "voice": "e",
+  "text": "yapmak",
+  "spoken": "yapmak"
+ },
+ {
+  "file": "audio/1ce55e21.mp3",
+  "voice": "e",
+  "text": "Ne yapıyorsun?",
+  "spoken": "Ne yapıyorsun?"
+ },
+ {
+  "file": "audio/5e06e8de.mp3",
+  "voice": "e",
+  "text": "istemek",
+  "spoken": "istemek"
+ },
+ {
+  "file": "audio/35718111.mp3",
+  "voice": "e",
+  "text": "Çay istiyorum.",
+  "spoken": "Çay istiyorum."
+ },
+ {
+  "file": "audio/7d694ed9.mp3",
+  "voice": "e",
+  "text": "sevmek",
+  "spoken": "sevmek"
+ },
+ {
+  "file": "audio/4c2097ec.mp3",
+  "voice": "e",
+  "text": "Seni seviyorum.",
+  "spoken": "Seni seviyorum."
+ },
+ {
+  "file": "audio/9b16e81e.mp3",
+  "voice": "e",
+  "text": "bilmek",
+  "spoken": "bilmek"
+ },
+ {
+  "file": "audio/5f37c99f.mp3",
+  "voice": "e",
+  "text": "Bilmiyorum.",
+  "spoken": "Bilmiyorum."
+ },
+ {
+  "file": "audio/b599b8cf.mp3",
+  "voice": "e",
+  "text": "anlamak",
+  "spoken": "anlamak"
+ },
+ {
+  "file": "audio/4da87fbb.mp3",
+  "voice": "e",
+  "text": "Anlamıyorum, tekrar eder misiniz?",
+  "spoken": "Anlamıyorum, tekrar eder misiniz?"
+ },
+ {
+  "file": "audio/8d4332a6.mp3",
+  "voice": "e",
+  "text": "konuşmak",
+  "spoken": "konuşmak"
+ },
+ {
+  "file": "audio/c1536e1c.mp3",
+  "voice": "e",
+  "text": "Türkçe konuşuyor musun?",
+  "spoken": "Türkçe konuşuyor musun?"
+ },
+ {
+  "file": "audio/02d24423.mp3",
+  "voice": "e",
+  "text": "söylemek",
+  "spoken": "söylemek"
+ },
+ {
+  "file": "audio/ae1335d7.mp3",
+  "voice": "e",
+  "text": "Ne söyledin?",
+  "spoken": "Ne söyledin?"
+ },
+ {
+  "file": "audio/0a151d91.mp3",
+  "voice": "e",
+  "text": "bakmak",
+  "spoken": "bakmak"
+ },
+ {
+  "file": "audio/37bdd058.mp3",
+  "voice": "e",
+  "text": "Şuna bak!",
+  "spoken": "Şuna bak!"
+ },
+ {
+  "file": "audio/8300c53d.mp3",
+  "voice": "e",
+  "text": "görmek",
+  "spoken": "görmek"
+ },
+ {
+  "file": "audio/8fcfeba5.mp3",
+  "voice": "e",
+  "text": "Seni görmek istiyorum.",
+  "spoken": "Seni görmek istiyorum."
+ },
+ {
+  "file": "audio/f0e55ca4.mp3",
+  "voice": "e",
+  "text": "almak",
+  "spoken": "almak"
+ },
+ {
+  "file": "audio/6c8f16ac.mp3",
+  "voice": "e",
+  "text": "Ekmek aldım.",
+  "spoken": "Ekmek aldım."
+ },
+ {
+  "file": "audio/aeed5198.mp3",
+  "voice": "e",
+  "text": "vermek",
+  "spoken": "vermek"
+ },
+ {
+  "file": "audio/f83ce615.mp3",
+  "voice": "e",
+  "text": "Suyu verir misin?",
+  "spoken": "Suyu verir misin?"
+ },
+ {
+  "file": "audio/1acb516c.mp3",
+  "voice": "e",
+  "text": "okumak",
+  "spoken": "okumak"
+ },
+ {
+  "file": "audio/ad6433f2.mp3",
+  "voice": "e",
+  "text": "Kitap okuyorum.",
+  "spoken": "Kitap okuyorum."
+ },
+ {
+  "file": "audio/186bdb23.mp3",
+  "voice": "e",
+  "text": "yazmak",
+  "spoken": "yazmak"
+ },
+ {
+  "file": "audio/11bf3511.mp3",
+  "voice": "e",
+  "text": "Adını yaz lütfen.",
+  "spoken": "Adını yaz lütfen."
+ },
+ {
+  "file": "audio/824d166c.mp3",
+  "voice": "e",
+  "text": "uyumak",
+  "spoken": "uyumak"
+ },
+ {
+  "file": "audio/7051a214.mp3",
+  "voice": "e",
+  "text": "kalkmak",
+  "spoken": "kalkmak"
+ },
+ {
+  "file": "audio/373eec55.mp3",
+  "voice": "e",
+  "text": "Sabah yedide kalkıyorum.",
+  "spoken": "Sabah yedide kalkıyorum."
+ },
+ {
+  "file": "audio/a12a0bbf.mp3",
+  "voice": "e",
+  "text": "oturmak",
+  "spoken": "oturmak"
+ },
+ {
+  "file": "audio/1f039717.mp3",
+  "voice": "e",
+  "text": "Buraya oturun lütfen.",
+  "spoken": "Buraya oturun lütfen."
+ },
+ {
+  "file": "audio/9f347854.mp3",
+  "voice": "e",
+  "text": "beklemek",
+  "spoken": "beklemek"
+ },
+ {
+  "file": "audio/f75dc646.mp3",
+  "voice": "e",
+  "text": "Seni bekliyorum.",
+  "spoken": "Seni bekliyorum."
+ },
+ {
+  "file": "audio/1264ac9c.mp3",
+  "voice": "e",
+  "text": "öğrenmek",
+  "spoken": "öğrenmek"
+ },
+ {
+  "file": "audio/79e6fbf9.mp3",
+  "voice": "e",
+  "text": "Türkçe öğreniyorum.",
+  "spoken": "Türkçe öğreniyorum."
+ },
+ {
+  "file": "audio/8d25731f.mp3",
+  "voice": "e",
+  "text": "çalışmak",
+  "spoken": "çalışmak"
+ },
+ {
+  "file": "audio/30911aad.mp3",
+  "voice": "e",
+  "text": "Kocam bugün çalışıyor.",
+  "spoken": "Kocam bugün çalışıyor."
+ },
+ {
+  "file": "audio/9710eca3.mp3",
+  "voice": "e",
+  "text": "dinlemek",
+  "spoken": "dinlemek"
+ },
+ {
+  "file": "audio/a1d24954.mp3",
+  "voice": "e",
+  "text": "Müzik dinliyorum.",
+  "spoken": "Müzik dinliyorum."
+ },
+ {
+  "file": "audio/70f894c5.mp3",
+  "voice": "e",
+  "text": "bugün",
+  "spoken": "bugün"
+ },
+ {
+  "file": "audio/b8bc3f7b.mp3",
+  "voice": "e",
+  "text": "Bugün çok yorgunum.",
+  "spoken": "Bugün çok yorgunum."
+ },
+ {
+  "file": "audio/53eb6a5b.mp3",
+  "voice": "e",
+  "text": "yarın",
+  "spoken": "yarın"
+ },
+ {
+  "file": "audio/632617d0.mp3",
+  "voice": "e",
+  "text": "Yarın görüşürüz.",
+  "spoken": "Yarın görüşürüz."
+ },
+ {
+  "file": "audio/7ac0df73.mp3",
+  "voice": "e",
+  "text": "dün",
+  "spoken": "dün"
+ },
+ {
+  "file": "audio/e992a2e6.mp3",
+  "voice": "e",
+  "text": "Dün ne yaptın?",
+  "spoken": "Dün ne yaptın?"
+ },
+ {
+  "file": "audio/af3922fb.mp3",
+  "voice": "e",
+  "text": "sabah",
+  "spoken": "sabah"
+ },
+ {
+  "file": "audio/93efb130.mp3",
+  "voice": "e",
+  "text": "Sabah kahve içerim.",
+  "spoken": "Sabah kahve içerim."
+ },
+ {
+  "file": "audio/bfb5fceb.mp3",
+  "voice": "e",
+  "text": "öğle",
+  "spoken": "öğle"
+ },
+ {
+  "file": "audio/ad9cd066.mp3",
+  "voice": "e",
+  "text": "Öğlen buluşalım.",
+  "spoken": "Öğlen buluşalım."
+ },
+ {
+  "file": "audio/af8c321e.mp3",
+  "voice": "e",
+  "text": "akşam",
+  "spoken": "akşam"
+ },
+ {
+  "file": "audio/16d5ddde.mp3",
+  "voice": "e",
+  "text": "Akşam ne yiyelim?",
+  "spoken": "Akşam ne yiyelim?"
+ },
+ {
+  "file": "audio/2433df40.mp3",
+  "voice": "e",
+  "text": "gece",
+  "spoken": "gece"
+ },
+ {
+  "file": "audio/7e51352c.mp3",
+  "voice": "e",
+  "text": "Gece geç yattım.",
+  "spoken": "Gece geç yattım."
+ },
+ {
+  "file": "audio/42e8d898.mp3",
+  "voice": "e",
+  "text": "gün",
+  "spoken": "gün"
+ },
+ {
+  "file": "audio/ab293c67.mp3",
+  "voice": "e",
+  "text": "Güzel bir gün!",
+  "spoken": "Güzel bir gün!"
+ },
+ {
+  "file": "audio/3a87b7e4.mp3",
+  "voice": "e",
+  "text": "hafta",
+  "spoken": "hafta"
+ },
+ {
+  "file": "audio/56b82916.mp3",
+  "voice": "e",
+  "text": "Gelecek hafta tatildeyim.",
+  "spoken": "Gelecek hafta tatildeyim."
+ },
+ {
+  "file": "audio/8dd9d6e2.mp3",
+  "voice": "e",
+  "text": "ay",
+  "spoken": "ay"
+ },
+ {
+  "file": "audio/9d88726f.mp3",
+  "voice": "e",
+  "text": "Bir ay İstanbul'dayım.",
+  "spoken": "Bir ay İstanbul'dayım."
+ },
+ {
+  "file": "audio/aa7c13ac.mp3",
+  "voice": "e",
+  "text": "yıl",
+  "spoken": "yıl"
+ },
+ {
+  "file": "audio/a7dd0bd3.mp3",
+  "voice": "e",
+  "text": "Yeni yılın kutlu olsun!",
+  "spoken": "Yeni yılın kutlu olsun!"
+ },
+ {
+  "file": "audio/91d4a2d9.mp3",
+  "voice": "e",
+  "text": "saat",
+  "spoken": "saat"
+ },
+ {
+  "file": "audio/1d3687ce.mp3",
+  "voice": "e",
+  "text": "Saat kaç?",
+  "spoken": "Saat kaç?"
+ },
+ {
+  "file": "audio/b760b93b.mp3",
+  "voice": "e",
+  "text": "dakika",
+  "spoken": "dakika"
+ },
+ {
+  "file": "audio/ea0bab8d.mp3",
+  "voice": "e",
+  "text": "On dakika bekle.",
+  "spoken": "On dakika bekle."
+ },
+ {
+  "file": "audio/a860d56b.mp3",
+  "voice": "e",
+  "text": "erken",
+  "spoken": "erken"
+ },
+ {
+  "file": "audio/aa3c26ec.mp3",
+  "voice": "e",
+  "text": "Erken kalktım.",
+  "spoken": "Erken kalktım."
+ },
+ {
+  "file": "audio/e4a69746.mp3",
+  "voice": "e",
+  "text": "geç",
+  "spoken": "geç"
+ },
+ {
+  "file": "audio/cea0dd0b.mp3",
+  "voice": "e",
+  "text": "Geç kaldım!",
+  "spoken": "Geç kaldım!"
+ },
+ {
+  "file": "audio/c909d9b1.mp3",
+  "voice": "e",
+  "text": "her gün",
+  "spoken": "her gün"
+ },
+ {
+  "file": "audio/455d0e8b.mp3",
+  "voice": "e",
+  "text": "Her gün Türkçe çalışıyorum.",
+  "spoken": "Her gün Türkçe çalışıyorum."
+ },
+ {
+  "file": "audio/ab8a28b3.mp3",
+  "voice": "e",
+  "text": "Pazartesi",
+  "spoken": "Pazartesi"
+ },
+ {
+  "file": "audio/204b61c7.mp3",
+  "voice": "e",
+  "text": "Salı",
+  "spoken": "Salı"
+ },
+ {
+  "file": "audio/7dd8879e.mp3",
+  "voice": "e",
+  "text": "Çarşamba",
+  "spoken": "Çarşamba"
+ },
+ {
+  "file": "audio/eb9da6cc.mp3",
+  "voice": "e",
+  "text": "Perşembe",
+  "spoken": "Perşembe"
+ },
+ {
+  "file": "audio/0ccee542.mp3",
+  "voice": "e",
+  "text": "Cuma",
+  "spoken": "Cuma"
+ },
+ {
+  "file": "audio/c8364fb3.mp3",
+  "voice": "e",
+  "text": "Cumartesi",
+  "spoken": "Cumartesi"
+ },
+ {
+  "file": "audio/798b1390.mp3",
+  "voice": "e",
+  "text": "Pazar",
+  "spoken": "Pazar"
+ },
+ {
+  "file": "audio/15a7a283.mp3",
+  "voice": "e",
+  "text": "Pazar günü ne yapıyoruz?",
+  "spoken": "Pazar günü ne yapıyoruz?"
+ },
+ {
+  "file": "audio/4cfbb8d7.mp3",
+  "voice": "e",
+  "text": "hafta sonu",
+  "spoken": "hafta sonu"
+ },
+ {
+  "file": "audio/d653440f.mp3",
+  "voice": "e",
+  "text": "Hafta sonu görüşelim.",
+  "spoken": "Hafta sonu görüşelim."
+ },
+ {
+  "file": "audio/80cf350f.mp3",
+  "voice": "e",
+  "text": "ev",
+  "spoken": "ev"
+ },
+ {
+  "file": "audio/9eaf3733.mp3",
+  "voice": "e",
+  "text": "Eve gidiyorum.",
+  "spoken": "Eve gidiyorum."
+ },
+ {
+  "file": "audio/964e9fda.mp3",
+  "voice": "e",
+  "text": "oda",
+  "spoken": "oda"
+ },
+ {
+  "file": "audio/868b69f9.mp3",
+  "voice": "e",
+  "text": "Odam çok küçük.",
+  "spoken": "Odam çok küçük."
+ },
+ {
+  "file": "audio/ddebefec.mp3",
+  "voice": "e",
+  "text": "mutfak",
+  "spoken": "mutfak"
+ },
+ {
+  "file": "audio/55f6ff6e.mp3",
+  "voice": "e",
+  "text": "Annem mutfakta.",
+  "spoken": "Annem mutfakta."
+ },
+ {
+  "file": "audio/eefc16b1.mp3",
+  "voice": "e",
+  "text": "banyo",
+  "spoken": "banyo"
+ },
+ {
+  "file": "audio/03d38e75.mp3",
+  "voice": "e",
+  "text": "Banyo nerede?",
+  "spoken": "Banyo nerede?"
+ },
+ {
+  "file": "audio/e0b48e37.mp3",
+  "voice": "e",
+  "text": "tuvalet",
+  "spoken": "tuvalet"
+ },
+ {
+  "file": "audio/4cb144b6.mp3",
+  "voice": "e",
+  "text": "yatak",
+  "spoken": "yatak"
+ },
+ {
+  "file": "audio/34818af6.mp3",
+  "voice": "e",
+  "text": "Yatak çok rahat.",
+  "spoken": "Yatak çok rahat."
+ },
+ {
+  "file": "audio/26de08b2.mp3",
+  "voice": "e",
+  "text": "masa",
+  "spoken": "masa"
+ },
+ {
+  "file": "audio/35b5b964.mp3",
+  "voice": "e",
+  "text": "Yemek masada.",
+  "spoken": "Yemek masada."
+ },
+ {
+  "file": "audio/eef580c9.mp3",
+  "voice": "e",
+  "text": "sandalye",
+  "spoken": "sandalye"
+ },
+ {
+  "file": "audio/94fcd25d.mp3",
+  "voice": "e",
+  "text": "Sandalyeye otur.",
+  "spoken": "Sandalyeye otur."
+ },
+ {
+  "file": "audio/852838db.mp3",
+  "voice": "e",
+  "text": "kapı",
+  "spoken": "kapı"
+ },
+ {
+  "file": "audio/63111b30.mp3",
+  "voice": "e",
+  "text": "Kapıyı kapat lütfen.",
+  "spoken": "Kapıyı kapat lütfen."
+ },
+ {
+  "file": "audio/56350c72.mp3",
+  "voice": "e",
+  "text": "pencere",
+  "spoken": "pencere"
+ },
+ {
+  "file": "audio/d477f803.mp3",
+  "voice": "e",
+  "text": "Pencereyi açar mısın?",
+  "spoken": "Pencereyi açar mısın?"
+ },
+ {
+  "file": "audio/98ddb039.mp3",
+  "voice": "e",
+  "text": "anahtar",
+  "spoken": "anahtar"
+ },
+ {
+  "file": "audio/a4464961.mp3",
+  "voice": "e",
+  "text": "Anahtarım nerede?",
+  "spoken": "Anahtarım nerede?"
+ },
+ {
+  "file": "audio/81b7407f.mp3",
+  "voice": "e",
+  "text": "telefon",
+  "spoken": "telefon"
+ },
+ {
+  "file": "audio/23973bd1.mp3",
+  "voice": "e",
+  "text": "Telefonum şarjda.",
+  "spoken": "Telefonum şarjda."
+ },
+ {
+  "file": "audio/02faf5cc.mp3",
+  "voice": "e",
+  "text": "buzdolabı",
+  "spoken": "buzdolabı"
+ },
+ {
+  "file": "audio/1366f1ab.mp3",
+  "voice": "e",
+  "text": "Süt buzdolabında.",
+  "spoken": "Süt buzdolabında."
+ },
+ {
+  "file": "audio/85f89153.mp3",
+  "voice": "e",
+  "text": "bardak",
+  "spoken": "bardak"
+ },
+ {
+  "file": "audio/ce0208bc.mp3",
+  "voice": "e",
+  "text": "Bir bardak su",
+  "spoken": "Bir bardak su"
+ },
+ {
+  "file": "audio/e5041377.mp3",
+  "voice": "e",
+  "text": "tabak",
+  "spoken": "tabak"
+ },
+ {
+  "file": "audio/3e6849e7.mp3",
+  "voice": "e",
+  "text": "Tabakları yıkadım.",
+  "spoken": "Tabakları yıkadım."
+ },
+ {
+  "file": "audio/74001498.mp3",
+  "voice": "e",
+  "text": "kaşık",
+  "spoken": "kaşık"
+ },
+ {
+  "file": "audio/1471172d.mp3",
+  "voice": "e",
+  "text": "Bir kaşık daha lütfen.",
+  "spoken": "Bir kaşık daha lütfen."
+ },
+ {
+  "file": "audio/301a23ce.mp3",
+  "voice": "e",
+  "text": "çatal",
+  "spoken": "çatal"
+ },
+ {
+  "file": "audio/e993ca2f.mp3",
+  "voice": "e",
+  "text": "bıçak",
+  "spoken": "bıçak"
+ },
+ {
+  "file": "audio/71e57962.mp3",
+  "voice": "e",
+  "text": "halı",
+  "spoken": "halı"
+ },
+ {
+  "file": "audio/15c6805d.mp3",
+  "voice": "e",
+  "text": "Türk halısı çok güzel.",
+  "spoken": "Türk halısı çok güzel."
+ },
+ {
+  "file": "audio/0273ff15.mp3",
+  "voice": "e",
+  "text": "balkon",
+  "spoken": "balkon"
+ },
+ {
+  "file": "audio/78eea5ba.mp3",
+  "voice": "e",
+  "text": "Balkonda çay içelim.",
+  "spoken": "Balkonda çay içelim."
+ },
+ {
+  "file": "audio/facea849.mp3",
+  "voice": "e",
+  "text": "terlik",
+  "spoken": "terlik"
+ },
+ {
+  "file": "audio/3e7cfbb9.mp3",
+  "voice": "e",
+  "text": "Terliğini giy!",
+  "spoken": "Terliğini giy!"
+ },
+ {
+  "file": "audio/5fac7889.mp3",
+  "voice": "e",
+  "text": "iyi",
+  "spoken": "iyi"
+ },
+ {
+  "file": "audio/dd3f1b34.mp3",
+  "voice": "e",
+  "text": "Çok iyi!",
+  "spoken": "Çok iyi!"
+ },
+ {
+  "file": "audio/db4ef2bf.mp3",
+  "voice": "e",
+  "text": "kötü",
+  "spoken": "kötü"
+ },
+ {
+  "file": "audio/58aaa779.mp3",
+  "voice": "e",
+  "text": "Hava çok kötü.",
+  "spoken": "Hava çok kötü."
+ },
+ {
+  "file": "audio/2b075fc8.mp3",
+  "voice": "e",
+  "text": "büyük",
+  "spoken": "büyük"
+ },
+ {
+  "file": "audio/aa41e578.mp3",
+  "voice": "e",
+  "text": "Büyük bir ev",
+  "spoken": "Büyük bir ev"
+ },
+ {
+  "file": "audio/0f79b938.mp3",
+  "voice": "e",
+  "text": "küçük",
+  "spoken": "küçük"
+ },
+ {
+  "file": "audio/cc04768c.mp3",
+  "voice": "e",
+  "text": "Küçük bir kedi",
+  "spoken": "Küçük bir kedi"
+ },
+ {
+  "file": "audio/0ed53c1d.mp3",
+  "voice": "e",
+  "text": "güzel",
+  "spoken": "güzel"
+ },
+ {
+  "file": "audio/3dd06ac9.mp3",
+  "voice": "e",
+  "text": "Ne güzel!",
+  "spoken": "Ne güzel!"
+ },
+ {
+  "file": "audio/62161973.mp3",
+  "voice": "e",
+  "text": "yeni",
+  "spoken": "yeni"
+ },
+ {
+  "file": "audio/55ec758f.mp3",
+  "voice": "e",
+  "text": "Yeni telefon aldım.",
+  "spoken": "Yeni telefon aldım."
+ },
+ {
+  "file": "audio/474cd0f8.mp3",
+  "voice": "e",
+  "text": "eski",
+  "spoken": "eski"
+ },
+ {
+  "file": "audio/356084f5.mp3",
+  "voice": "e",
+  "text": "Eski bir şehir",
+  "spoken": "Eski bir şehir"
+ },
+ {
+  "file": "audio/62d59ca3.mp3",
+  "voice": "e",
+  "text": "sıcak",
+  "spoken": "sıcak"
+ },
+ {
+  "file": "audio/5abc37b8.mp3",
+  "voice": "e",
+  "text": "Bugün çok sıcak.",
+  "spoken": "Bugün çok sıcak."
+ },
+ {
+  "file": "audio/0479100b.mp3",
+  "voice": "e",
+  "text": "soğuk",
+  "spoken": "soğuk"
+ },
+ {
+  "file": "audio/01f14a7f.mp3",
+  "voice": "e",
+  "text": "Su çok soğuk.",
+  "spoken": "Su çok soğuk."
+ },
+ {
+  "file": "audio/c908951f.mp3",
+  "voice": "e",
+  "text": "pahalı",
+  "spoken": "pahalı"
+ },
+ {
+  "file": "audio/6d3a602b.mp3",
+  "voice": "e",
+  "text": "Bu çok pahalı!",
+  "spoken": "Bu çok pahalı!"
+ },
+ {
+  "file": "audio/6303633f.mp3",
+  "voice": "e",
+  "text": "ucuz",
+  "spoken": "ucuz"
+ },
+ {
+  "file": "audio/bf273471.mp3",
+  "voice": "e",
+  "text": "Pazarda her şey ucuz.",
+  "spoken": "Pazarda her şey ucuz."
+ },
+ {
+  "file": "audio/58f0725c.mp3",
+  "voice": "e",
+  "text": "kolay",
+  "spoken": "kolay"
+ },
+ {
+  "file": "audio/366e5826.mp3",
+  "voice": "e",
+  "text": "Türkçe kolay mı?",
+  "spoken": "Türkçe kolay mı?"
+ },
+ {
+  "file": "audio/fd811c97.mp3",
+  "voice": "e",
+  "text": "zor",
+  "spoken": "zor"
+ },
+ {
+  "file": "audio/dddc02d9.mp3",
+  "voice": "e",
+  "text": "Biraz zor ama güzel.",
+  "spoken": "Biraz zor ama güzel."
+ },
+ {
+  "file": "audio/72ff58bc.mp3",
+  "voice": "e",
+  "text": "uzun",
+  "spoken": "uzun"
+ },
+ {
+  "file": "audio/ad14fd45.mp3",
+  "voice": "e",
+  "text": "Uzun bir yol",
+  "spoken": "Uzun bir yol"
+ },
+ {
+  "file": "audio/d9d2f912.mp3",
+  "voice": "e",
+  "text": "kısa",
+  "spoken": "kısa"
+ },
+ {
+  "file": "audio/8e8d6d81.mp3",
+  "voice": "e",
+  "text": "Kısa bir ara",
+  "spoken": "Kısa bir ara"
+ },
+ {
+  "file": "audio/3423a6c6.mp3",
+  "voice": "e",
+  "text": "hızlı",
+  "spoken": "hızlı"
+ },
+ {
+  "file": "audio/b46f319e.mp3",
+  "voice": "e",
+  "text": "Çok hızlı konuşuyorsun.",
+  "spoken": "Çok hızlı konuşuyorsun."
+ },
+ {
+  "file": "audio/7e8dfefb.mp3",
+  "voice": "e",
+  "text": "yavaş",
+  "spoken": "yavaş"
+ },
+ {
+  "file": "audio/733e411b.mp3",
+  "voice": "e",
+  "text": "Yavaş konuşur musunuz?",
+  "spoken": "Yavaş konuşur musunuz?"
+ },
+ {
+  "file": "audio/a300fe15.mp3",
+  "voice": "e",
+  "text": "temiz",
+  "spoken": "temiz"
+ },
+ {
+  "file": "audio/cd6f2598.mp3",
+  "voice": "e",
+  "text": "Oda tertemiz.",
+  "spoken": "Oda tertemiz."
+ },
+ {
+  "file": "audio/760959b1.mp3",
+  "voice": "e",
+  "text": "kirli",
+  "spoken": "kirli"
+ },
+ {
+  "file": "audio/31d69023.mp3",
+  "voice": "e",
+  "text": "Ellerim kirli.",
+  "spoken": "Ellerim kirli."
+ },
+ {
+  "file": "audio/a36533fc.mp3",
+  "voice": "e",
+  "text": "yorgun",
+  "spoken": "yorgun"
+ },
+ {
+  "file": "audio/095762d5.mp3",
+  "voice": "e",
+  "text": "mutlu",
+  "spoken": "mutlu"
+ },
+ {
+  "file": "audio/19788616.mp3",
+  "voice": "e",
+  "text": "Seninle çok mutluyum.",
+  "spoken": "Seninle çok mutluyum."
+ },
+ {
+  "file": "audio/356948b3.mp3",
+  "voice": "e",
+  "text": "hasta",
+  "spoken": "hasta"
+ },
+ {
+  "file": "audio/8e472691.mp3",
+  "voice": "e",
+  "text": "Hastayım, bugün gelemem.",
+  "spoken": "Hastayım, bugün gelemem."
+ },
+ {
+  "file": "audio/32cd152d.mp3",
+  "voice": "e",
+  "text": "doğru",
+  "spoken": "doğru"
+ },
+ {
+  "file": "audio/16bf9a84.mp3",
+  "voice": "e",
+  "text": "Doğru!",
+  "spoken": "Doğru!"
+ },
+ {
+  "file": "audio/a692b223.mp3",
+  "voice": "e",
+  "text": "yanlış",
+  "spoken": "yanlış"
+ },
+ {
+  "file": "audio/aeb61b17.mp3",
+  "voice": "e",
+  "text": "Yanlış numara.",
+  "spoken": "Yanlış numara."
+ },
+ {
+  "file": "audio/63770019.mp3",
+  "voice": "e",
+  "text": "Ne kadar tatlı bir bebek!",
+  "spoken": "Ne kadar tatlı bir bebek!"
+ },
+ {
+  "file": "audio/badbdb2e.mp3",
+  "voice": "e",
+  "text": "şehir",
+  "spoken": "şehir"
+ },
+ {
+  "file": "audio/c3c410b6.mp3",
+  "voice": "e",
+  "text": "İstanbul büyük bir şehir.",
+  "spoken": "İstanbul büyük bir şehir."
+ },
+ {
+  "file": "audio/92eb96d3.mp3",
+  "voice": "e",
+  "text": "sokak",
+  "spoken": "sokak"
+ },
+ {
+  "file": "audio/09f3fd45.mp3",
+  "voice": "e",
+  "text": "Bu sokakta güzel bir kafe var.",
+  "spoken": "Bu sokakta güzel bir kafe var."
+ },
+ {
+  "file": "audio/eff19904.mp3",
+  "voice": "e",
+  "text": "market",
+  "spoken": "market"
+ },
+ {
+  "file": "audio/e5e62182.mp3",
+  "voice": "e",
+  "text": "Marketten süt al.",
+  "spoken": "Marketten süt al."
+ },
+ {
+  "file": "audio/be62dcf0.mp3",
+  "voice": "e",
+  "text": "pazar",
+  "spoken": "pazar"
+ },
+ {
+  "file": "audio/6aaf4f3c.mp3",
+  "voice": "e",
+  "text": "Pazar çok kalabalık.",
+  "spoken": "Pazar çok kalabalık."
+ },
+ {
+  "file": "audio/f427ca48.mp3",
+  "voice": "e",
+  "text": "fırın",
+  "spoken": "fırın"
+ },
+ {
+  "file": "audio/4380787e.mp3",
+  "voice": "e",
+  "text": "Fırın köşede.",
+  "spoken": "Fırın köşede."
+ },
+ {
+  "file": "audio/00630da4.mp3",
+  "voice": "e",
+  "text": "eczane",
+  "spoken": "eczane"
+ },
+ {
+  "file": "audio/68211098.mp3",
+  "voice": "e",
+  "text": "Eczane nerede?",
+  "spoken": "Eczane nerede?"
+ },
+ {
+  "file": "audio/0fa195a6.mp3",
+  "voice": "e",
+  "text": "hastane",
+  "spoken": "hastane"
+ },
+ {
+  "file": "audio/9d0b8e96.mp3",
+  "voice": "e",
+  "text": "Hastaneye gitmem lazım.",
+  "spoken": "Hastaneye gitmem lazım."
+ },
+ {
+  "file": "audio/703e9b07.mp3",
+  "voice": "e",
+  "text": "okul",
+  "spoken": "okul"
+ },
+ {
+  "file": "audio/05157ced.mp3",
+  "voice": "e",
+  "text": "Çocuklar okulda.",
+  "spoken": "Çocuklar okulda."
+ },
+ {
+  "file": "audio/15297221.mp3",
+  "voice": "e",
+  "text": "banka",
+  "spoken": "banka"
+ },
+ {
+  "file": "audio/ff6332f4.mp3",
+  "voice": "e",
+  "text": "Banka saat beşte kapanıyor.",
+  "spoken": "Banka saat beşte kapanıyor."
+ },
+ {
+  "file": "audio/ec90957e.mp3",
+  "voice": "e",
+  "text": "cami",
+  "spoken": "cami"
+ },
+ {
+  "file": "audio/9b66ab7a.mp3",
+  "voice": "e",
+  "text": "Sultanahmet Camii çok güzel.",
+  "spoken": "Sultanahmet Camii çok güzel."
+ },
+ {
+  "file": "audio/e0b806dc.mp3",
+  "voice": "e",
+  "text": "park",
+  "spoken": "park"
+ },
+ {
+  "file": "audio/05728596.mp3",
+  "voice": "e",
+  "text": "Parkta yürüyelim.",
+  "spoken": "Parkta yürüyelim."
+ },
+ {
+  "file": "audio/9b7b9a2c.mp3",
+  "voice": "e",
+  "text": "restoran",
+  "spoken": "restoran"
+ },
+ {
+  "file": "audio/7fbd5ef9.mp3",
+  "voice": "e",
+  "text": "kafe",
+  "spoken": "kafe"
+ },
+ {
+  "file": "audio/27f17fe9.mp3",
+  "voice": "e",
+  "text": "Kafede buluşalım.",
+  "spoken": "Kafede buluşalım."
+ },
+ {
+  "file": "audio/20ea3ef6.mp3",
+  "voice": "e",
+  "text": "otel",
+  "spoken": "otel"
+ },
+ {
+  "file": "audio/b9b1fc28.mp3",
+  "voice": "e",
+  "text": "havalimanı",
+  "spoken": "havalimanı"
+ },
+ {
+  "file": "audio/771a3c30.mp3",
+  "voice": "e",
+  "text": "Havalimanına nasıl gidebilirim?",
+  "spoken": "Havalimanına nasıl gidebilirim?"
+ },
+ {
+  "file": "audio/156080ae.mp3",
+  "voice": "e",
+  "text": "istasyon",
+  "spoken": "istasyon"
+ },
+ {
+  "file": "audio/4d9774ab.mp3",
+  "voice": "e",
+  "text": "durak",
+  "spoken": "durak"
+ },
+ {
+  "file": "audio/64dcdb46.mp3",
+  "voice": "e",
+  "text": "Otobüs durağı nerede?",
+  "spoken": "Otobüs durağı nerede?"
+ },
+ {
+  "file": "audio/4850279c.mp3",
+  "voice": "e",
+  "text": "deniz",
+  "spoken": "deniz"
+ },
+ {
+  "file": "audio/78015465.mp3",
+  "voice": "e",
+  "text": "Deniz çok güzel.",
+  "spoken": "Deniz çok güzel."
+ },
+ {
+  "file": "audio/d1202c05.mp3",
+  "voice": "e",
+  "text": "köprü",
+  "spoken": "köprü"
+ },
+ {
+  "file": "audio/aefe698e.mp3",
+  "voice": "e",
+  "text": "Boğaz Köprüsü",
+  "spoken": "Boğaz Köprüsü"
+ },
+ {
+  "file": "audio/353bf445.mp3",
+  "voice": "e",
+  "text": "sağ",
+  "spoken": "sağ"
+ },
+ {
+  "file": "audio/2dbeb2e2.mp3",
+  "voice": "e",
+  "text": "Sağa dönün.",
+  "spoken": "Sağa dönün."
+ },
+ {
+  "file": "audio/0749d8d6.mp3",
+  "voice": "e",
+  "text": "sol",
+  "spoken": "sol"
+ },
+ {
+  "file": "audio/2489258e.mp3",
+  "voice": "e",
+  "text": "Solda bir banka var.",
+  "spoken": "Solda bir banka var."
+ },
+ {
+  "file": "audio/8ec0feef.mp3",
+  "voice": "e",
+  "text": "düz",
+  "spoken": "düz"
+ },
+ {
+  "file": "audio/9b9c656a.mp3",
+  "voice": "e",
+  "text": "Düz gidin.",
+  "spoken": "Düz gidin."
+ },
+ {
+  "file": "audio/1b508ade.mp3",
+  "voice": "e",
+  "text": "yakın",
+  "spoken": "yakın"
+ },
+ {
+  "file": "audio/fff4868c.mp3",
+  "voice": "e",
+  "text": "Çok yakın.",
+  "spoken": "Çok yakın."
+ },
+ {
+  "file": "audio/77cdc3cf.mp3",
+  "voice": "e",
+  "text": "uzak",
+  "spoken": "uzak"
+ },
+ {
+  "file": "audio/636aa658.mp3",
+  "voice": "e",
+  "text": "Uzak mı?",
+  "spoken": "Uzak mı?"
+ },
+ {
+  "file": "audio/8e8b993e.mp3",
+  "voice": "e",
+  "text": "renk",
+  "spoken": "renk"
+ },
+ {
+  "file": "audio/534203b4.mp3",
+  "voice": "e",
+  "text": "En sevdiğin renk ne?",
+  "spoken": "En sevdiğin renk ne?"
+ },
+ {
+  "file": "audio/347eee61.mp3",
+  "voice": "e",
+  "text": "kırmızı",
+  "spoken": "kırmızı"
+ },
+ {
+  "file": "audio/97c94994.mp3",
+  "voice": "e",
+  "text": "Türk bayrağı kırmızı ve beyaz.",
+  "spoken": "Türk bayrağı kırmızı ve beyaz."
+ },
+ {
+  "file": "audio/e3847ccf.mp3",
+  "voice": "e",
+  "text": "beyaz",
+  "spoken": "beyaz"
+ },
+ {
+  "file": "audio/d7135f56.mp3",
+  "voice": "e",
+  "text": "Beyaz peynir",
+  "spoken": "Beyaz peynir"
+ },
+ {
+  "file": "audio/10650cee.mp3",
+  "voice": "e",
+  "text": "siyah",
+  "spoken": "siyah"
+ },
+ {
+  "file": "audio/4474d832.mp3",
+  "voice": "e",
+  "text": "Siyah çay",
+  "spoken": "Siyah çay"
+ },
+ {
+  "file": "audio/22d13673.mp3",
+  "voice": "e",
+  "text": "mavi",
+  "spoken": "mavi"
+ },
+ {
+  "file": "audio/16406656.mp3",
+  "voice": "e",
+  "text": "Gökyüzü masmavi.",
+  "spoken": "Gökyüzü masmavi."
+ },
+ {
+  "file": "audio/e78c7a07.mp3",
+  "voice": "e",
+  "text": "yeşil",
+  "spoken": "yeşil"
+ },
+ {
+  "file": "audio/6fd9d729.mp3",
+  "voice": "e",
+  "text": "Yeşil çay",
+  "spoken": "Yeşil çay"
+ },
+ {
+  "file": "audio/b68086d1.mp3",
+  "voice": "e",
+  "text": "sarı",
+  "spoken": "sarı"
+ },
+ {
+  "file": "audio/d4aaef10.mp3",
+  "voice": "e",
+  "text": "Sarı bir taksi",
+  "spoken": "Sarı bir taksi"
+ },
+ {
+  "file": "audio/2966060c.mp3",
+  "voice": "e",
+  "text": "turuncu",
+  "spoken": "turuncu"
+ },
+ {
+  "file": "audio/a8277f8a.mp3",
+  "voice": "e",
+  "text": "mor",
+  "spoken": "mor"
+ },
+ {
+  "file": "audio/7dc6e90f.mp3",
+  "voice": "e",
+  "text": "pembe",
+  "spoken": "pembe"
+ },
+ {
+  "file": "audio/0a32240a.mp3",
+  "voice": "e",
+  "text": "Pembe elbise çok güzel.",
+  "spoken": "Pembe elbise çok güzel."
+ },
+ {
+  "file": "audio/6a599f2e.mp3",
+  "voice": "e",
+  "text": "kahverengi",
+  "spoken": "kahverengi"
+ },
+ {
+  "file": "audio/fbd9f958.mp3",
+  "voice": "e",
+  "text": "gri",
+  "spoken": "gri"
+ },
+ {
+  "file": "audio/100507d0.mp3",
+  "voice": "e",
+  "text": "lacivert",
+  "spoken": "lacivert"
+ },
+ {
+  "file": "audio/2075c247.mp3",
+  "voice": "e",
+  "text": "üzgün",
+  "spoken": "üzgün"
+ },
+ {
+  "file": "audio/c87a28ec.mp3",
+  "voice": "e",
+  "text": "kızgın",
+  "spoken": "kızgın"
+ },
+ {
+  "file": "audio/8766d0f5.mp3",
+  "voice": "e",
+  "text": "Bana kızgın mısın?",
+  "spoken": "Bana kızgın mısın?"
+ },
+ {
+  "file": "audio/5789de28.mp3",
+  "voice": "e",
+  "text": "heyecanlı",
+  "spoken": "heyecanlı"
+ },
+ {
+  "file": "audio/4dd74d72.mp3",
+  "voice": "e",
+  "text": "Çok heyecanlıyım!",
+  "spoken": "Çok heyecanlıyım!"
+ },
+ {
+  "file": "audio/9ae1aea0.mp3",
+  "voice": "e",
+  "text": "korkmak",
+  "spoken": "korkmak"
+ },
+ {
+  "file": "audio/63957b94.mp3",
+  "voice": "e",
+  "text": "Köpeklerden korkuyorum.",
+  "spoken": "Köpeklerden korkuyorum."
+ },
+ {
+  "file": "audio/db7f2700.mp3",
+  "voice": "e",
+  "text": "endişeli",
+  "spoken": "endişeli"
+ },
+ {
+  "file": "audio/6f5882ff.mp3",
+  "voice": "e",
+  "text": "Endişelenme!",
+  "spoken": "Endişelenme!"
+ },
+ {
+  "file": "audio/ae1d3d15.mp3",
+  "voice": "e",
+  "text": "şaşırmak",
+  "spoken": "şaşırmak"
+ },
+ {
+  "file": "audio/cef7b453.mp3",
+  "voice": "e",
+  "text": "Çok şaşırdım!",
+  "spoken": "Çok şaşırdım!"
+ },
+ {
+  "file": "audio/ea402d47.mp3",
+  "voice": "e",
+  "text": "sıkılmak",
+  "spoken": "sıkılmak"
+ },
+ {
+  "file": "audio/1f84cf28.mp3",
+  "voice": "e",
+  "text": "Sıkıldım.",
+  "spoken": "Sıkıldım."
+ },
+ {
+  "file": "audio/cea17ebd.mp3",
+  "voice": "e",
+  "text": "özlemek",
+  "spoken": "özlemek"
+ },
+ {
+  "file": "audio/82ad9f1d.mp3",
+  "voice": "e",
+  "text": "Seni çok özledim.",
+  "spoken": "Seni çok özledim."
+ },
+ {
+  "file": "audio/e0d6c922.mp3",
+  "voice": "e",
+  "text": "sevgi",
+  "spoken": "sevgi"
+ },
+ {
+  "file": "audio/08583d56.mp3",
+  "voice": "e",
+  "text": "Sevgiyle",
+  "spoken": "Sevgiyle"
+ },
+ {
+  "file": "audio/44abf628.mp3",
+  "voice": "e",
+  "text": "aşk",
+  "spoken": "aşk"
+ },
+ {
+  "file": "audio/bd0f38f8.mp3",
+  "voice": "e",
+  "text": "canım",
+  "spoken": "canım"
+ },
+ {
+  "file": "audio/02207db2.mp3",
+  "voice": "e",
+  "text": "Nasılsın canım?",
+  "spoken": "Nasılsın canım?"
+ },
+ {
+  "file": "audio/344be926.mp3",
+  "voice": "e",
+  "text": "aşkım",
+  "spoken": "aşkım"
+ },
+ {
+  "file": "audio/32bd259e.mp3",
+  "voice": "e",
+  "text": "Günaydın aşkım!",
+  "spoken": "Günaydın aşkım!"
+ },
+ {
+  "file": "audio/c296a2bb.mp3",
+  "voice": "e",
+  "text": "Çok güzel bir gün!",
+  "spoken": "Çok güzel bir gün!"
+ },
+ {
+  "file": "audio/36f1fbc6.mp3",
+  "voice": "e",
+  "text": "rahat",
+  "spoken": "rahat"
+ },
+ {
+  "file": "audio/044ccc50.mp3",
+  "voice": "e",
+  "text": "Rahat ol!",
+  "spoken": "Rahat ol!"
+ },
+ {
+  "file": "audio/49f39428.mp3",
+  "voice": "e",
+  "text": "merak etmek",
+  "spoken": "merak etmek"
+ },
+ {
+  "file": "audio/e15d9796.mp3",
+  "voice": "e",
+  "text": "Merak etme!",
+  "spoken": "Merak etme!"
+ },
+ {
+  "file": "audio/c85a4ac4.mp3",
+  "voice": "e",
+  "text": "açmak",
+  "spoken": "açmak"
+ },
+ {
+  "file": "audio/9208a775.mp3",
+  "voice": "e",
+  "text": "Işığı açar mısın?",
+  "spoken": "Işığı açar mısın?"
+ },
+ {
+  "file": "audio/f3a40334.mp3",
+  "voice": "e",
+  "text": "kapatmak",
+  "spoken": "kapatmak"
+ },
+ {
+  "file": "audio/89dd2ba9.mp3",
+  "voice": "e",
+  "text": "Televizyonu kapat.",
+  "spoken": "Televizyonu kapat."
+ },
+ {
+  "file": "audio/f389aa5d.mp3",
+  "voice": "e",
+  "text": "başlamak",
+  "spoken": "başlamak"
+ },
+ {
+  "file": "audio/af02e862.mp3",
+  "voice": "e",
+  "text": "Film başladı!",
+  "spoken": "Film başladı!"
+ },
+ {
+  "file": "audio/044e8fa6.mp3",
+  "voice": "e",
+  "text": "bitmek",
+  "spoken": "bitmek"
+ },
+ {
+  "file": "audio/a49d4806.mp3",
+  "voice": "e",
+  "text": "İş bitti.",
+  "spoken": "İş bitti."
+ },
+ {
+  "file": "audio/7b8630d8.mp3",
+  "voice": "e",
+  "text": "yaşamak",
+  "spoken": "yaşamak"
+ },
+ {
+  "file": "audio/854086c2.mp3",
+  "voice": "e",
+  "text": "İstanbul'da yaşıyorum.",
+  "spoken": "İstanbul'da yaşıyorum."
+ },
+ {
+  "file": "audio/09a819e0.mp3",
+  "voice": "e",
+  "text": "yürümek",
+  "spoken": "yürümek"
+ },
+ {
+  "file": "audio/28cba77e.mp3",
+  "voice": "e",
+  "text": "Yürüyerek gidelim.",
+  "spoken": "Yürüyerek gidelim."
+ },
+ {
+  "file": "audio/161f271c.mp3",
+  "voice": "e",
+  "text": "binmek",
+  "spoken": "binmek"
+ },
+ {
+  "file": "audio/f3061ab8.mp3",
+  "voice": "e",
+  "text": "Otobüse bindim.",
+  "spoken": "Otobüse bindim."
+ },
+ {
+  "file": "audio/88671b9a.mp3",
+  "voice": "e",
+  "text": "inmek",
+  "spoken": "inmek"
+ },
+ {
+  "file": "audio/b721e5d0.mp3",
+  "voice": "e",
+  "text": "Bir sonraki durakta iniyorum.",
+  "spoken": "Bir sonraki durakta iniyorum."
+ },
+ {
+  "file": "audio/80a9d015.mp3",
+  "voice": "e",
+  "text": "ödemek",
+  "spoken": "ödemek"
+ },
+ {
+  "file": "audio/85ddb9b3.mp3",
+  "voice": "e",
+  "text": "Kartla ödeyebilir miyim?",
+  "spoken": "Kartla ödeyebilir miyim?"
+ },
+ {
+  "file": "audio/3e612033.mp3",
+  "voice": "e",
+  "text": "pişirmek",
+  "spoken": "pişirmek"
+ },
+ {
+  "file": "audio/0cab7c92.mp3",
+  "voice": "e",
+  "text": "Pilav pişirdim.",
+  "spoken": "Pilav pişirdim."
+ },
+ {
+  "file": "audio/93e02d63.mp3",
+  "voice": "e",
+  "text": "yıkamak",
+  "spoken": "yıkamak"
+ },
+ {
+  "file": "audio/9ccb32c1.mp3",
+  "voice": "e",
+  "text": "Ellerini yıka!",
+  "spoken": "Ellerini yıka!"
+ },
+ {
+  "file": "audio/b359c3c1.mp3",
+  "voice": "e",
+  "text": "temizlemek",
+  "spoken": "temizlemek"
+ },
+ {
+  "file": "audio/2a0a1984.mp3",
+  "voice": "e",
+  "text": "Evi temizledim.",
+  "spoken": "Evi temizledim."
+ },
+ {
+  "file": "audio/c3e1e9fd.mp3",
+  "voice": "e",
+  "text": "aramak",
+  "spoken": "aramak"
+ },
+ {
+  "file": "audio/89211d7c.mp3",
+  "voice": "e",
+  "text": "Seni sonra ararım.",
+  "spoken": "Seni sonra ararım."
+ },
+ {
+  "file": "audio/c56fe256.mp3",
+  "voice": "e",
+  "text": "bulmak",
+  "spoken": "bulmak"
+ },
+ {
+  "file": "audio/544631d4.mp3",
+  "voice": "e",
+  "text": "Anahtarı buldum!",
+  "spoken": "Anahtarı buldum!"
+ },
+ {
+  "file": "audio/25d8fbc1.mp3",
+  "voice": "e",
+  "text": "unutmak",
+  "spoken": "unutmak"
+ },
+ {
+  "file": "audio/51e6fd47.mp3",
+  "voice": "e",
+  "text": "Unuttum!",
+  "spoken": "Unuttum!"
+ },
+ {
+  "file": "audio/ca1c7ca2.mp3",
+  "voice": "e",
+  "text": "hatırlamak",
+  "spoken": "hatırlamak"
+ },
+ {
+  "file": "audio/3f670b70.mp3",
+  "voice": "e",
+  "text": "Beni hatırlıyor musun?",
+  "spoken": "Beni hatırlıyor musun?"
+ },
+ {
+  "file": "audio/190b7bbd.mp3",
+  "voice": "e",
+  "text": "düşünmek",
+  "spoken": "düşünmek"
+ },
+ {
+  "file": "audio/3f891af3.mp3",
+  "voice": "e",
+  "text": "Ne düşünüyorsun?",
+  "spoken": "Ne düşünüyorsun?"
+ },
+ {
+  "file": "audio/652b239e.mp3",
+  "voice": "e",
+  "text": "beğenmek",
+  "spoken": "beğenmek"
+ },
+ {
+  "file": "audio/029b1697.mp3",
+  "voice": "e",
+  "text": "Bunu çok beğendim.",
+  "spoken": "Bunu çok beğendim."
+ },
+ {
+  "file": "audio/f8d5efdd.mp3",
+  "voice": "e",
+  "text": "gülmek",
+  "spoken": "gülmek"
+ },
+ {
+  "file": "audio/38c7f98e.mp3",
+  "voice": "e",
+  "text": "Neden gülüyorsun?",
+  "spoken": "Neden gülüyorsun?"
+ },
+ {
+  "file": "audio/d441ba7a.mp3",
+  "voice": "e",
+  "text": "getirmek",
+  "spoken": "getirmek"
+ },
+ {
+  "file": "audio/65a7753d.mp3",
+  "voice": "e",
+  "text": "Su getirir misin?",
+  "spoken": "Su getirir misin?"
+ },
+ {
+  "file": "audio/d0033044.mp3",
+  "voice": "e",
+  "text": "göndermek",
+  "spoken": "göndermek"
+ },
+ {
+  "file": "audio/cde785c4.mp3",
+  "voice": "e",
+  "text": "Fotoğrafı gönder.",
+  "spoken": "Fotoğrafı gönder."
+ },
+ {
+  "file": "audio/e5bca1d2.mp3",
+  "voice": "e",
+  "text": "kullanmak",
+  "spoken": "kullanmak"
+ },
+ {
+  "file": "audio/c38ffce2.mp3",
+  "voice": "e",
+  "text": "Bunu nasıl kullanırım?",
+  "spoken": "Bunu nasıl kullanırım?"
+ },
+ {
+  "file": "audio/194fc30e.mp3",
+  "voice": "e",
+  "text": "yardım etmek",
+  "spoken": "yardım etmek"
+ },
+ {
+  "file": "audio/fb0b2a38.mp3",
+  "voice": "e",
+  "text": "Yardım eder misiniz?",
+  "spoken": "Yardım eder misiniz?"
+ },
+ {
+  "file": "audio/5dc5200f.mp3",
+  "voice": "e",
+  "text": "sormak",
+  "spoken": "sormak"
+ },
+ {
+  "file": "audio/7e065934.mp3",
+  "voice": "e",
+  "text": "Bir şey sorabilir miyim?",
+  "spoken": "Bir şey sorabilir miyim?"
+ },
+ {
+  "file": "audio/3ec6c8a3.mp3",
+  "voice": "e",
+  "text": "tanışmak",
+  "spoken": "tanışmak"
+ },
+ {
+  "file": "audio/c0f7b2be.mp3",
+  "voice": "e",
+  "text": "otobüs",
+  "spoken": "otobüs"
+ },
+ {
+  "file": "audio/56c3fdb5.mp3",
+  "voice": "e",
+  "text": "Otobüs geliyor.",
+  "spoken": "Otobüs geliyor."
+ },
+ {
+  "file": "audio/d584ef78.mp3",
+  "voice": "e",
+  "text": "taksi",
+  "spoken": "taksi"
+ },
+ {
+  "file": "audio/95c219ee.mp3",
+  "voice": "e",
+  "text": "Taksi çağıralım.",
+  "spoken": "Taksi çağıralım."
+ },
+ {
+  "file": "audio/cbc42bc5.mp3",
+  "voice": "e",
+  "text": "metro",
+  "spoken": "metro"
+ },
+ {
+  "file": "audio/9b171a0a.mp3",
+  "voice": "e",
+  "text": "Metroyla gidelim.",
+  "spoken": "Metroyla gidelim."
+ },
+ {
+  "file": "audio/85b46aa5.mp3",
+  "voice": "e",
+  "text": "tren",
+  "spoken": "tren"
+ },
+ {
+  "file": "audio/3c41b393.mp3",
+  "voice": "e",
+  "text": "Tren kaçta kalkıyor?",
+  "spoken": "Tren kaçta kalkıyor?"
+ },
+ {
+  "file": "audio/298c37b4.mp3",
+  "voice": "e",
+  "text": "vapur",
+  "spoken": "vapur"
+ },
+ {
+  "file": "audio/38961116.mp3",
+  "voice": "e",
+  "text": "Vapurla Kadıköy'e gidelim.",
+  "spoken": "Vapurla Kadıköy'e gidelim."
+ },
+ {
+  "file": "audio/3672fc15.mp3",
+  "voice": "e",
+  "text": "uçak",
+  "spoken": "uçak"
+ },
+ {
+  "file": "audio/97b9f437.mp3",
+  "voice": "e",
+  "text": "Uçak gecikti.",
+  "spoken": "Uçak gecikti."
+ },
+ {
+  "file": "audio/9af71c03.mp3",
+  "voice": "e",
+  "text": "araba",
+  "spoken": "araba"
+ },
+ {
+  "file": "audio/c36c56bf.mp3",
+  "voice": "e",
+  "text": "Arabayla geldik.",
+  "spoken": "Arabayla geldik."
+ },
+ {
+  "file": "audio/264bddcb.mp3",
+  "voice": "e",
+  "text": "bisiklet",
+  "spoken": "bisiklet"
+ },
+ {
+  "file": "audio/83bac696.mp3",
+  "voice": "e",
+  "text": "bilet",
+  "spoken": "bilet"
+ },
+ {
+  "file": "audio/c9a92d2e.mp3",
+  "voice": "e",
+  "text": "İki bilet lütfen.",
+  "spoken": "İki bilet lütfen."
+ },
+ {
+  "file": "audio/7146c9cc.mp3",
+  "voice": "e",
+  "text": "yol",
+  "spoken": "yol"
+ },
+ {
+  "file": "audio/6a27ac2a.mp3",
+  "voice": "e",
+  "text": "Yol çok uzun.",
+  "spoken": "Yol çok uzun."
+ },
+ {
+  "file": "audio/870d95d1.mp3",
+  "voice": "e",
+  "text": "trafik",
+  "spoken": "trafik"
+ },
+ {
+  "file": "audio/32498dd6.mp3",
+  "voice": "e",
+  "text": "Çok trafik var.",
+  "spoken": "Çok trafik var."
+ },
+ {
+  "file": "audio/c2358f02.mp3",
+  "voice": "e",
+  "text": "durmak",
+  "spoken": "durmak"
+ },
+ {
+  "file": "audio/79f76ff5.mp3",
+  "voice": "e",
+  "text": "Burada durun lütfen.",
+  "spoken": "Burada durun lütfen."
+ },
+ {
+  "file": "audio/52bbacf0.mp3",
+  "voice": "e",
+  "text": "dönmek",
+  "spoken": "dönmek"
+ },
+ {
+  "file": "audio/f8c4d25d.mp3",
+  "voice": "e",
+  "text": "Sola dönün.",
+  "spoken": "Sola dönün."
+ },
+ {
+  "file": "audio/c0800891.mp3",
+  "voice": "e",
+  "text": "baş",
+  "spoken": "baş"
+ },
+ {
+  "file": "audio/084a6a94.mp3",
+  "voice": "e",
+  "text": "Başım ağrıyor.",
+  "spoken": "Başım ağrıyor."
+ },
+ {
+  "file": "audio/4ef7f606.mp3",
+  "voice": "e",
+  "text": "göz",
+  "spoken": "göz"
+ },
+ {
+  "file": "audio/0ed874a7.mp3",
+  "voice": "e",
+  "text": "Gözlerin çok güzel.",
+  "spoken": "Gözlerin çok güzel."
+ },
+ {
+  "file": "audio/cb1906d4.mp3",
+  "voice": "e",
+  "text": "kulak",
+  "spoken": "kulak"
+ },
+ {
+  "file": "audio/7f706d3a.mp3",
+  "voice": "e",
+  "text": "burun",
+  "spoken": "burun"
+ },
+ {
+  "file": "audio/b6e772a1.mp3",
+  "voice": "e",
+  "text": "ağız",
+  "spoken": "ağız"
+ },
+ {
+  "file": "audio/caaa829f.mp3",
+  "voice": "e",
+  "text": "diş",
+  "spoken": "diş"
+ },
+ {
+  "file": "audio/f049aaac.mp3",
+  "voice": "e",
+  "text": "Dişim ağrıyor.",
+  "spoken": "Dişim ağrıyor."
+ },
+ {
+  "file": "audio/7acf2b9d.mp3",
+  "voice": "e",
+  "text": "el",
+  "spoken": "el"
+ },
+ {
+  "file": "audio/95cb27bc.mp3",
+  "voice": "e",
+  "text": "Ellerini yıka.",
+  "spoken": "Ellerini yıka."
+ },
+ {
+  "file": "audio/1b86af7e.mp3",
+  "voice": "e",
+  "text": "kol",
+  "spoken": "kol"
+ },
+ {
+  "file": "audio/36999116.mp3",
+  "voice": "e",
+  "text": "ayak",
+  "spoken": "ayak"
+ },
+ {
+  "file": "audio/33b6125d.mp3",
+  "voice": "e",
+  "text": "Ayağım ağrıyor.",
+  "spoken": "Ayağım ağrıyor."
+ },
+ {
+  "file": "audio/893c6ad5.mp3",
+  "voice": "e",
+  "text": "karın",
+  "spoken": "karın"
+ },
+ {
+  "file": "audio/8aa44881.mp3",
+  "voice": "e",
+  "text": "Karnım ağrıyor.",
+  "spoken": "Karnım ağrıyor."
+ },
+ {
+  "file": "audio/ae69cc58.mp3",
+  "voice": "e",
+  "text": "sırt",
+  "spoken": "sırt"
+ },
+ {
+  "file": "audio/96cc8db8.mp3",
+  "voice": "e",
+  "text": "kalp",
+  "spoken": "kalp"
+ },
+ {
+  "file": "audio/0c3b518f.mp3",
+  "voice": "e",
+  "text": "ağrı",
+  "spoken": "ağrı"
+ },
+ {
+  "file": "audio/1a58e72a.mp3",
+  "voice": "e",
+  "text": "ilaç",
+  "spoken": "ilaç"
+ },
+ {
+  "file": "audio/9690ea4e.mp3",
+  "voice": "e",
+  "text": "Bu ilacı günde iki kere alın.",
+  "spoken": "Bu ilacı günde iki kere alın."
+ },
+ {
+  "file": "audio/02ad918f.mp3",
+  "voice": "e",
+  "text": "doktor",
+  "spoken": "doktor"
+ },
+ {
+  "file": "audio/3d994e81.mp3",
+  "voice": "e",
+  "text": "Doktora gitmen lazım.",
+  "spoken": "Doktora gitmen lazım."
+ },
+ {
+  "file": "audio/b4ac8a3c.mp3",
+  "voice": "e",
+  "text": "ateş",
+  "spoken": "ateş"
+ },
+ {
+  "file": "audio/87550243.mp3",
+  "voice": "e",
+  "text": "Ateşim var.",
+  "spoken": "Ateşim var."
+ },
+ {
+  "file": "audio/d2a3a3de.mp3",
+  "voice": "e",
+  "text": "öksürük",
+  "spoken": "öksürük"
+ },
+ {
+  "file": "audio/a02339f8.mp3",
+  "voice": "e",
+  "text": "grip",
+  "spoken": "grip"
+ },
+ {
+  "file": "audio/abc538d3.mp3",
+  "voice": "e",
+  "text": "Grip oldum.",
+  "spoken": "Grip oldum."
+ },
+ {
+  "file": "audio/6952dd2b.mp3",
+  "voice": "e",
+  "text": "Geçmiş olsun",
+  "spoken": "Geçmiş olsun"
+ },
+ {
+  "file": "audio/54f89a46.mp3",
+  "voice": "e",
+  "text": "Hasta mısın? Geçmiş olsun!",
+  "spoken": "Hasta mısın? Geçmiş olsun!"
+ },
+ {
+  "file": "audio/cb1c082e.mp3",
+  "voice": "e",
+  "text": "hava",
+  "spoken": "hava"
+ },
+ {
+  "file": "audio/a75859ce.mp3",
+  "voice": "e",
+  "text": "Hava nasıl?",
+  "spoken": "Hava nasıl?"
+ },
+ {
+  "file": "audio/f8d003bb.mp3",
+  "voice": "e",
+  "text": "güneş",
+  "spoken": "güneş"
+ },
+ {
+  "file": "audio/c7bb5d08.mp3",
+  "voice": "e",
+  "text": "Güneş çok güzel.",
+  "spoken": "Güneş çok güzel."
+ },
+ {
+  "file": "audio/57c81029.mp3",
+  "voice": "e",
+  "text": "yağmur",
+  "spoken": "yağmur"
+ },
+ {
+  "file": "audio/ba026937.mp3",
+  "voice": "e",
+  "text": "Yağmur yağıyor.",
+  "spoken": "Yağmur yağıyor."
+ },
+ {
+  "file": "audio/259ec422.mp3",
+  "voice": "e",
+  "text": "kar",
+  "spoken": "kar"
+ },
+ {
+  "file": "audio/7fa8cdcf.mp3",
+  "voice": "e",
+  "text": "Kar yağıyor!",
+  "spoken": "Kar yağıyor!"
+ },
+ {
+  "file": "audio/338523bf.mp3",
+  "voice": "e",
+  "text": "rüzgâr",
+  "spoken": "rüzgâr"
+ },
+ {
+  "file": "audio/fbba6b78.mp3",
+  "voice": "e",
+  "text": "Çok rüzgârlı.",
+  "spoken": "Çok rüzgârlı."
+ },
+ {
+  "file": "audio/203191da.mp3",
+  "voice": "e",
+  "text": "bulut",
+  "spoken": "bulut"
+ },
+ {
+  "file": "audio/bee04cff.mp3",
+  "voice": "e",
+  "text": "Hava bulutlu.",
+  "spoken": "Hava bulutlu."
+ },
+ {
+  "file": "audio/c30285ea.mp3",
+  "voice": "e",
+  "text": "ilkbahar",
+  "spoken": "ilkbahar"
+ },
+ {
+  "file": "audio/7f4262a8.mp3",
+  "voice": "e",
+  "text": "yaz",
+  "spoken": "yaz"
+ },
+ {
+  "file": "audio/8be89078.mp3",
+  "voice": "e",
+  "text": "Yazın denize gideriz.",
+  "spoken": "Yazın denize gideriz."
+ },
+ {
+  "file": "audio/4d981b20.mp3",
+  "voice": "e",
+  "text": "sonbahar",
+  "spoken": "sonbahar"
+ },
+ {
+  "file": "audio/8a1a0b4a.mp3",
+  "voice": "e",
+  "text": "kış",
+  "spoken": "kış"
+ },
+ {
+  "file": "audio/89a532b9.mp3",
+  "voice": "e",
+  "text": "Kış çok soğuk.",
+  "spoken": "Kış çok soğuk."
+ },
+ {
+  "file": "audio/727df9fb.mp3",
+  "voice": "e",
+  "text": "mevsim",
+  "spoken": "mevsim"
+ },
+ {
+  "file": "audio/9f6d4619.mp3",
+  "voice": "e",
+  "text": "En sevdiğin mevsim hangisi?",
+  "spoken": "En sevdiğin mevsim hangisi?"
+ },
+ {
+  "file": "audio/d99aa44e.mp3",
+  "voice": "e",
+  "text": "derece",
+  "spoken": "derece"
+ },
+ {
+  "file": "audio/c542878b.mp3",
+  "voice": "e",
+  "text": "Bugün otuz derece.",
+  "spoken": "Bugün otuz derece."
+ },
+ {
+  "file": "audio/1b6456c8.mp3",
+  "voice": "e",
+  "text": "şemsiye",
+  "spoken": "şemsiye"
+ },
+ {
+  "file": "audio/02a3de5e.mp3",
+  "voice": "e",
+  "text": "Şemsiyeni al!",
+  "spoken": "Şemsiyeni al!"
+ },
+ {
+  "file": "audio/d233b96f.mp3",
+  "voice": "e",
+  "text": "deprem",
+  "spoken": "deprem"
+ },
+ {
+  "file": "audio/eac7dab6.mp3",
+  "voice": "e",
+  "text": "Deprem oldu mu?",
+  "spoken": "Deprem oldu mu?"
+ },
+ {
+  "file": "audio/eab8169a.mp3",
+  "voice": "e",
+  "text": "para",
+  "spoken": "para"
+ },
+ {
+  "file": "audio/f8d39d16.mp3",
+  "voice": "e",
+  "text": "lira",
+  "spoken": "lira"
+ },
+ {
+  "file": "audio/b3785c52.mp3",
+  "voice": "e",
+  "text": "Elli lira.",
+  "spoken": "Elli lira."
+ },
+ {
+  "file": "audio/0e8d6d89.mp3",
+  "voice": "e",
+  "text": "fiyat",
+  "spoken": "fiyat"
+ },
+ {
+  "file": "audio/4b5f55b8.mp3",
+  "voice": "e",
+  "text": "Fiyatı ne?",
+  "spoken": "Fiyatı ne?"
+ },
+ {
+  "file": "audio/da9ea51c.mp3",
+  "voice": "e",
+  "text": "indirim",
+  "spoken": "indirim"
+ },
+ {
+  "file": "audio/00bf1a33.mp3",
+  "voice": "e",
+  "text": "İndirim var mı?",
+  "spoken": "İndirim var mı?"
+ },
+ {
+  "file": "audio/0d1a9968.mp3",
+  "voice": "e",
+  "text": "kredi kartı",
+  "spoken": "kredi kartı"
+ },
+ {
+  "file": "audio/20b83c62.mp3",
+  "voice": "e",
+  "text": "Kredi kartı geçiyor mu?",
+  "spoken": "Kredi kartı geçiyor mu?"
+ },
+ {
+  "file": "audio/44184e3f.mp3",
+  "voice": "e",
+  "text": "nakit",
+  "spoken": "nakit"
+ },
+ {
+  "file": "audio/81552850.mp3",
+  "voice": "e",
+  "text": "Nakit ödeyeceğim.",
+  "spoken": "Nakit ödeyeceğim."
+ },
+ {
+  "file": "audio/bcf7f3d8.mp3",
+  "voice": "e",
+  "text": "poşet",
+  "spoken": "poşet"
+ },
+ {
+  "file": "audio/1f1f45b9.mp3",
+  "voice": "e",
+  "text": "Poşet ister misiniz?",
+  "spoken": "Poşet ister misiniz?"
+ },
+ {
+  "file": "audio/51342a44.mp3",
+  "voice": "e",
+  "text": "beden",
+  "spoken": "beden"
+ },
+ {
+  "file": "audio/64e34966.mp3",
+  "voice": "e",
+  "text": "Daha büyük beden var mı?",
+  "spoken": "Daha büyük beden var mı?"
+ },
+ {
+  "file": "audio/c3aa1658.mp3",
+  "voice": "e",
+  "text": "elbise",
+  "spoken": "elbise"
+ },
+ {
+  "file": "audio/a9e54c9f.mp3",
+  "voice": "e",
+  "text": "Bu elbiseyi deneyebilir miyim?",
+  "spoken": "Bu elbiseyi deneyebilir miyim?"
+ },
+ {
+  "file": "audio/fcf25af7.mp3",
+  "voice": "e",
+  "text": "ayakkabı",
+  "spoken": "ayakkabı"
+ },
+ {
+  "file": "audio/a6203207.mp3",
+  "voice": "e",
+  "text": "Yeni ayakkabı aldım.",
+  "spoken": "Yeni ayakkabı aldım."
+ },
+ {
+  "file": "audio/2cbd25aa.mp3",
+  "voice": "e",
+  "text": "çanta",
+  "spoken": "çanta"
+ },
+ {
+  "file": "audio/2434fc69.mp3",
+  "voice": "e",
+  "text": "Çantam nerede?",
+  "spoken": "Çantam nerede?"
+ },
+ {
+  "file": "audio/1f0ce99d.mp3",
+  "voice": "e",
+  "text": "kilo",
+  "spoken": "kilo"
+ },
+ {
+  "file": "audio/07116418.mp3",
+  "voice": "e",
+  "text": "İki kilo domates lütfen.",
+  "spoken": "İki kilo domates lütfen."
+ },
+ {
+  "file": "audio/424580c6.mp3",
+  "voice": "e",
+  "text": "tane",
+  "spoken": "tane"
+ },
+ {
+  "file": "audio/fe96ac81.mp3",
+  "voice": "e",
+  "text": "Üç tane simit lütfen.",
+  "spoken": "Üç tane simit lütfen."
+ },
+ {
+  "file": "audio/b125e347.mp3",
+  "voice": "e",
+  "text": "Ne kadar?",
+  "spoken": "Ne kadar?"
+ },
+ {
+  "file": "audio/153fbfad.mp3",
+  "voice": "e",
+  "text": "Kaç lira?",
+  "spoken": "Kaç lira?"
+ },
+ {
+  "file": "audio/92fd6782.mp3",
+  "voice": "e",
+  "text": "Kilosu kaç lira?",
+  "spoken": "Kilosu kaç lira?"
+ },
+ {
+  "file": "audio/b1fc72a6.mp3",
+  "voice": "e",
+  "text": "hediye",
+  "spoken": "hediye"
+ },
+ {
+  "file": "audio/82c0e76f.mp3",
+  "voice": "e",
+  "text": "Bu senin için bir hediye.",
+  "spoken": "Bu senin için bir hediye."
+ },
+ {
+  "file": "audio/b253c4bb.mp3",
+  "voice": "e",
+  "text": "iş",
+  "spoken": "iş"
+ },
+ {
+  "file": "audio/b5b948b5.mp3",
+  "voice": "e",
+  "text": "İş nasıl gidiyor?",
+  "spoken": "İş nasıl gidiyor?"
+ },
+ {
+  "file": "audio/640090f9.mp3",
+  "voice": "e",
+  "text": "öğrenci",
+  "spoken": "öğrenci"
+ },
+ {
+  "file": "audio/453a7c8d.mp3",
+  "voice": "e",
+  "text": "Ben öğrenciyim.",
+  "spoken": "Ben öğrenciyim."
+ },
+ {
+  "file": "audio/05941d05.mp3",
+  "voice": "e",
+  "text": "öğretmen",
+  "spoken": "öğretmen"
+ },
+ {
+  "file": "audio/c4f8c839.mp3",
+  "voice": "e",
+  "text": "Öğretmenim çok sabırlı.",
+  "spoken": "Öğretmenim çok sabırlı."
+ },
+ {
+  "file": "audio/7062733c.mp3",
+  "voice": "e",
+  "text": "ders",
+  "spoken": "ders"
+ },
+ {
+  "file": "audio/9bf98569.mp3",
+  "voice": "e",
+  "text": "Bugün Türkçe dersim var.",
+  "spoken": "Bugün Türkçe dersim var."
+ },
+ {
+  "file": "audio/010e9601.mp3",
+  "voice": "e",
+  "text": "kitap",
+  "spoken": "kitap"
+ },
+ {
+  "file": "audio/053bb7d9.mp3",
+  "voice": "e",
+  "text": "Bu kitap çok güzel.",
+  "spoken": "Bu kitap çok güzel."
+ },
+ {
+  "file": "audio/1d36f59e.mp3",
+  "voice": "e",
+  "text": "kalem",
+  "spoken": "kalem"
+ },
+ {
+  "file": "audio/9597749d.mp3",
+  "voice": "e",
+  "text": "Kalemin var mı?",
+  "spoken": "Kalemin var mı?"
+ },
+ {
+  "file": "audio/eb5acd39.mp3",
+  "voice": "e",
+  "text": "kelime",
+  "spoken": "kelime"
+ },
+ {
+  "file": "audio/c937939e.mp3",
+  "voice": "e",
+  "text": "Bugün on kelime öğrendim.",
+  "spoken": "Bugün on kelime öğrendim."
+ },
+ {
+  "file": "audio/dcd24bf5.mp3",
+  "voice": "e",
+  "text": "dil",
+  "spoken": "dil"
+ },
+ {
+  "file": "audio/76c26bc4.mp3",
+  "voice": "e",
+  "text": "Kaç dil biliyorsun?",
+  "spoken": "Kaç dil biliyorsun?"
+ },
+ {
+  "file": "audio/1830f7c3.mp3",
+  "voice": "e",
+  "text": "soru",
+  "spoken": "soru"
+ },
+ {
+  "file": "audio/4b1fccf0.mp3",
+  "voice": "e",
+  "text": "Bir sorum var.",
+  "spoken": "Bir sorum var."
+ },
+ {
+  "file": "audio/63bb1dfb.mp3",
+  "voice": "e",
+  "text": "cevap",
+  "spoken": "cevap"
+ },
+ {
+  "file": "audio/bf7cbe97.mp3",
+  "voice": "e",
+  "text": "Cevap doğru!",
+  "spoken": "Cevap doğru!"
+ },
+ {
+  "file": "audio/a551d3b7.mp3",
+  "voice": "e",
+  "text": "sınav",
+  "spoken": "sınav"
+ },
+ {
+  "file": "audio/2d2cd111.mp3",
+  "voice": "e",
+  "text": "Yarın sınavım var.",
+  "spoken": "Yarın sınavım var."
+ },
+ {
+  "file": "audio/83aa3a31.mp3",
+  "voice": "e",
+  "text": "toplantı",
+  "spoken": "toplantı"
+ },
+ {
+  "file": "audio/35dce0e8.mp3",
+  "voice": "e",
+  "text": "Saat ikide toplantım var.",
+  "spoken": "Saat ikide toplantım var."
+ },
+ {
+  "file": "audio/5ccd61a5.mp3",
+  "voice": "e",
+  "text": "bilgisayar",
+  "spoken": "bilgisayar"
+ },
+ {
+  "file": "audio/9bd7ac98.mp3",
+  "voice": "e",
+  "text": "tatil",
+  "spoken": "tatil"
+ },
+ {
+  "file": "audio/fd4b57f6.mp3",
+  "voice": "e",
+  "text": "Tatile gidiyoruz!",
+  "spoken": "Tatile gidiyoruz!"
+ },
+ {
+  "file": "audio/1cd2fcb2.mp3",
+  "voice": "e",
+  "text": "Kolay gelsin",
+  "spoken": "Kolay gelsin"
+ },
+ {
+  "file": "audio/883cdaaf.mp3",
+  "voice": "e",
+  "text": "Merhaba, kolay gelsin!",
+  "spoken": "Merhaba, kolay gelsin!"
+ },
+ {
+  "file": "audio/20fecece.mp3",
+  "voice": "e",
+  "text": "dağ",
+  "spoken": "dağ"
+ },
+ {
+  "file": "audio/d3b251f2.mp3",
+  "voice": "e",
+  "text": "evler",
+  "spoken": "evler"
+ },
+ {
+  "file": "audio/094d7bd2.mp3",
+  "voice": "e",
+  "text": "arabalar",
+  "spoken": "arabalar"
+ },
+ {
+  "file": "audio/903c2e6d.mp3",
+  "voice": "e",
+  "text": "evim",
+  "spoken": "evim"
+ },
+ {
+  "file": "audio/a7a58681.mp3",
+  "voice": "e",
+  "text": "okulum",
+  "spoken": "okulum"
+ },
+ {
+  "file": "audio/e376b81c.mp3",
+  "voice": "e",
+  "text": "gözüm",
+  "spoken": "gözüm"
+ },
+ {
+  "file": "audio/6bdd19b4.mp3",
+  "voice": "e",
+  "text": "Yorgunum.",
+  "spoken": "Yorgunum."
+ },
+ {
+  "file": "audio/47686561.mp3",
+  "voice": "e",
+  "text": "Biz evliyiz.",
+  "spoken": "Biz evliyiz."
+ },
+ {
+  "file": "audio/434242ca.mp3",
+  "voice": "e",
+  "text": "Hastayım.",
+  "spoken": "Hastayım."
+ },
+ {
+  "file": "audio/e1cff333.mp3",
+  "voice": "e",
+  "text": "Bu benim kocam.",
+  "spoken": "Bu benim kocam."
+ },
+ {
+  "file": "audio/0b4302db.mp3",
+  "voice": "e",
+  "text": "Şu elbise çok güzel.",
+  "spoken": "Şu elbise çok güzel."
+ },
+ {
+  "file": "audio/2086637c.mp3",
+  "voice": "e",
+  "text": "Çocuklar bahçede.",
+  "spoken": "Çocuklar bahçede."
+ },
+ {
+  "file": "audio/bde04d7c.mp3",
+  "voice": "e",
+  "text": "Üç kedim var.",
+  "spoken": "Üç kedim var."
+ },
+ {
+  "file": "audio/81e04d3a.mp3",
+  "voice": "e",
+  "text": "Arkadaşlarım geliyor.",
+  "spoken": "Arkadaşlarım geliyor."
+ },
+ {
+  "file": "audio/c1819eae.mp3",
+  "voice": "e",
+  "text": "Çay mı, kahve mi?",
+  "spoken": "Çay mı, kahve mi?"
+ },
+ {
+  "file": "audio/e5205db2.mp3",
+  "voice": "e",
+  "text": "Aç mısın?",
+  "spoken": "Aç mısın?"
+ },
+ {
+  "file": "audio/d47137ab.mp3",
+  "voice": "e",
+  "text": "İyi misin?",
+  "spoken": "İyi misin?"
+ },
+ {
+  "file": "audio/a47b0d7a.mp3",
+  "voice": "e",
+  "text": "Japon musunuz?",
+  "spoken": "Japon musunuz?"
+ },
+ {
+  "file": "audio/9156341c.mp3",
+  "voice": "e",
+  "text": "Ben Türk değilim, Japonum.",
+  "spoken": "Ben Türk değilim, Japonum."
+ },
+ {
+  "file": "audio/79963a5f.mp3",
+  "voice": "e",
+  "text": "Önemli değil.",
+  "spoken": "Önemli değil."
+ },
+ {
+  "file": "audio/e24d1fc0.mp3",
+  "voice": "e",
+  "text": "Acı değil.",
+  "spoken": "Acı değil."
+ },
+ {
+  "file": "audio/6c0409a1.mp3",
+  "voice": "e",
+  "text": "Güzel, değil mi?",
+  "spoken": "Güzel, değil mi?"
+ },
+ {
+  "file": "audio/285e1c8a.mp3",
+  "voice": "e",
+  "text": "Benim adım Hana.",
+  "spoken": "Benim adım Hana."
+ },
+ {
+  "file": "audio/22c5bd4a.mp3",
+  "voice": "e",
+  "text": "Adın ne?",
+  "spoken": "Adın ne?"
+ },
+ {
+  "file": "audio/d7d190f1.mp3",
+  "voice": "e",
+  "text": "Annem çok tatlı.",
+  "spoken": "Annem çok tatlı."
+ },
+ {
+  "file": "audio/9059275d.mp3",
+  "voice": "e",
+  "text": "Kocamın ailesi",
+  "spoken": "Kocamın ailesi"
+ },
+ {
+  "file": "audio/3698f953.mp3",
+  "voice": "e",
+  "text": "Çocuğum üç yaşında.",
+  "spoken": "Çocuğum üç yaşında."
+ },
+ {
+  "file": "audio/fdf5ba69.mp3",
+  "voice": "e",
+  "text": "Bugün zamanım yok.",
+  "spoken": "Bugün zamanım yok."
+ },
+ {
+  "file": "audio/40f4e43d.mp3",
+  "voice": "e",
+  "text": "Sorun yok!",
+  "spoken": "Sorun yok!"
+ },
+ {
+  "file": "audio/f7fe6943.mp3",
+  "voice": "e",
+  "text": "Ekmek var mı?",
+  "spoken": "Ekmek var mı?"
+ },
+ {
+  "file": "audio/440de23c.mp3",
+  "voice": "e",
+  "text": "Neredesin?",
+  "spoken": "Neredesin?"
+ },
+ {
+  "file": "audio/ec16e589.mp3",
+  "voice": "e",
+  "text": "Evdeyim.",
+  "spoken": "Evdeyim."
+ },
+ {
+  "file": "audio/e7797999.mp3",
+  "voice": "e",
+  "text": "İstanbul'da yaşıyoruz.",
+  "spoken": "İstanbul'da yaşıyoruz."
+ },
+ {
+  "file": "audio/405c4a28.mp3",
+  "voice": "e",
+  "text": "Saat beşte buluşalım.",
+  "spoken": "Saat beşte buluşalım."
+ },
+ {
+  "file": "audio/4e8aef12.mp3",
+  "voice": "e",
+  "text": "Markete gidelim.",
+  "spoken": "Markete gidelim."
+ },
+ {
+  "file": "audio/ed706b35.mp3",
+  "voice": "e",
+  "text": "Bana bak!",
+  "spoken": "Bana bak!"
+ },
+ {
+  "file": "audio/24e2b715.mp3",
+  "voice": "e",
+  "text": "Sana bir hediye aldım.",
+  "spoken": "Sana bir hediye aldım."
+ },
+ {
+  "file": "audio/ddc4005f.mp3",
+  "voice": "e",
+  "text": "Japonya'ya ne zaman gidiyorsun?",
+  "spoken": "Japonya'ya ne zaman gidiyorsun?"
+ },
+ {
+  "file": "audio/56786f29.mp3",
+  "voice": "e",
+  "text": "Japonya'dan geliyorum.",
+  "spoken": "Japonya'dan geliyorum."
+ },
+ {
+  "file": "audio/e419ed76.mp3",
+  "voice": "e",
+  "text": "İşten yeni geldim.",
+  "spoken": "İşten yeni geldim."
+ },
+ {
+  "file": "audio/f2599fdd.mp3",
+  "voice": "e",
+  "text": "Sabahtan beri bekliyorum.",
+  "spoken": "Sabahtan beri bekliyorum."
+ },
+ {
+  "file": "audio/42bebf63.mp3",
+  "voice": "e",
+  "text": "Türkçe Japoncadan kolay mı?",
+  "spoken": "Türkçe Japoncadan kolay mı?"
+ },
+ {
+  "file": "audio/57ec0dff.mp3",
+  "voice": "e",
+  "text": "Eve geliyorum.",
+  "spoken": "Eve geliyorum."
+ },
+ {
+  "file": "audio/49bb06f2.mp3",
+  "voice": "e",
+  "text": "Kapıyı kapat.",
+  "spoken": "Kapıyı kapat."
+ },
+ {
+  "file": "audio/c7550e18.mp3",
+  "voice": "e",
+  "text": "Bu filmi izledin mi?",
+  "spoken": "Bu filmi izledin mi?"
+ },
+ {
+  "file": "audio/cc4d2110.mp3",
+  "voice": "e",
+  "text": "Beni ara.",
+  "spoken": "Beni ara."
+ },
+ {
+  "file": "audio/6c7c1731.mp3",
+  "voice": "e",
+  "text": "Çok güzel bir gün geçirdim.",
+  "spoken": "Çok güzel bir gün geçirdim."
+ },
+ {
+  "file": "audio/f4bb128d.mp3",
+  "voice": "e",
+  "text": "Anladım!",
+  "spoken": "Anladım!"
+ },
+ {
+  "file": "audio/93a8efaf.mp3",
+  "voice": "e",
+  "text": "Yemek yedin mi?",
+  "spoken": "Yemek yedin mi?"
+ },
+ {
+  "file": "audio/e2f2895b.mp3",
+  "voice": "e",
+  "text": "Yarın ne yapacaksın?",
+  "spoken": "Yarın ne yapacaksın?"
+ },
+ {
+  "file": "audio/5e1f8db4.mp3",
+  "voice": "e",
+  "text": "Seni arayacağım.",
+  "spoken": "Seni arayacağım."
+ },
+ {
+  "file": "audio/0280f248.mp3",
+  "voice": "e",
+  "text": "Hava güzel olacak.",
+  "spoken": "Hava güzel olacak."
+ },
+ {
+  "file": "audio/d71a990a.mp3",
+  "voice": "e",
+  "text": "Yaz tatilinde Japonya'ya gideceğiz.",
+  "spoken": "Yaz tatilinde Japonya'ya gideceğiz."
+ },
+ {
+  "file": "audio/964ee30e.mp3",
+  "voice": "e",
+  "text": "Ne yapmak istersin?",
+  "spoken": "Ne yapmak istersin?"
+ },
+ {
+  "file": "audio/b4c18869.mp3",
+  "voice": "e",
+  "text": "Bugün gelemem, özür dilerim.",
+  "spoken": "Bugün gelemem, özür dilerim."
+ },
+ {
+  "file": "audio/3fea1a99.mp3",
+  "voice": "e",
+  "text": "Fotoğraf çekebilir miyim?",
+  "spoken": "Fotoğraf çekebilir miyim?"
+ },
+ {
+  "file": "audio/9cbbbf37.mp3",
+  "voice": "e",
+  "text": "Buyurun, oturun.",
+  "spoken": "Buyurun, oturun."
+ },
+ {
+  "file": "audio/f8fdc25a.mp3",
+  "voice": "e",
+  "text": "Hadi gidelim!",
+  "spoken": "Hadi gidelim!"
+ },
+ {
+  "file": "audio/ec5da8e7.mp3",
+  "voice": "e",
+  "text": "Merak etme.",
+  "spoken": "Merak etme."
+ },
+ {
+  "file": "audio/6181ece1.mp3",
+  "voice": "e",
+  "text": "Bakar mısınız?",
+  "spoken": "Bakar mısınız?"
+ },
+ {
+  "file": "audio/50bf606d.mp3",
+  "voice": "e",
+  "text": "Saat yedi buçuk.",
+  "spoken": "Saat yedi buçuk."
+ },
+ {
+  "file": "audio/ae0cdd68.mp3",
+  "voice": "e",
+  "text": "Yüz elli lira.",
+  "spoken": "Yüz elli lira."
+ },
+ {
+  "file": "audio/6e44fae5.mp3",
+  "voice": "e",
+  "text": "Kocamla İstanbul'a geldim.",
+  "spoken": "Kocamla İstanbul'a geldim."
+ },
+ {
+  "file": "audio/cbf25cc7.mp3",
+  "voice": "e",
+  "text": "Afiyet olsun",
+  "spoken": "Afiyet olsun"
+ },
+ {
+  "file": "audio/857472b0.mp3",
+  "voice": "e",
+  "text": "Ellerinize sağlık",
+  "spoken": "Ellerinize sağlık"
+ },
+ {
+  "file": "audio/d0110e8b.mp3",
+  "voice": "e",
+  "text": "Hayırlı olsun",
+  "spoken": "Hayırlı olsun"
+ },
+ {
+  "file": "audio/e84649db.mp3",
+  "voice": "e",
+  "text": "Güle güle kullan",
+  "spoken": "Güle güle kullan"
+ },
+ {
+  "file": "audio/f62a5f05.mp3",
+  "voice": "e",
+  "text": "Tebrikler!",
+  "spoken": "Tebrikler!"
+ },
+ {
+  "file": "audio/33da4a10.mp3",
+  "voice": "e",
+  "text": "İyi ki doğdun!",
+  "spoken": "İyi ki doğdun!"
+ },
+ {
+  "file": "audio/b0e44960.mp3",
+  "voice": "e",
+  "text": "Çok yaşa!",
+  "spoken": "Çok yaşa!"
+ },
+ {
+  "file": "audio/101c6e0d.mp3",
+  "voice": "e",
+  "text": "Kusura bakma",
+  "spoken": "Kusura bakma"
+ },
+ {
+  "file": "audio/c25a93ab.mp3",
+  "voice": "e",
+  "text": "Önemli değil",
+  "spoken": "Önemli değil"
+ },
+ {
+  "file": "audio/b801962b.mp3",
+  "voice": "e",
+  "text": "Maşallah!",
+  "spoken": "Maşallah!"
+ },
+ {
+  "file": "audio/c35d970c.mp3",
+  "voice": "e",
+  "text": "İnşallah",
+  "spoken": "İnşallah"
+ },
+ {
+  "file": "audio/7080ebf9.mp3",
+  "voice": "e",
+  "text": "Allah'a emanet ol",
+  "spoken": "Allah'a emanet ol"
+ },
+ {
+  "file": "audio/ef87b024.mp3",
+  "voice": "e",
+  "text": "Buyurun",
+  "spoken": "Buyurun"
+ },
+ {
+  "file": "audio/ca0a65a9.mp3",
+  "voice": "e",
+  "text": "Sağlığınıza!",
+  "spoken": "Sağlığınıza!"
+ },
+ {
+  "file": "audio/ff9157df.mp3",
+  "voice": "e",
+  "text": "Başınız sağ olsun",
+  "spoken": "Başınız sağ olsun"
+ },
+ {
+  "file": "audio/14ff6b24.mp3",
+  "voice": "e",
+  "text": "Nazar değmesin",
+  "spoken": "Nazar değmesin"
+ },
+ {
+  "file": "audio/56fd6216.mp3",
+  "voice": "e",
+  "text": "Bayramınız kutlu olsun",
+  "spoken": "Bayramınız kutlu olsun"
+ },
+ {
+  "file": "audio/1e05d49e.mp3",
+  "voice": "e",
+  "text": "Yavaş yavaş",
+  "spoken": "Yavaş yavaş"
+ },
+ {
+  "file": "audio/71528b2b.mp3",
+  "voice": "e",
+  "text": "Hadi!",
+  "spoken": "Hadi!"
+ },
+ {
+  "file": "audio/20789c10.mp3",
+  "voice": "e",
+  "text": "Aman!",
+  "spoken": "Aman!"
+ },
+ {
+  "file": "audio/d8d146d6.mp3",
+  "voice": "e",
+  "text": "Boş ver",
+  "spoken": "Boş ver"
+ },
+ {
+  "file": "audio/f96723ef.mp3",
+  "voice": "e",
+  "text": "Anlamadım, tekrar eder misiniz?",
+  "spoken": "Anlamadım, tekrar eder misiniz?"
+ },
+ {
+  "file": "audio/4284b3ed.mp3",
+  "voice": "e",
+  "text": "Türkçe öğreniyorum",
+  "spoken": "Türkçe öğreniyorum"
+ },
+ {
+  "file": "audio/064956f7.mp3",
+  "voice": "e",
+  "text": "Buna Türkçe ne denir?",
+  "spoken": "Buna Türkçe ne denir?"
+ },
+ {
+  "file": "audio/36d93a34.mp3",
+  "voice": "e",
+  "text": "… ne demek?",
+  "spoken": "… ne demek?"
+ },
+ {
+  "file": "audio/f8295854.mp3",
+  "voice": "e",
+  "text": "Merhaba! Türkçe öğreniyorum.",
+  "spoken": "Merhaba! Türkçe öğreniyorum."
+ },
+ {
+  "file": "audio/84963332.mp3",
+  "voice": "a",
+  "text": "Merhaba! Benim adım Mehmet. Senin adın ne?",
+  "spoken": "Merhaba! Benim adım Mehmet. Senin adın ne?"
+ },
+ {
+  "file": "audio/fa1b4397.mp3",
+  "voice": "e",
+  "text": "Merhaba! Benim adım Hana.",
+  "spoken": "Merhaba! Benim adım Hana."
+ },
+ {
+  "file": "audio/be60becb.mp3",
+  "voice": "a",
+  "text": "Memnun oldum Hana. Nerelisin?",
+  "spoken": "Memnun oldum Hana. Nerelisin?"
+ },
+ {
+  "file": "audio/ead4e55c.mp3",
+  "voice": "e",
+  "text": "Ben Japonum. Tokyo'dan geliyorum.",
+  "spoken": "Ben Japonum. Tokyo'dan geliyorum."
+ },
+ {
+  "file": "audio/d58d6d0d.mp3",
+  "voice": "a",
+  "text": "Vay! Türkçe biliyor musun?",
+  "spoken": "Vay! Türkçe biliyor musun?"
+ },
+ {
+  "file": "audio/44eb9fe3.mp3",
+  "voice": "e",
+  "text": "Biraz biliyorum. Her gün öğreniyorum.",
+  "spoken": "Biraz biliyorum. Her gün öğreniyorum."
+ },
+ {
+  "file": "audio/971da84a.mp3",
+  "voice": "a",
+  "text": "Çok güzel konuşuyorsun!",
+  "spoken": "Çok güzel konuşuyorsun!"
+ },
+ {
+  "file": "audio/bb54a4b4.mp3",
+  "voice": "e",
+  "text": "Teşekkür ederim, çok naziksin.",
+  "spoken": "Teşekkür ederim, çok naziksin."
+ },
+ {
+  "file": "audio/62d7b113.mp3",
+  "voice": "a",
+  "text": "Hoş geldiniz! Ne alırsınız?",
+  "spoken": "Hoş geldiniz! Ne alırsınız?"
+ },
+ {
+  "file": "audio/164f8315.mp3",
+  "voice": "e",
+  "text": "Bir çay lütfen.",
+  "spoken": "Bir çay lütfen."
+ },
+ {
+  "file": "audio/237d8b89.mp3",
+  "voice": "a",
+  "text": "Şekerli mi, şekersiz mi?",
+  "spoken": "Şekerli mi, şekersiz mi?"
+ },
+ {
+  "file": "audio/1f2113cd.mp3",
+  "voice": "e",
+  "text": "Şekersiz olsun. Bir de simit alabilir miyim?",
+  "spoken": "Şekersiz olsun. Bir de simit alabilir miyim?"
+ },
+ {
+  "file": "audio/9b606e64.mp3",
+  "voice": "a",
+  "text": "Tabii. Başka bir şey?",
+  "spoken": "Tabii. Başka bir şey?"
+ },
+ {
+  "file": "audio/d5811a40.mp3",
+  "voice": "e",
+  "text": "Hayır, bu kadar. Ne kadar?",
+  "spoken": "Hayır, bu kadar. Ne kadar?"
+ },
+ {
+  "file": "audio/b081bc05.mp3",
+  "voice": "a",
+  "text": "Kırk lira.",
+  "spoken": "Kırk lira."
+ },
+ {
+  "file": "audio/1c9a1fbe.mp3",
+  "voice": "e",
+  "text": "Buyurun.",
+  "spoken": "Buyurun."
+ },
+ {
+  "file": "audio/cb495504.mp3",
+  "voice": "a",
+  "text": "Teşekkürler, afiyet olsun!",
+  "spoken": "Teşekkürler, afiyet olsun!"
+ },
+ {
+  "file": "audio/550c81d3.mp3",
+  "voice": "a",
+  "text": "Buyurun, kaç kişisiniz?",
+  "spoken": "Buyurun, kaç kişisiniz?"
+ },
+ {
+  "file": "audio/399723a1.mp3",
+  "voice": "e",
+  "text": "İki kişiyiz.",
+  "spoken": "İki kişiyiz."
+ },
+ {
+  "file": "audio/942b6f1a.mp3",
+  "voice": "a",
+  "text": "Şöyle buyurun. İşte menü.",
+  "spoken": "Şöyle buyurun. İşte menü."
+ },
+ {
+  "file": "audio/c68d5530.mp3",
+  "voice": "e",
+  "text": "Ne tavsiye edersiniz?",
+  "spoken": "Ne tavsiye edersiniz?"
+ },
+ {
+  "file": "audio/19de6777.mp3",
+  "voice": "a",
+  "text": "Bugün kuzu tandır çok güzel.",
+  "spoken": "Bugün kuzu tandır çok güzel."
+ },
+ {
+  "file": "audio/952d4aac.mp3",
+  "voice": "e",
+  "text": "Acı mı?",
+  "spoken": "Acı mı?"
+ },
+ {
+  "file": "audio/33c3a98c.mp3",
+  "voice": "a",
+  "text": "Hayır, hiç acı değil.",
+  "spoken": "Hayır, hiç acı değil."
+ },
+ {
+  "file": "audio/57e3f7b1.mp3",
+  "voice": "e",
+  "text": "Tamam, iki tane lütfen. Bir de su.",
+  "spoken": "Tamam, iki tane lütfen. Bir de su."
+ },
+ {
+  "file": "audio/dfd49397.mp3",
+  "voice": "e",
+  "text": "Hesabı alabilir miyiz?",
+  "spoken": "Hesabı alabilir miyiz?"
+ },
+ {
+  "file": "audio/d5e08ade.mp3",
+  "voice": "a",
+  "text": "Tabii, hemen getiriyorum.",
+  "spoken": "Tabii, hemen getiriyorum."
+ },
+ {
+  "file": "audio/a614c130.mp3",
+  "voice": "a",
+  "text": "Buyurun abla, ne istersiniz?",
+  "spoken": "Buyurun abla, ne istersiniz?"
+ },
+ {
+  "file": "audio/055fa2b3.mp3",
+  "voice": "e",
+  "text": "Domatesler çok güzel. Kilosu kaç lira?",
+  "spoken": "Domatesler çok güzel. Kilosu kaç lira?"
+ },
+ {
+  "file": "audio/0841e883.mp3",
+  "voice": "a",
+  "text": "Kilosu otuz lira.",
+  "spoken": "Kilosu otuz lira."
+ },
+ {
+  "file": "audio/8413496b.mp3",
+  "voice": "e",
+  "text": "Biraz pahalı. Yirmi beş olur mu?",
+  "spoken": "Biraz pahalı. Yirmi beş olur mu?"
+ },
+ {
+  "file": "audio/dd4e86c0.mp3",
+  "voice": "a",
+  "text": "Peki, senin için yirmi beş olsun.",
+  "spoken": "Peki, senin için yirmi beş olsun."
+ },
+ {
+  "file": "audio/4fa0839e.mp3",
+  "voice": "e",
+  "text": "İki kilo lütfen. Bir de bir kilo elma.",
+  "spoken": "İki kilo lütfen. Bir de bir kilo elma."
+ },
+ {
+  "file": "audio/06800bd2.mp3",
+  "voice": "a",
+  "text": "Başka?",
+  "spoken": "Başka?"
+ },
+ {
+  "file": "audio/0593e4f6.mp3",
+  "voice": "e",
+  "text": "Bu kadar, teşekkürler.",
+  "spoken": "Bu kadar, teşekkürler."
+ },
+ {
+  "file": "audio/38661eee.mp3",
+  "voice": "a",
+  "text": "Afiyet olsun!",
+  "spoken": "Afiyet olsun!"
+ },
+ {
+  "file": "audio/67fff46d.mp3",
+  "voice": "e",
+  "text": "Merhaba, Taksim'e gitmek istiyorum.",
+  "spoken": "Merhaba, Taksim'e gitmek istiyorum."
+ },
+ {
+  "file": "audio/2744e776.mp3",
+  "voice": "a",
+  "text": "Tamam, buyurun.",
+  "spoken": "Tamam, buyurun."
+ },
+ {
+  "file": "audio/cd744052.mp3",
+  "voice": "e",
+  "text": "Ne kadar sürer?",
+  "spoken": "Ne kadar sürer?"
+ },
+ {
+  "file": "audio/d76d447f.mp3",
+  "voice": "a",
+  "text": "Trafik var, yaklaşık yarım saat.",
+  "spoken": "Trafik var, yaklaşık yarım saat."
+ },
+ {
+  "file": "audio/ea9476bb.mp3",
+  "voice": "e",
+  "text": "Taksimetreyi açar mısınız?",
+  "spoken": "Taksimetreyi açar mısınız?"
+ },
+ {
+  "file": "audio/52e89c2a.mp3",
+  "voice": "a",
+  "text": "Tabii, açtım.",
+  "spoken": "Tabii, açtım."
+ },
+ {
+  "file": "audio/b70be793.mp3",
+  "voice": "e",
+  "text": "Burada durabilir misiniz?",
+  "spoken": "Burada durabilir misiniz?"
+ },
+ {
+  "file": "audio/994f0855.mp3",
+  "voice": "a",
+  "text": "Tamam. Yüz seksen lira.",
+  "spoken": "Tamam. Yüz seksen lira."
+ },
+ {
+  "file": "audio/12e96dc8.mp3",
+  "voice": "a",
+  "text": "Evet, olur.",
+  "spoken": "Evet, olur."
+ },
+ {
+  "file": "audio/18af7a3b.mp3",
+  "voice": "e",
+  "text": "Affedersiniz, en yakın eczane nerede?",
+  "spoken": "Affedersiniz, en yakın eczane nerede?"
+ },
+ {
+  "file": "audio/016007e5.mp3",
+  "voice": "a",
+  "text": "Düz gidin, sonra sağa dönün.",
+  "spoken": "Düz gidin, sonra sağa dönün."
+ },
+ {
+  "file": "audio/176cea40.mp3",
+  "voice": "a",
+  "text": "Hayır, çok yakın. Yürüyerek beş dakika.",
+  "spoken": "Hayır, çok yakın. Yürüyerek beş dakika."
+ },
+ {
+  "file": "audio/7d00d389.mp3",
+  "voice": "e",
+  "text": "Bankanın yanında mı?",
+  "spoken": "Bankanın yanında mı?"
+ },
+ {
+  "file": "audio/7bb2989d.mp3",
+  "voice": "a",
+  "text": "Hayır, bankanın karşısında.",
+  "spoken": "Hayır, bankanın karşısında."
+ },
+ {
+  "file": "audio/d02eea3c.mp3",
+  "voice": "e",
+  "text": "Çok teşekkür ederim!",
+  "spoken": "Çok teşekkür ederim!"
+ },
+ {
+  "file": "audio/19945796.mp3",
+  "voice": "a",
+  "text": "Bir şey değil.",
+  "spoken": "Bir şey değil."
+ },
+ {
+  "file": "audio/d168cbee.mp3",
+  "voice": "f",
+  "text": "Hoş geldin kızım!",
+  "spoken": "Hoş geldin kızım!"
+ },
+ {
+  "file": "audio/1da02bdd.mp3",
+  "voice": "e",
+  "text": "Hoş bulduk anne. Nasılsınız?",
+  "spoken": "Hoş bulduk anne. Nasılsınız?"
+ },
+ {
+  "file": "audio/7844f42d.mp3",
+  "voice": "f",
+  "text": "İyiyim kızım, sen nasılsın? Yol nasıldı?",
+  "spoken": "İyiyim kızım, sen nasılsın? Yol nasıldı?"
+ },
+ {
+  "file": "audio/31b6ff9f.mp3",
+  "voice": "e",
+  "text": "Çok iyiydi, teşekkürler. Bu sizin için.",
+  "spoken": "Çok iyiydi, teşekkürler. Bu sizin için."
+ },
+ {
+  "file": "audio/6a0931f1.mp3",
+  "voice": "f",
+  "text": "Ay, ne gerek vardı! Çok teşekkürler.",
+  "spoken": "Ay, ne gerek vardı! Çok teşekkürler."
+ },
+ {
+  "file": "audio/007a7356.mp3",
+  "voice": "f",
+  "text": "Gel, otur. Çay içer misin?",
+  "spoken": "Gel, otur. Çay içer misin?"
+ },
+ {
+  "file": "audio/64f7940d.mp3",
+  "voice": "e",
+  "text": "Evet, çok severim.",
+  "spoken": "Evet, çok severim."
+ },
+ {
+  "file": "audio/bb1aff25.mp3",
+  "voice": "e",
+  "text": "Ellerinize sağlık anne, çok lezzetliydi.",
+  "spoken": "Ellerinize sağlık anne, çok lezzetliydi."
+ },
+ {
+  "file": "audio/cf9ea92c.mp3",
+  "voice": "f",
+  "text": "Afiyet olsun kızım.",
+  "spoken": "Afiyet olsun kızım."
+ },
+ {
+  "file": "audio/6d411d2b.mp3",
+  "voice": "a",
+  "text": "Alo?",
+  "spoken": "Alo?"
+ },
+ {
+  "file": "audio/b3c5f0df.mp3",
+  "voice": "e",
+  "text": "Alo, merhaba. Ben Hana. Mehmet orada mı?",
+  "spoken": "Alo, merhaba. Ben Hana. Mehmet orada mı?"
+ },
+ {
+  "file": "audio/3e39e139.mp3",
+  "voice": "a",
+  "text": "Şu an burada değil. Mesaj bırakmak ister misin?",
+  "spoken": "Şu an burada değil. Mesaj bırakmak ister misin?"
+ },
+ {
+  "file": "audio/6076883c.mp3",
+  "voice": "e",
+  "text": "Akşam beni arasın lütfen.",
+  "spoken": "Akşam beni arasın lütfen."
+ },
+ {
+  "file": "audio/0a1ee396.mp3",
+  "voice": "a",
+  "text": "Tamam, söylerim.",
+  "spoken": "Tamam, söylerim."
+ },
+ {
+  "file": "audio/66f85451.mp3",
+  "voice": "e",
+  "text": "Teşekkürler, görüşürüz.",
+  "spoken": "Teşekkürler, görüşürüz."
+ },
+ {
+  "file": "audio/c6b7d52f.mp3",
+  "voice": "a",
+  "text": "Görüşürüz, hoşça kal.",
+  "spoken": "Görüşürüz, hoşça kal."
+ },
+ {
+  "file": "audio/7a5a0c29.mp3",
+  "voice": "a",
+  "text": "Geçmiş olsun. Şikâyetiniz ne?",
+  "spoken": "Geçmiş olsun. Şikâyetiniz ne?"
+ },
+ {
+  "file": "audio/d04e705a.mp3",
+  "voice": "e",
+  "text": "Başım ağrıyor ve ateşim var.",
+  "spoken": "Başım ağrıyor ve ateşim var."
+ },
+ {
+  "file": "audio/682f16b4.mp3",
+  "voice": "a",
+  "text": "Ne zamandan beri?",
+  "spoken": "Ne zamandan beri?"
+ },
+ {
+  "file": "audio/bc707d60.mp3",
+  "voice": "e",
+  "text": "Dünden beri.",
+  "spoken": "Dünden beri."
+ },
+ {
+  "file": "audio/a90a8bac.mp3",
+  "voice": "a",
+  "text": "Öksürük var mı?",
+  "spoken": "Öksürük var mı?"
+ },
+ {
+  "file": "audio/6620c293.mp3",
+  "voice": "e",
+  "text": "Biraz var.",
+  "spoken": "Biraz var."
+ },
+ {
+  "file": "audio/07915f18.mp3",
+  "voice": "a",
+  "text": "Bu ilacı günde üç kere alın.",
+  "spoken": "Bu ilacı günde üç kere alın."
+ },
+ {
+  "file": "audio/b30d343f.mp3",
+  "voice": "e",
+  "text": "Yemekten önce mi, sonra mı?",
+  "spoken": "Yemekten önce mi, sonra mı?"
+ },
+ {
+  "file": "audio/3f47d1c2.mp3",
+  "voice": "a",
+  "text": "Yemekten sonra. Bol su için ve dinlenin.",
+  "spoken": "Yemekten sonra. Bol su için ve dinlenin."
+ },
+ {
+  "file": "audio/f68d0412.mp3",
+  "voice": "a",
+  "text": "Günaydın aşkım!",
+  "spoken": "Günaydın aşkım!"
+ },
+ {
+  "file": "audio/1755ac7e.mp3",
+  "voice": "e",
+  "text": "Günaydın canım. İyi uyudun mu?",
+  "spoken": "Günaydın canım. İyi uyudun mu?"
+ },
+ {
+  "file": "audio/25a6c7c0.mp3",
+  "voice": "a",
+  "text": "Evet, çok iyi. Kahvaltı hazır!",
+  "spoken": "Evet, çok iyi. Kahvaltı hazır!"
+ },
+ {
+  "file": "audio/122f0a2d.mp3",
+  "voice": "e",
+  "text": "Ellerine sağlık! Çok güzel görünüyor.",
+  "spoken": "Ellerine sağlık! Çok güzel görünüyor."
+ },
+ {
+  "file": "audio/21e9c4e2.mp3",
+  "voice": "a",
+  "text": "Bugün ne yapalım?",
+  "spoken": "Bugün ne yapalım?"
+ },
+ {
+  "file": "audio/88635e59.mp3",
+  "voice": "e",
+  "text": "Sahilde yürüyüş yapalım mı?",
+  "spoken": "Sahilde yürüyüş yapalım mı?"
+ },
+ {
+  "file": "audio/59ed8e1e.mp3",
+  "voice": "a",
+  "text": "Harika fikir!",
+  "spoken": "Harika fikir!"
+ },
+ {
+  "file": "audio/f1db517c.mp3",
+  "voice": "a",
+  "text": "Ben de seni seviyorum.",
+  "spoken": "Ben de seni seviyorum."
+ },
+ {
+  "file": "audio/fc3f9d8c.mp3",
+  "voice": "a",
+  "text": "Bugün hava çok güzel, değil mi?",
+  "spoken": "Bugün hava çok güzel, değil mi?"
+ },
+ {
+  "file": "audio/7bb84884.mp3",
+  "voice": "e",
+  "text": "Evet, ama yarın yağmur yağacakmış.",
+  "spoken": "Evet, ama yarın yağmur yağacakmış."
+ },
+ {
+  "file": "audio/4f8b9822.mp3",
+  "voice": "a",
+  "text": "Gerçekten mi? Şemsiye almam lazım.",
+  "spoken": "Gerçekten mi? Şemsiye almam lazım."
+ },
+ {
+  "file": "audio/d30da35f.mp3",
+  "voice": "a",
+  "text": "Japonya'da şimdi hava nasıl?",
+  "spoken": "Japonya'da şimdi hava nasıl?"
+ },
+ {
+  "file": "audio/d8b9ebc3.mp3",
+  "voice": "e",
+  "text": "Orada kış başlıyor. Hokkaido'da kar yağıyor.",
+  "spoken": "Orada kış başlıyor. Hokkaido'da kar yağıyor."
+ },
+ {
+  "file": "audio/c3efd044.mp3",
+  "voice": "a",
+  "text": "İstanbul'da da bazen kar yağar.",
+  "spoken": "İstanbul'da da bazen kar yağar."
+ },
+ {
+  "file": "audio/99533d6f.mp3",
+  "voice": "e",
+  "text": "Kar çok güzel ama ben yazı seviyorum.",
+  "spoken": "Kar çok güzel ama ben yazı seviyorum."
+ },
+ {
+  "file": "audio/e78611d0.mp3",
+  "voice": "f",
+  "text": "Günaydın kızım! Uyandın mı?",
+  "spoken": "Günaydın kızım! Uyandın mı?"
+ },
+ {
+  "file": "audio/f7a0570e.mp3",
+  "voice": "e",
+  "text": "Günaydın anne, günaydın baba.",
+  "spoken": "Günaydın anne, günaydın baba."
+ },
+ {
+  "file": "audio/c61e86b2.mp3",
+  "voice": "a",
+  "text": "Günaydın kızım. İyi uyudun mu?",
+  "spoken": "Günaydın kızım. İyi uyudun mu?"
+ },
+ {
+  "file": "audio/cf0c42e0.mp3",
+  "voice": "e",
+  "text": "Evet, çok iyi uyudum, teşekkürler.",
+  "spoken": "Evet, çok iyi uyudum, teşekkürler."
+ },
+ {
+  "file": "audio/a45b69c9.mp3",
+  "voice": "f",
+  "text": "Gel otur, kahvaltı hazır. Çay koyayım mı?",
+  "spoken": "Gel otur, kahvaltı hazır. Çay koyayım mı?"
+ },
+ {
+  "file": "audio/7c7d304e.mp3",
+  "voice": "e",
+  "text": "Evet lütfen, açık olsun.",
+  "spoken": "Evet lütfen, açık olsun."
+ },
+ {
+  "file": "audio/a3411f99.mp3",
+  "voice": "f",
+  "text": "Yumurta ister misin? Menemen yaptım.",
+  "spoken": "Yumurta ister misin? Menemen yaptım."
+ },
+ {
+  "file": "audio/1c80b5cc.mp3",
+  "voice": "e",
+  "text": "Menemen mi? Çok severim!",
+  "spoken": "Menemen mi? Çok severim!"
+ },
+ {
+  "file": "audio/545fe9b9.mp3",
+  "voice": "a",
+  "text": "Peynir de ye, köyden geldi.",
+  "spoken": "Peynir de ye, köyden geldi."
+ },
+ {
+  "file": "audio/e00cb72a.mp3",
+  "voice": "e",
+  "text": "Hmm, çok lezzetli! Bu peynir harika.",
+  "spoken": "Hmm, çok lezzetli! Bu peynir harika."
+ },
+ {
+  "file": "audio/ea573ecc.mp3",
+  "voice": "f",
+  "text": "Afiyet olsun. Bir çay daha?",
+  "spoken": "Afiyet olsun. Bir çay daha?"
+ },
+ {
+  "file": "audio/d4b54be7.mp3",
+  "voice": "e",
+  "text": "Yok, teşekkürler, doydum.",
+  "spoken": "Yok, teşekkürler, doydum."
+ },
+ {
+  "file": "audio/5fe8a9fc.mp3",
+  "voice": "e",
+  "text": "Ellerinize sağlık anne.",
+  "spoken": "Ellerinize sağlık anne."
+ },
+ {
+  "file": "audio/58404e88.mp3",
+  "voice": "e",
+  "text": "Anne, yardım edebilir miyim?",
+  "spoken": "Anne, yardım edebilir miyim?"
+ },
+ {
+  "file": "audio/2018222d.mp3",
+  "voice": "f",
+  "text": "Tabii kızım, gel. Bugün sarma yapıyoruz.",
+  "spoken": "Tabii kızım, gel. Bugün sarma yapıyoruz."
+ },
+ {
+  "file": "audio/3c04864d.mp3",
+  "voice": "e",
+  "text": "Sarma nedir?",
+  "spoken": "Sarma nedir?"
+ },
+ {
+  "file": "audio/8a38e96a.mp3",
+  "voice": "f",
+  "text": "Asma yaprağına pirinç sarıyoruz. Bak, böyle.",
+  "spoken": "Asma yaprağına pirinç sarıyoruz. Bak, böyle."
+ },
+ {
+  "file": "audio/d9ddddce.mp3",
+  "voice": "e",
+  "text": "Böyle mi?",
+  "spoken": "Böyle mi?"
+ },
+ {
+  "file": "audio/348129a1.mp3",
+  "voice": "f",
+  "text": "Biraz daha sıkı sar. Evet, aferin!",
+  "spoken": "Biraz daha sıkı sar. Evet, aferin!"
+ },
+ {
+  "file": "audio/299f7f8e.mp3",
+  "voice": "e",
+  "text": "Çok zor ama eğlenceli.",
+  "spoken": "Çok zor ama eğlenceli."
+ },
+ {
+  "file": "audio/5f230e33.mp3",
+  "voice": "f",
+  "text": "Japonya'da da böyle yemekler var mı?",
+  "spoken": "Japonya'da da böyle yemekler var mı?"
+ },
+ {
+  "file": "audio/d50442cb.mp3",
+  "voice": "e",
+  "text": "Evet! Onigiri var. Pirinci deniz yosununa sarıyoruz.",
+  "spoken": "Evet! Onigiri var. Pirinci deniz yosununa sarıyoruz."
+ },
+ {
+  "file": "audio/bb67b919.mp3",
+  "voice": "f",
+  "text": "Ne güzel! Bir gün bana da öğret.",
+  "spoken": "Ne güzel! Bir gün bana da öğret."
+ },
+ {
+  "file": "audio/f9f22793.mp3",
+  "voice": "e",
+  "text": "Tabii, birlikte yapalım!",
+  "spoken": "Tabii, birlikte yapalım!"
+ },
+ {
+  "file": "audio/86800106.mp3",
+  "voice": "f",
+  "text": "Şimdi tencereye koyalım. Bir saat pişecek.",
+  "spoken": "Şimdi tencereye koyalım. Bir saat pişecek."
+ },
+ {
+  "file": "audio/67b36b44.mp3",
+  "voice": "e",
+  "text": "Tuzu ne kadar koyuyorsunuz?",
+  "spoken": "Tuzu ne kadar koyuyorsunuz?"
+ },
+ {
+  "file": "audio/89fa96ac.mp3",
+  "voice": "f",
+  "text": "Göz kararı kızım, göz kararı!",
+  "spoken": "Göz kararı kızım, göz kararı!"
+ },
+ {
+  "file": "audio/661b2e2b.mp3",
+  "voice": "f",
+  "text": "Yemek hazır! Hadi sofraya!",
+  "spoken": "Yemek hazır! Hadi sofraya!"
+ },
+ {
+  "file": "audio/4725382d.mp3",
+  "voice": "a",
+  "text": "Geliyoruz anne!",
+  "spoken": "Geliyoruz anne!"
+ },
+ {
+  "file": "audio/b0ddb20a.mp3",
+  "voice": "a",
+  "text": "Hadi, afiyet olsun herkese.",
+  "spoken": "Hadi, afiyet olsun herkese."
+ },
+ {
+  "file": "audio/f4883e12.mp3",
+  "voice": "e",
+  "text": "Afiyet olsun!",
+  "spoken": "Afiyet olsun!"
+ },
+ {
+  "file": "audio/eadf2d4d.mp3",
+  "voice": "f",
+  "text": "Hana, pilavdan al. Bol ye!",
+  "spoken": "Hana, pilavdan al. Bol ye!"
+ },
+ {
+  "file": "audio/89f4d82c.mp3",
+  "voice": "e",
+  "text": "Teşekkürler anne. Bu çorba çok güzel kokuyor.",
+  "spoken": "Teşekkürler anne. Bu çorba çok güzel kokuyor."
+ },
+ {
+  "file": "audio/717edcdf.mp3",
+  "voice": "f",
+  "text": "Mercimek çorbası. Limon sık, daha güzel olur.",
+  "spoken": "Mercimek çorbası. Limon sık, daha güzel olur."
+ },
+ {
+  "file": "audio/f5469b03.mp3",
+  "voice": "a",
+  "text": "Annemin çorbası dünyanın en iyi çorbası!",
+  "spoken": "Annemin çorbası dünyanın en iyi çorbası!"
+ },
+ {
+  "file": "audio/88ed1e21.mp3",
+  "voice": "a",
+  "text": "Hana, Japonya'da akşam ne yersiniz?",
+  "spoken": "Hana, Japonya'da akşam ne yersiniz?"
+ },
+ {
+  "file": "audio/5154e466.mp3",
+  "voice": "e",
+  "text": "Genelde pilav, çorba ve balık yeriz. Miso çorbası çok meşhur.",
+  "spoken": "Genelde pilav, çorba ve balık yeriz. Miso çorbası çok meşhur."
+ },
+ {
+  "file": "audio/1055d8e5.mp3",
+  "voice": "a",
+  "text": "Balık mı? Biz de balığı çok severiz!",
+  "spoken": "Balık mı? Biz de balığı çok severiz!"
+ },
+ {
+  "file": "audio/2e9260d9.mp3",
+  "voice": "f",
+  "text": "Biraz daha ister misin kızım?",
+  "spoken": "Biraz daha ister misin kızım?"
+ },
+ {
+  "file": "audio/08ddc822.mp3",
+  "voice": "e",
+  "text": "Çok teşekkürler ama doydum. Ellerinize sağlık!",
+  "spoken": "Çok teşekkürler ama doydum. Ellerinize sağlık!"
+ },
+ {
+  "file": "audio/f61bc04c.mp3",
+  "voice": "f",
+  "text": "Ama hiçbir şey yemedin ki!",
+  "spoken": "Ama hiçbir şey yemedin ki!"
+ },
+ {
+  "file": "audio/1420157f.mp3",
+  "voice": "e",
+  "text": "Gerçekten doydum anne, her şey çok lezzetliydi.",
+  "spoken": "Gerçekten doydum anne, her şey çok lezzetliydi."
+ },
+ {
+  "file": "audio/370b1101.mp3",
+  "voice": "a",
+  "text": "Anne, Japonlar az yer! (gülüyor)",
+  "spoken": "Anne, Japonlar az yer!"
+ },
+ {
+  "file": "audio/df4b412e.mp3",
+  "voice": "f",
+  "text": "Merhaba! Gelin hanım bu mu?",
+  "spoken": "Merhaba! Gelin hanım bu mu?"
+ },
+ {
+  "file": "audio/02cd2e9c.mp3",
+  "voice": "f",
+  "text": "Evet, bizim Japon gelinimiz Hana.",
+  "spoken": "Evet, bizim Japon gelinimiz Hana."
+ },
+ {
+  "file": "audio/a9d079c6.mp3",
+  "voice": "e",
+  "text": "Merhaba teyze, memnun oldum.",
+  "spoken": "Merhaba teyze, memnun oldum."
+ },
+ {
+  "file": "audio/f4fce8fa.mp3",
+  "voice": "f",
+  "text": "Maşallah, ne kadar tatlı! Türkçe biliyor musun?",
+  "spoken": "Maşallah, ne kadar tatlı! Türkçe biliyor musun?"
+ },
+ {
+  "file": "audio/622111e2.mp3",
+  "voice": "e",
+  "text": "Biraz biliyorum, öğreniyorum.",
+  "spoken": "Biraz biliyorum, öğreniyorum."
+ },
+ {
+  "file": "audio/cdaede5a.mp3",
+  "voice": "f",
+  "text": "Aferin sana! Türkiye'yi sevdin mi?",
+  "spoken": "Aferin sana! Türkiye'yi sevdin mi?"
+ },
+ {
+  "file": "audio/ab23bc98.mp3",
+  "voice": "e",
+  "text": "Çok sevdim. İnsanlar çok sıcak.",
+  "spoken": "Çok sevdim. İnsanlar çok sıcak."
+ },
+ {
+  "file": "audio/4a5aa7e9.mp3",
+  "voice": "f",
+  "text": "En çok hangi yemeği sevdin?",
+  "spoken": "En çok hangi yemeği sevdin?"
+ },
+ {
+  "file": "audio/766fd2e3.mp3",
+  "voice": "e",
+  "text": "Annemin yaptığı mantıyı çok seviyorum.",
+  "spoken": "Annemin yaptığı mantıyı çok seviyorum."
+ },
+ {
+  "file": "audio/ba8d2644.mp3",
+  "voice": "f",
+  "text": "Duydun mu Ayşe? Benim mantımı seviyor!",
+  "spoken": "Duydun mu Ayşe? Benim mantımı seviyor!"
+ },
+ {
+  "file": "audio/e17cc507.mp3",
+  "voice": "f",
+  "text": "Peki, çocuk ne zaman?",
+  "spoken": "Peki, çocuk ne zaman?"
+ },
+ {
+  "file": "audio/ccba62ff.mp3",
+  "voice": "e",
+  "text": "Ah... İnşallah, bir gün!",
+  "spoken": "Ah... İnşallah, bir gün!"
+ },
+ {
+  "file": "audio/6dd161f0.mp3",
+  "voice": "f",
+  "text": "Ayşe, rahat bırak kızı! (gülüyor) Çay tazeleyeyim mi?",
+  "spoken": "Ayşe, rahat bırak kızı! Çay tazeleyeyim mi?"
+ },
+ {
+  "file": "audio/b339b652.mp3",
+  "voice": "f",
+  "text": "Olur, tazele. Hana, sen de otur yanıma.",
+  "spoken": "Olur, tazele. Hana, sen de otur yanıma."
+ },
+ {
+  "file": "audio/44272d5e.mp3",
+  "voice": "e",
+  "text": "İyi bayramlar baba!",
+  "spoken": "İyi bayramlar baba!"
+ },
+ {
+  "file": "audio/f7bd0579.mp3",
+  "voice": "a",
+  "text": "Sana da iyi bayramlar kızım. Gel bakalım.",
+  "spoken": "Sana da iyi bayramlar kızım. Gel bakalım."
+ },
+ {
+  "file": "audio/2020a391.mp3",
+  "voice": "a",
+  "text": "Hana, babamın elini öp, sonra alnına koy.",
+  "spoken": "Hana, babamın elini öp, sonra alnına koy."
+ },
+ {
+  "file": "audio/8a8d81e2.mp3",
+  "voice": "a",
+  "text": "Aferin kızım! Al bakalım, bu senin bayram harçlığın.",
+  "spoken": "Aferin kızım! Al bakalım, bu senin bayram harçlığın."
+ },
+ {
+  "file": "audio/65789288.mp3",
+  "voice": "e",
+  "text": "Ay, gerek yoktu! Çok teşekkür ederim.",
+  "spoken": "Ay, gerek yoktu! Çok teşekkür ederim."
+ },
+ {
+  "file": "audio/e73d6583.mp3",
+  "voice": "a",
+  "text": "Yenge! İyi bayramlar!",
+  "spoken": "Yenge! İyi bayramlar!"
+ },
+ {
+  "file": "audio/a1abfd58.mp3",
+  "voice": "e",
+  "text": "İyi bayramlar Can! Ne kadar büyümüşsün!",
+  "spoken": "İyi bayramlar Can! Ne kadar büyümüşsün!"
+ },
+ {
+  "file": "audio/fda6d082.mp3",
+  "voice": "a",
+  "text": "Şeker var mı?",
+  "spoken": "Şeker var mı?"
+ },
+ {
+  "file": "audio/67bffb7f.mp3",
+  "voice": "e",
+  "text": "Tabii, buyur. Bu Japon şekeri.",
+  "spoken": "Tabii, buyur. Bu Japon şekeri."
+ },
+ {
+  "file": "audio/16b30c71.mp3",
+  "voice": "a",
+  "text": "Vay, çok güzel! Teşekkürler yenge!",
+  "spoken": "Vay, çok güzel! Teşekkürler yenge!"
+ },
+ {
+  "file": "audio/d356dc34.mp3",
+  "voice": "a",
+  "text": "Hadi, baklava yiyelim. Bayram baklavasız olmaz!",
+  "spoken": "Hadi, baklava yiyelim. Bayram baklavasız olmaz!"
+ },
+ {
+  "file": "audio/d7bd78fc.mp3",
+  "voice": "f",
+  "text": "Alo kızım! Beni görebiliyor musun?",
+  "spoken": "Alo kızım! Beni görebiliyor musun?"
+ },
+ {
+  "file": "audio/abf517b9.mp3",
+  "voice": "e",
+  "text": "Evet anne, görüyorum! Ama sesiniz biraz kesik.",
+  "spoken": "Evet anne, görüyorum! Ama sesiniz biraz kesik."
+ },
+ {
+  "file": "audio/867ad692.mp3",
+  "voice": "f",
+  "text": "Şimdi? Şimdi duyuyor musun?",
+  "spoken": "Şimdi? Şimdi duyuyor musun?"
+ },
+ {
+  "file": "audio/043f4323.mp3",
+  "voice": "e",
+  "text": "Evet, şimdi iyi. Nasılsınız?",
+  "spoken": "Evet, şimdi iyi. Nasılsınız?"
+ },
+ {
+  "file": "audio/3ff2153c.mp3",
+  "voice": "f",
+  "text": "İyiyiz. Babanın biraz sırtı ağrıyor ama iyi.",
+  "spoken": "İyiyiz. Babanın biraz sırtı ağrıyor ama iyi."
+ },
+ {
+  "file": "audio/b916eab0.mp3",
+  "voice": "e",
+  "text": "Geçmiş olsun! Doktora gitti mi?",
+  "spoken": "Geçmiş olsun! Doktora gitti mi?"
+ },
+ {
+  "file": "audio/61a891b8.mp3",
+  "voice": "f",
+  "text": "Gitti, önemli bir şey yok. Mehmet nerede?",
+  "spoken": "Gitti, önemli bir şey yok. Mehmet nerede?"
+ },
+ {
+  "file": "audio/42c7bbeb.mp3",
+  "voice": "e",
+  "text": "O işte, akşam gelecek.",
+  "spoken": "O işte, akşam gelecek."
+ },
+ {
+  "file": "audio/7cb3c225.mp3",
+  "voice": "f",
+  "text": "İyi yemek yiyor musunuz? Zayıflamış gibisin.",
+  "spoken": "İyi yemek yiyor musunuz? Zayıflamış gibisin."
+ },
+ {
+  "file": "audio/471c369f.mp3",
+  "voice": "e",
+  "text": "Yiyoruz anne, merak etmeyin. Dün karnıyarık yaptım!",
+  "spoken": "Yiyoruz anne, merak etmeyin. Dün karnıyarık yaptım!"
+ },
+ {
+  "file": "audio/6a00d247.mp3",
+  "voice": "f",
+  "text": "Sen mi yaptın? Aferin kızım! Tarifi kimden aldın?",
+  "spoken": "Sen mi yaptın? Aferin kızım! Tarifi kimden aldın?"
+ },
+ {
+  "file": "audio/a44ed34b.mp3",
+  "voice": "e",
+  "text": "Sizden tabii!",
+  "spoken": "Sizden tabii!"
+ },
+ {
+  "file": "audio/608cb0d2.mp3",
+  "voice": "f",
+  "text": "(gülüyor) Hafta sonu gelin, sizi özledik.",
+  "spoken": "Hafta sonu gelin, sizi özledik."
+ },
+ {
+  "file": "audio/05d8e451.mp3",
+  "voice": "e",
+  "text": "Tamam, inşallah geliriz. Babama selam söyleyin.",
+  "spoken": "Tamam, inşallah geliriz. Babama selam söyleyin."
+ },
+ {
+  "file": "audio/2f6c47e0.mp3",
+  "voice": "f",
+  "text": "Söylerim. Öptüm kızım, kendine iyi bak!",
+  "spoken": "Söylerim. Öptüm kızım, kendine iyi bak!"
+ },
+ {
+  "file": "audio/77cb4d4d.mp3",
+  "voice": "e",
+  "text": "Ben de öptüm anne, görüşürüz!",
+  "spoken": "Ben de öptüm anne, görüşürüz!"
+ },
+ {
+  "file": "audio/89c29197.mp3",
+  "voice": "f",
+  "text": "Hana, hazır mısın? Çarşıya gidiyoruz!",
+  "spoken": "Hana, hazır mısın? Çarşıya gidiyoruz!"
+ },
+ {
+  "file": "audio/f9ea0e37.mp3",
+  "voice": "e",
+  "text": "Hazırım abla!",
+  "spoken": "Hazırım abla!"
+ },
+ {
+  "file": "audio/fcbbeb49.mp3",
+  "voice": "f",
+  "text": "Önce bir kafede oturalım mı?",
+  "spoken": "Önce bir kafede oturalım mı?"
+ },
+ {
+  "file": "audio/ea6629ec.mp3",
+  "voice": "e",
+  "text": "Olur, Türk kahvesi içmek istiyorum.",
+  "spoken": "Olur, Türk kahvesi içmek istiyorum."
+ },
+ {
+  "file": "audio/89dc41a0.mp3",
+  "voice": "f",
+  "text": "Kahveden sonra sana fal bakarım!",
+  "spoken": "Kahveden sonra sana fal bakarım!"
+ },
+ {
+  "file": "audio/bfbda25b.mp3",
+  "voice": "e",
+  "text": "Fal mı? Nasıl yani?",
+  "spoken": "Fal mı? Nasıl yani?"
+ },
+ {
+  "file": "audio/1ae3b9d2.mp3",
+  "voice": "f",
+  "text": "Fincanı ters çeviriyoruz, sonra telveye bakıyoruz.",
+  "spoken": "Fincanı ters çeviriyoruz, sonra telveye bakıyoruz."
+ },
+ {
+  "file": "audio/14dd4442.mp3",
+  "voice": "f",
+  "text": "Bak! Burada bir kuş var. Yakında güzel bir haber alacaksın!",
+  "spoken": "Bak! Burada bir kuş var. Yakında güzel bir haber alacaksın!"
+ },
+ {
+  "file": "audio/86679c94.mp3",
+  "voice": "e",
+  "text": "Gerçekten mi? (gülüyor)",
+  "spoken": "Gerçekten mi?"
+ },
+ {
+  "file": "audio/ffee567e.mp3",
+  "voice": "f",
+  "text": "Hadi şimdi alışverişe! Şu elbise sana çok yakışır.",
+  "spoken": "Hadi şimdi alışverişe! Şu elbise sana çok yakışır."
+ },
+ {
+  "file": "audio/039cbd7d.mp3",
+  "voice": "e",
+  "text": "Sence mi? Biraz pahalı ama...",
+  "spoken": "Sence mi? Biraz pahalı ama..."
+ },
+ {
+  "file": "audio/5cb10b17.mp3",
+  "voice": "f",
+  "text": "Pazarlık yaparız, merak etme!",
+  "spoken": "Pazarlık yaparız, merak etme!"
+ },
+ {
+  "file": "audio/97af530f.mp3",
+  "voice": "e",
+  "text": "Abla, sen harikasın!",
+  "spoken": "Abla, sen harikasın!"
+ },
+ {
+  "file": "audio/ee0921a3.mp3",
+  "voice": "a",
+  "text": "Hana, iyi misin? Yüzün solgun.",
+  "spoken": "Hana, iyi misin? Yüzün solgun."
+ },
+ {
+  "file": "audio/01aedd4d.mp3",
+  "voice": "e",
+  "text": "Pek iyi değilim. Başım dönüyor.",
+  "spoken": "Pek iyi değilim. Başım dönüyor."
+ },
+ {
+  "file": "audio/f8369366.mp3",
+  "voice": "a",
+  "text": "Ateşin var mı? Bir bakayım... Ay, sıcaksın!",
+  "spoken": "Ateşin var mı? Bir bakayım... Ay, sıcaksın!"
+ },
+ {
+  "file": "audio/4c877181.mp3",
+  "voice": "e",
+  "text": "Galiba grip oldum.",
+  "spoken": "Galiba grip oldum."
+ },
+ {
+  "file": "audio/0c4871ae.mp3",
+  "voice": "a",
+  "text": "Hemen yat. Sana ıhlamur yapayım.",
+  "spoken": "Hemen yat. Sana ıhlamur yapayım."
+ },
+ {
+  "file": "audio/231b8340.mp3",
+  "voice": "e",
+  "text": "Ihlamur ne?",
+  "spoken": "Ihlamur ne?"
+ },
+ {
+  "file": "audio/96d0ef0d.mp3",
+  "voice": "a",
+  "text": "Bitki çayı. Annem hep yapar, iyi gelir.",
+  "spoken": "Bitki çayı. Annem hep yapar, iyi gelir."
+ },
+ {
+  "file": "audio/49e4a580.mp3",
+  "voice": "f",
+  "text": "Hana hasta mı? Geçmiş olsun kızım! Çorba getiriyorum!",
+  "spoken": "Hana hasta mı? Geçmiş olsun kızım! Çorba getiriyorum!"
+ },
+ {
+  "file": "audio/c84f5280.mp3",
+  "voice": "e",
+  "text": "Teşekkürler anne, zahmet etmeyin.",
+  "spoken": "Teşekkürler anne, zahmet etmeyin."
+ },
+ {
+  "file": "audio/244ca683.mp3",
+  "voice": "f",
+  "text": "Ne zahmeti! Tavuk suyu çorba en iyi ilaçtır.",
+  "spoken": "Ne zahmeti! Tavuk suyu çorba en iyi ilaçtır."
+ },
+ {
+  "file": "audio/aa516ef9.mp3",
+  "voice": "a",
+  "text": "Gördün mü? Annem geliyor, hemen iyileşirsin!",
+  "spoken": "Gördün mü? Annem geliyor, hemen iyileşirsin!"
+ },
+ {
+  "file": "audio/8813a779.mp3",
+  "voice": "e",
+  "text": "(gülüyor) Ben çok şanslıyım.",
+  "spoken": "Ben çok şanslıyım."
+ },
+ {
+  "file": "audio/7f892cea.mp3",
+  "voice": "a",
+  "text": "Hana, bize Japonya'yı anlat. Nasıl bir yer?",
+  "spoken": "Hana, bize Japonya'yı anlat. Nasıl bir yer?"
+ },
+ {
+  "file": "audio/58aba0c9.mp3",
+  "voice": "e",
+  "text": "Çok güzel bir ülke. Dağlar, tapınaklar ve çok temiz şehirler var.",
+  "spoken": "Çok güzel bir ülke. Dağlar, tapınaklar ve çok temiz şehirler var."
+ },
+ {
+  "file": "audio/aa190291.mp3",
+  "voice": "f",
+  "text": "Doğru mu? Sokaklarda hiç çöp yokmuş.",
+  "spoken": "Doğru mu? Sokaklarda hiç çöp yokmuş."
+ },
+ {
+  "file": "audio/cd5f0af7.mp3",
+  "voice": "e",
+  "text": "Evet, herkes çöpünü eve götürür.",
+  "spoken": "Evet, herkes çöpünü eve götürür."
+ },
+ {
+  "file": "audio/c08b2a1a.mp3",
+  "voice": "a",
+  "text": "Vay! Keşke bizde de öyle olsa.",
+  "spoken": "Vay! Keşke bizde de öyle olsa."
+ },
+ {
+  "file": "audio/0c3d04de.mp3",
+  "voice": "f",
+  "text": "Senin ailen nerede yaşıyor?",
+  "spoken": "Senin ailen nerede yaşıyor?"
+ },
+ {
+  "file": "audio/378007e3.mp3",
+  "voice": "e",
+  "text": "Osaka'da. Annem, babam ve bir kardeşim var.",
+  "spoken": "Osaka'da. Annem, babam ve bir kardeşim var."
+ },
+ {
+  "file": "audio/85911fed.mp3",
+  "voice": "f",
+  "text": "Onları çok özlüyorsundur.",
+  "spoken": "Onları çok özlüyorsundur."
+ },
+ {
+  "file": "audio/7fe37e4b.mp3",
+  "voice": "e",
+  "text": "Evet, çok özlüyorum. Ama burada da bir ailem var.",
+  "spoken": "Evet, çok özlüyorum. Ama burada da bir ailem var."
+ },
+ {
+  "file": "audio/853322ee.mp3",
+  "voice": "f",
+  "text": "Ah kızım... Tabii, biz de senin ailen sayılırız!",
+  "spoken": "Ah kızım... Tabii, biz de senin ailen sayılırız!"
+ },
+ {
+  "file": "audio/627649cc.mp3",
+  "voice": "a",
+  "text": "Bir gün hepimiz Japonya'ya gidelim!",
+  "spoken": "Bir gün hepimiz Japonya'ya gidelim!"
+ },
+ {
+  "file": "audio/3b4f7709.mp3",
+  "voice": "e",
+  "text": "Çok sevinirim! Annem size suşi yapar.",
+  "spoken": "Çok sevinirim! Annem size suşi yapar."
+ },
+ {
+  "file": "audio/4dc5155b.mp3",
+  "voice": "a",
+  "text": "Çiğ balık mı? Hmm... Denerim! (gülüyor)",
+  "spoken": "Çiğ balık mı? Hmm... Denerim!"
+ },
+ {
+  "file": "audio/75fe294e.mp3",
+  "voice": "f",
+  "text": "Hayırlı olsun! Eviniz çok güzelmiş!",
+  "spoken": "Hayırlı olsun! Eviniz çok güzelmiş!"
+ },
+ {
+  "file": "audio/098e1835.mp3",
+  "voice": "e",
+  "text": "Teşekkürler anne, buyurun içeri.",
+  "spoken": "Teşekkürler anne, buyurun içeri."
+ },
+ {
+  "file": "audio/3f519e82.mp3",
+  "voice": "a",
+  "text": "Bu sizin için. Ekmek ve tuz getirdik.",
+  "spoken": "Bu sizin için. Ekmek ve tuz getirdik."
+ },
+ {
+  "file": "audio/d5acafb9.mp3",
+  "voice": "e",
+  "text": "Ekmek ve tuz mu? Neden?",
+  "spoken": "Ekmek ve tuz mu? Neden?"
+ },
+ {
+  "file": "audio/396c4b87.mp3",
+  "voice": "a",
+  "text": "Gelenek. Evinizde bereket olsun diye.",
+  "spoken": "Gelenek. Evinizde bereket olsun diye."
+ },
+ {
+  "file": "audio/31150ecb.mp3",
+  "voice": "f",
+  "text": "Mutfağınız ne kadar ferah! Perdeler de çok güzel.",
+  "spoken": "Mutfağınız ne kadar ferah! Perdeler de çok güzel."
+ },
+ {
+  "file": "audio/a1030a6f.mp3",
+  "voice": "e",
+  "text": "Perdeleri ben seçtim.",
+  "spoken": "Perdeleri ben seçtim."
+ },
+ {
+  "file": "audio/5f16e055.mp3",
+  "voice": "f",
+  "text": "Zevkin çok güzel kızım.",
+  "spoken": "Zevkin çok güzel kızım."
+ },
+ {
+  "file": "audio/e564987d.mp3",
+  "voice": "e",
+  "text": "Çay mı, kahve mi içersiniz?",
+  "spoken": "Çay mı, kahve mi içersiniz?"
+ },
+ {
+  "file": "audio/a45dba2e.mp3",
+  "voice": "a",
+  "text": "Ben çay alayım.",
+  "spoken": "Ben çay alayım."
+ },
+ {
+  "file": "audio/58b6641e.mp3",
+  "voice": "f",
+  "text": "Ben de. Ama sen yorulma, ben yaparım!",
+  "spoken": "Ben de. Ama sen yorulma, ben yaparım!"
+ },
+ {
+  "file": "audio/ba090335.mp3",
+  "voice": "e",
+  "text": "Olmaz anne, bugün siz misafirsiniz!",
+  "spoken": "Olmaz anne, bugün siz misafirsiniz!"
+ },
+ {
+  "file": "audio/7d72cd19.mp3",
+  "voice": "f",
+  "text": "Yenge, Japonca bir şey söyle!",
+  "spoken": "Yenge, Japonca bir şey söyle!"
+ },
+ {
+  "file": "audio/4c69c106.mp3",
+  "voice": "e",
+  "text": "\"Konnichiwa.\" Bu \"merhaba\" demek.",
+  "spoken": "\"Konnichiwa.\" Bu \"merhaba\" demek."
+ },
+ {
+  "file": "audio/47d04b44.mp3",
+  "voice": "f",
+  "text": "Konniçiva! Benim adımı Japonca yazar mısın?",
+  "spoken": "Konniçiva! Benim adımı Japonca yazar mısın?"
+ },
+ {
+  "file": "audio/aa0a5254.mp3",
+  "voice": "e",
+  "text": "Tabii! Bak: ゼイネプ.",
+  "spoken": "Tabii! Bak: ゼイネプ."
+ },
+ {
+  "file": "audio/0b4d83ea.mp3",
+  "voice": "f",
+  "text": "Çok güzel! Bu harfler resim gibi!",
+  "spoken": "Çok güzel! Bu harfler resim gibi!"
+ },
+ {
+  "file": "audio/a676d6a9.mp3",
+  "voice": "e",
+  "text": "Sen de bana Türkçe bir oyun öğretir misin?",
+  "spoken": "Sen de bana Türkçe bir oyun öğretir misin?"
+ },
+ {
+  "file": "audio/baa69a2e.mp3",
+  "voice": "f",
+  "text": "Olur! Saklambaç oynayalım! Sen ebe ol!",
+  "spoken": "Olur! Saklambaç oynayalım! Sen ebe ol!"
+ },
+ {
+  "file": "audio/42102317.mp3",
+  "voice": "e",
+  "text": "Tamam, sayıyorum: bir, iki, üç...",
+  "spoken": "Tamam, sayıyorum: bir, iki, üç..."
+ },
+ {
+  "file": "audio/ca3b7bc8.mp3",
+  "voice": "f",
+  "text": "Ona kadar say!",
+  "spoken": "Ona kadar say!"
+ },
+ {
+  "file": "audio/91234fa7.mp3",
+  "voice": "e",
+  "text": "...dokuz, on! Önüm arkam sağım solum sobe!",
+  "spoken": "...dokuz, on! Önüm arkam sağım solum sobe!"
+ },
+ {
+  "file": "audio/0ee62474.mp3",
+  "voice": "f",
+  "text": "Bulamazsın beni!",
+  "spoken": "Bulamazsın beni!"
+ },
+ {
+  "file": "audio/4860d0b9.mp3",
+  "voice": "e",
+  "text": "Buldum seni! Sobe!",
+  "spoken": "Buldum seni! Sobe!"
+ },
+ {
+  "file": "audio/fcf27ca2.mp3",
+  "voice": "f",
+  "text": "(gülüyor) Yenge, sen çok eğlencelisin!",
+  "spoken": "Yenge, sen çok eğlencelisin!"
+ },
+ {
+  "file": "audio/14d32412.mp3",
+  "voice": "e",
+  "text": "Anne, artık gitmemiz lazım. Geç oldu.",
+  "spoken": "Anne, artık gitmemiz lazım. Geç oldu."
+ },
+ {
+  "file": "audio/80fb3f30.mp3",
+  "voice": "f",
+  "text": "Ne erken! Daha yeni geldiniz!",
+  "spoken": "Ne erken! Daha yeni geldiniz!"
+ },
+ {
+  "file": "audio/b97e4d1b.mp3",
+  "voice": "a",
+  "text": "Yarın işim var anne.",
+  "spoken": "Yarın işim var anne."
+ },
+ {
+  "file": "audio/8c960f55.mp3",
+  "voice": "f",
+  "text": "Peki. Durun, size yemek koydum, götürün.",
+  "spoken": "Peki. Durun, size yemek koydum, götürün."
+ },
+ {
+  "file": "audio/1c2361b1.mp3",
+  "voice": "e",
+  "text": "Ay anne, çok fazla!",
+  "spoken": "Ay anne, çok fazla!"
+ },
+ {
+  "file": "audio/8acaa882.mp3",
+  "voice": "f",
+  "text": "Olsun, iki gün yersiniz. Kapları sonra getirirsiniz.",
+  "spoken": "Olsun, iki gün yersiniz. Kapları sonra getirirsiniz."
+ },
+ {
+  "file": "audio/e3b56ecc.mp3",
+  "voice": "e",
+  "text": "Çok teşekkürler. Her şey için sağ olun.",
+  "spoken": "Çok teşekkürler. Her şey için sağ olun."
+ },
+ {
+  "file": "audio/c639500e.mp3",
+  "voice": "a",
+  "text": "Yine bekleriz kızım. Sık sık gelin.",
+  "spoken": "Yine bekleriz kızım. Sık sık gelin."
+ },
+ {
+  "file": "audio/b94eefa5.mp3",
+  "voice": "e",
+  "text": "Tabii baba, yine geleceğiz.",
+  "spoken": "Tabii baba, yine geleceğiz."
+ },
+ {
+  "file": "audio/63c11516.mp3",
+  "voice": "f",
+  "text": "Varınca mesaj at, merak ederim.",
+  "spoken": "Varınca mesaj at, merak ederim."
+ },
+ {
+  "file": "audio/59500670.mp3",
+  "voice": "e",
+  "text": "Atarım anne. Hoşça kalın!",
+  "spoken": "Atarım anne. Hoşça kalın!"
+ },
+ {
+  "file": "audio/c739bfe9.mp3",
+  "voice": "f",
+  "text": "Güle güle! Allah'a emanet olun!",
+  "spoken": "Güle güle! Allah'a emanet olun!"
+ },
+ {
+  "file": "audio/df83cf46.mp3",
+  "voice": "e",
+  "text": "Mehmet, bugün çamaşırları sen yıkar mısın?",
+  "spoken": "Mehmet, bugün çamaşırları sen yıkar mısın?"
+ },
+ {
+  "file": "audio/6300558b.mp3",
+  "voice": "a",
+  "text": "Tamam, ben yıkarım. Sen ne yapacaksın?",
+  "spoken": "Tamam, ben yıkarım. Sen ne yapacaksın?"
+ },
+ {
+  "file": "audio/1b4e7da2.mp3",
+  "voice": "e",
+  "text": "Mutfağı temizleyeceğim, sonra yemek yapacağım.",
+  "spoken": "Mutfağı temizleyeceğim, sonra yemek yapacağım."
+ },
+ {
+  "file": "audio/83d8ec86.mp3",
+  "voice": "a",
+  "text": "Bulaşıkları da ben yıkarım.",
+  "spoken": "Bulaşıkları da ben yıkarım."
+ },
+ {
+  "file": "audio/37ed2a1e.mp3",
+  "voice": "e",
+  "text": "Gerçekten mi? Sen bir tanesin!",
+  "spoken": "Gerçekten mi? Sen bir tanesin!"
+ },
+ {
+  "file": "audio/88950c80.mp3",
+  "voice": "a",
+  "text": "Ama bir şartla...",
+  "spoken": "Ama bir şartla..."
+ },
+ {
+  "file": "audio/05ee075c.mp3",
+  "voice": "e",
+  "text": "Ne şartı?",
+  "spoken": "Ne şartı?"
+ },
+ {
+  "file": "audio/8bbd65c3.mp3",
+  "voice": "a",
+  "text": "Akşam o güzel Japon körisinden yap!",
+  "spoken": "Akşam o güzel Japon körisinden yap!"
+ },
+ {
+  "file": "audio/f14c8e87.mp3",
+  "voice": "e",
+  "text": "(gülüyor) Anlaştık!",
+  "spoken": "Anlaştık!"
+ },
+ {
+  "file": "audio/a8d91cc5.mp3",
+  "voice": "a",
+  "text": "Bu arada, çöpü kim çıkaracak?",
+  "spoken": "Bu arada, çöpü kim çıkaracak?"
+ },
+ {
+  "file": "audio/3ac63cad.mp3",
+  "voice": "e",
+  "text": "Sıra sende canım!",
+  "spoken": "Sıra sende canım!"
+ },
+ {
+  "file": "audio/abc56a33.mp3",
+  "voice": "a",
+  "text": "Of ya... Peki, peki.",
+  "spoken": "Of ya... Peki, peki."
+ },
+ {
+  "file": "audio/01915abc.mp3",
+  "voice": "e",
+  "text": "Mehmet, kalk! Saat sekiz oldu!",
+  "spoken": "Mehmet, kalk! Saat sekiz oldu!"
+ },
+ {
+  "file": "audio/247f1508.mp3",
+  "voice": "a",
+  "text": "Ne? Alarm çalmadı mı?",
+  "spoken": "Ne? Alarm çalmadı mı?"
+ },
+ {
+  "file": "audio/3ffc69de.mp3",
+  "voice": "e",
+  "text": "Çaldı ama sen kapattın!",
+  "spoken": "Çaldı ama sen kapattın!"
+ },
+ {
+  "file": "audio/8d9aa6e3.mp3",
+  "voice": "a",
+  "text": "Eyvah, geç kaldım! Gömleğim nerede?",
+  "spoken": "Eyvah, geç kaldım! Gömleğim nerede?"
+ },
+ {
+  "file": "audio/f9d56e0e.mp3",
+  "voice": "e",
+  "text": "Dolapta, ütüledim.",
+  "spoken": "Dolapta, ütüledim."
+ },
+ {
+  "file": "audio/e196777b.mp3",
+  "voice": "a",
+  "text": "Sen bir meleksin! Anahtarlarımı gördün mü?",
+  "spoken": "Sen bir meleksin! Anahtarlarımı gördün mü?"
+ },
+ {
+  "file": "audio/93ab6489.mp3",
+  "voice": "e",
+  "text": "Masanın üstünde. Kahvaltı yapmayacak mısın?",
+  "spoken": "Masanın üstünde. Kahvaltı yapmayacak mısın?"
+ },
+ {
+  "file": "audio/655ff11a.mp3",
+  "voice": "a",
+  "text": "Vaktim yok, yolda simit alırım.",
+  "spoken": "Vaktim yok, yolda simit alırım."
+ },
+ {
+  "file": "audio/0e4f7e43.mp3",
+  "voice": "e",
+  "text": "Al, bu sandviçi yanına al.",
+  "spoken": "Al, bu sandviçi yanına al."
+ },
+ {
+  "file": "audio/1551cbb9.mp3",
+  "voice": "a",
+  "text": "Teşekkürler aşkım! Akşam görüşürüz!",
+  "spoken": "Teşekkürler aşkım! Akşam görüşürüz!"
+ },
+ {
+  "file": "audio/d12dcc7b.mp3",
+  "voice": "e",
+  "text": "Dikkatli git! Kolay gelsin!",
+  "spoken": "Dikkatli git! Kolay gelsin!"
+ },
+ {
+  "file": "audio/3463e262.mp3",
+  "voice": "a",
+  "text": "Bugün nasıl geçti?",
+  "spoken": "Bugün nasıl geçti?"
+ },
+ {
+  "file": "audio/97f1b22f.mp3",
+  "voice": "e",
+  "text": "Güzeldi. Türkçe çalışırken çok şey öğrendim.",
+  "spoken": "Güzeldi. Türkçe çalışırken çok şey öğrendim."
+ },
+ {
+  "file": "audio/272bcaf0.mp3",
+  "voice": "a",
+  "text": "Ne öğrendin?",
+  "spoken": "Ne öğrendin?"
+ },
+ {
+  "file": "audio/c31f9507.mp3",
+  "voice": "e",
+  "text": "Geçmiş zamanı öğrendim. Mesela: \"Seni çok özledim.\"",
+  "spoken": "Geçmiş zamanı öğrendim. Mesela: \"Seni çok özledim.\""
+ },
+ {
+  "file": "audio/ccb714ff.mp3",
+  "voice": "a",
+  "text": "Ooo! Ben de seni çok özledim.",
+  "spoken": "Ooo! Ben de seni çok özledim."
+ },
+ {
+  "file": "audio/a67d3d41.mp3",
+  "voice": "e",
+  "text": "Senin günün nasıldı?",
+  "spoken": "Senin günün nasıldı?"
+ },
+ {
+  "file": "audio/0577609d.mp3",
+  "voice": "a",
+  "text": "Yorucuydu. Toplantı üstüne toplantı.",
+  "spoken": "Yorucuydu. Toplantı üstüne toplantı."
+ },
+ {
+  "file": "audio/3ef5d988.mp3",
+  "voice": "e",
+  "text": "Gel, sana bir çay yapayım.",
+  "spoken": "Gel, sana bir çay yapayım."
+ },
+ {
+  "file": "audio/ecda06ee.mp3",
+  "voice": "a",
+  "text": "Sen olmasan ne yaparım?",
+  "spoken": "Sen olmasan ne yaparım?"
+ },
+ {
+  "file": "audio/161438c6.mp3",
+  "voice": "e",
+  "text": "Bir film izleyelim mi?",
+  "spoken": "Bir film izleyelim mi?"
+ },
+ {
+  "file": "audio/4d29a2c5.mp3",
+  "voice": "a",
+  "text": "Olur, ama Türk filmi izleyelim. Türkçe pratik olur!",
+  "spoken": "Olur, ama Türk filmi izleyelim. Türkçe pratik olur!"
+ },
+ {
+  "file": "audio/15225b3b.mp3",
+  "voice": "e",
+  "text": "Tamam, ama altyazılı!",
+  "spoken": "Tamam, ama altyazılı!"
+ },
+ {
+  "file": "audio/7ba7e09a.mp3",
+  "voice": "a",
+  "text": "Anlaştık.",
+  "spoken": "Anlaştık."
+ },
+ {
+  "file": "audio/fe9603c9.mp3",
+  "voice": "a",
+  "text": "Hana, gözlerini kapat. Bir sürprizim var.",
+  "spoken": "Hana, gözlerini kapat. Bir sürprizim var."
+ },
+ {
+  "file": "audio/c64ba1d6.mp3",
+  "voice": "e",
+  "text": "Ne sürprizi? Merak ettim!",
+  "spoken": "Ne sürprizi? Merak ettim!"
+ },
+ {
+  "file": "audio/de7a1df2.mp3",
+  "voice": "a",
+  "text": "Şimdi aç!",
+  "spoken": "Şimdi aç!"
+ },
+ {
+  "file": "audio/4c9291bb.mp3",
+  "voice": "e",
+  "text": "Çiçekler! Ne kadar güzel! Bugün ne günü?",
+  "spoken": "Çiçekler! Ne kadar güzel! Bugün ne günü?"
+ },
+ {
+  "file": "audio/05575200.mp3",
+  "voice": "a",
+  "text": "Unuttun mu? Bugün evlilik yıl dönümümüz!",
+  "spoken": "Unuttun mu? Bugün evlilik yıl dönümümüz!"
+ },
+ {
+  "file": "audio/49e5941e.mp3",
+  "voice": "e",
+  "text": "Unutmadım tabii! Benim de sana bir hediyem var.",
+  "spoken": "Unutmadım tabii! Benim de sana bir hediyem var."
+ },
+ {
+  "file": "audio/3397cd03.mp3",
+  "voice": "a",
+  "text": "Gerçekten mi? Ne bu?",
+  "spoken": "Gerçekten mi? Ne bu?"
+ },
+ {
+  "file": "audio/fc0a75b9.mp3",
+  "voice": "e",
+  "text": "Bir mektup. Türkçe yazdım!",
+  "spoken": "Bir mektup. Türkçe yazdım!"
+ },
+ {
+  "file": "audio/a8052893.mp3",
+  "voice": "a",
+  "text": "Türkçe mi? Okuyayım: \"Seninle her gün çok mutluyum.\"",
+  "spoken": "Türkçe mi? Okuyayım: \"Seninle her gün çok mutluyum.\""
+ },
+ {
+  "file": "audio/e249de68.mp3",
+  "voice": "a",
+  "text": "Hana... Çok duygulandım. Teşekkür ederim.",
+  "spoken": "Hana... Çok duygulandım. Teşekkür ederim."
+ },
+ {
+  "file": "audio/d73e6b1b.mp3",
+  "voice": "e",
+  "text": "İyi ki varsın.",
+  "spoken": "İyi ki varsın."
+ },
+ {
+  "file": "audio/71e6bd7b.mp3",
+  "voice": "a",
+  "text": "Sen de iyi ki varsın. Hadi, akşam yemeğe çıkalım!",
+  "spoken": "Sen de iyi ki varsın. Hadi, akşam yemeğe çıkalım!"
+ }
+]

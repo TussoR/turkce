@@ -61,7 +61,7 @@ const DEFAULT = {
   srs: {}, newDay: { date: '', n: 0 }, grammar: {}, dialogs: {},
   streak: { last: '', n: 0, best: 0 }, xp: 0, log: {}, badges: {}, flags: {},
   day: { date: '', g: false, d: false, bonus: false }, welcomed: false,
-  settings: { daily: 10, kana: true, name: '', theme: 'iznik' }
+  settings: { daily: 10, kana: true, name: '', theme: 'iznik', speed: 1, autoplay: true }
 };
 let st;
 function load() {
@@ -92,6 +92,30 @@ const grammarDone = () => GRAMMAR.filter(g => (st.grammar[g.id] || {}).done).len
 const DAILY_GOAL = 50;
 const nameFix = s => st.settings.name ? s.replace(/Hana/g, st.settings.name).replace(/ハナ/g, st.settings.name) : s;
 const kana = t => st.settings.kana ? `<div class="kana">${esc(toKana(t))}</div>` : '';
+
+/* ================= audio (pre-generated neural voice mp3s) ================= */
+const player = new Audio();
+player.preload = 'auto';
+let playToken = 0;
+function play(text, voice = 'e', onend) {
+  const token = ++playToken;
+  const done = () => { if (token === playToken && onend) onend(); };
+  try { player.pause(); } catch (e) {}
+  player.src = AUDIO.file(text, voice);
+  player.playbackRate = st.settings.speed || 1;
+  player.preservesPitch = true; player.webkitPreservesPitch = true;
+  player.onended = done;
+  player.onerror = done;
+  const p = player.play();
+  if (p && p.catch) p.catch(done);
+}
+function stopAudio() {
+  playToken++;
+  try { player.pause(); } catch (e) {}
+  document.querySelectorAll('.playing').forEach(b => b.classList.remove('playing'));
+}
+const sayBtn = (text, voice = 'e', cls = '') => `<button class="say ${cls}" data-act="say" data-say="${esc(text)}" data-v="${voice}" aria-label="再生">🔊</button>`;
+const autoPlay = (text, voice) => { if (st.settings.autoplay) play(text, voice); };
 const todoCounts = () => {
   const due = dueKeys().length;
   const nNew = Math.min(Math.max(0, st.settings.daily - newToday()), ALL.filter(w => !st.srs[w.key]).length);
@@ -280,9 +304,9 @@ function viewStudy() {
   if (S.idx >= S.queue.length) return studyDone();
   const it = S.queue[S.idx], w = BYKEY[it.key];
   const top = sessionTop(S.idx, S.queue.length);
-  const example = w.ex ? `<div class="divider"></div><div class="example"><div class="tr">${esc(w.ex)}</div>${kana(w.ex)}<div class="small muted">${esc(w.exJa)}</div></div>` : '';
+  const example = w.ex ? `<div class="divider"></div><div class="example row"><div class="grow"><div class="tr">${esc(w.ex)}</div>${kana(w.ex)}<div class="small muted">${esc(w.exJa)}</div></div>${sayBtn(w.ex, 'e', 'sm')}</div>` : '';
   const note = w.note ? `<div class="note">💡 ${esc(w.note)}</div>` : '';
-  const trBlock = `<div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}`;
+  const trBlock = `<div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}<div class="say-row">${sayBtn(w.tr)}</div>`;
   const catLabel = `<span class="small muted" style="font-weight:700">${esc(CAT[w.cat].icon + ' ' + CAT[w.cat].name)}</span>`;
   let html;
   if (it.mode === 'new') {
@@ -305,6 +329,7 @@ function viewStudy() {
       </div>`;
   }
   render(html, true);
+  if (it.mode === 'new' || (it.dir !== 'ja' && !S.shown) || (it.dir === 'ja' && S.shown)) autoPlay(w.tr);
 }
 function ivl(key, r) {
   const s = st.srs[key] || { i: 0, e: 2.5 };
@@ -326,11 +351,11 @@ function studyDone() {
 }
 
 /* ================= word quiz ================= */
-const QTYPES = { tr2ja: ['🇹🇷→🇯🇵', 'トルコ語 → 日本語'], ja2tr: ['🇯🇵→🇹🇷', '日本語 → トルコ語'], type: ['⌨️', '書き取り'], mix: ['🎲', 'ミックス'] };
+const QTYPES = { tr2ja: ['🇹🇷→🇯🇵', 'トルコ語 → 日本語'], ja2tr: ['🇯🇵→🇹🇷', '日本語 → トルコ語'], listen: ['🎧', '聞き取り'], type: ['⌨️', '書き取り'], mix: ['🎲', 'ミックス'] };
 function startQuiz(pool, type, title) {
   if (pool.length < 4) { toast('まず単語を4つ以上覚えましょう 🐾'); return; }
   const items = pick(pool, Math.min(10, pool.length)).map(w => {
-    const t = type === 'mix' ? pick(['tr2ja', 'ja2tr', 'tr2ja', 'type'], 1)[0] : type;
+    const t = type === 'mix' ? pick(['tr2ja', 'ja2tr', 'listen', 'type'], 1)[0] : type;
     return { w, t, choices: t === 'type' ? null : makeChoices(w, t) };
   });
   Q = { kind: 'word', title, items, idx: 0, ok: 0, combo: 0, answered: null, missed: [] };
@@ -352,8 +377,10 @@ function viewQuiz() {
   if (Q.kind === 'grammar') return viewGQuiz(top);
   const it = Q.items[Q.idx], w = it.w, a = Q.answered;
   const prompt = it.t === 'tr2ja'
-    ? `<div class="label">意味はどれ?</div><div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}`
-    : `<div class="label">トルコ語で言うと?</div><div class="big ja">${esc(w.ja)}</div>`;
+    ? `<div class="label">意味はどれ?</div><div class="big tr">${esc(w.tr)}</div>${kana(w.tr)}<div class="say-row">${sayBtn(w.tr)}</div>`
+    : it.t === 'listen'
+      ? `<div class="label">聞こえた言葉の意味は?</div><div class="say-row"><button class="say huge" data-act="say" data-say="${esc(w.tr)}" data-v="e">🔊</button></div>${a ? `<div class="big tr">${esc(w.tr)}</div>` : '<div class="small muted">タップでもう一度</div>'}`
+      : `<div class="label">トルコ語で言うと?</div><div class="big ja">${esc(w.ja)}</div>`;
   let body;
   if (it.t === 'type') {
     body = a ? '' : `<input type="text" id="typed" class="tr" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="トルコ語を入力">
@@ -370,11 +397,14 @@ function viewQuiz() {
   let fb = '';
   if (a) {
     fb = `<div class="feedback ${a.ok ? 'ok' : 'ng'} pop"><b>${a.ok ? (a.close ? '⭕ 正解!(つづりに注意)' : pick(['⭕ 正解! Harika!', '⭕ 正解! Aferin!', '⭕ 正解! Süper!'], 1)[0]) : '❌ 残念… つぎは大丈夫!'}</b>
-      <div style="margin-top:6px"><span class="tr">${esc(w.tr)}</span> <span class="ja">= ${esc(w.ja)}</span>${a.typed ? `<div class="small">あなたの答え:${esc(a.typed)}</div>` : ''}</div></div>
+      <div class="row" style="margin-top:6px"><div class="grow"><span class="tr">${esc(w.tr)}</span> <span class="ja">= ${esc(w.ja)}</span>${a.typed ? `<div class="small">あなたの答え:${esc(a.typed)}</div>` : ''}</div>${sayBtn(w.tr, 'e', 'sm')}</div></div>
       <button class="btn btn-main btn-block btn-lg" style="margin-top:14px" data-act="next">次へ →</button>`;
   }
   render(`${top}<div class="card q-prompt pop">${prompt}</div>${body}${fb}`, true);
   if (!a && it.t === 'type') setTimeout(() => { const i = $('#typed'); i && i.focus(); }, 100);
+  if (!a && it.t === 'listen') play(w.tr);
+  else if (!a && it.t === 'tr2ja') autoPlay(w.tr);
+  else if (a && it.t !== 'listen' && it.t !== 'tr2ja') autoPlay(w.tr);
 }
 function scoreAnswer(ok) {
   if (ok) { Q.ok++; Q.combo++; if (Q.combo === 5 || Q.combo === 10) confetti(70); } else Q.combo = 0;
@@ -403,7 +433,7 @@ function quizDone() {
       ? (nx ? `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${nx.id}">次のレッスンへ →</a>` : '')
       : `<a class="btn btn-main btn-block btn-lg" href="#/grammar/${g.id}">レッスンを復習する</a>`;
   } else if (Q.missed.length) {
-    extra = `<div class="card"><h3>📝 復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(w.tr)}</span><div class="small muted">${esc(w.ja)}</div></div></div>`).join('')}</div>`;
+    extra = `<div class="card"><h3>📝 復習しよう</h3>${Q.missed.map(w => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(w.tr)}</span><div class="small muted">${esc(w.ja)}</div></div>${sayBtn(w.tr, 'e', 'sm')}</div>`).join('')}</div>`;
   }
   const msg = r === 1 ? ['Mükemmel!', '完璧です!'] : r >= .6 ? ['Aferin!', 'よくできました'] : ['Devam!', 'この調子で続けよう'];
   render(`<div class="done-screen pop">${catSVG(r >= .6 ? 'happy' : 'normal')}<h1>${ok} / ${n} 正解</h1>
@@ -501,12 +531,12 @@ function viewHome() {
     <div class="lvbar"><i style="width:${lvPct}%"></i></div></a>
 
   <div class="card tile-phrase"><div class="label">💬 今日のひとこと</div>
-    <div class="tr" style="font-size:22px;color:var(--accent);margin-top:4px">${esc(ph[0])}</div>${kana(ph[0])}
-    <div style="font-weight:800">${esc(ph[1])}</div><div class="small muted">${esc(ph[2])}</div></div>
+    <div class="row"><div class="grow"><div class="tr" style="font-size:22px;color:var(--accent);margin-top:4px">${esc(ph[0])}</div>${kana(ph[0])}
+    <div style="font-weight:800">${esc(ph[1])}</div><div class="small muted">${esc(ph[2])}</div></div>${sayBtn(ph[0])}</div></div>
 
   <div class="card tile-word"><div class="label">✨ 今日の単語ピックアップ</div>
-    <div class="tr" style="font-size:22px;color:var(--primary-2);margin-top:4px">${esc(wod.tr)}</div>${kana(wod.tr)}<div style="font-weight:800">${esc(wod.ja)}</div>
-    ${wod.ex ? `<div class="small" style="margin-top:8px;background:var(--card-2);padding:8px 12px;border-radius:12px"><span class="tr">${esc(wod.ex)}</span><br><span class="muted">${esc(wod.exJa)}</span></div>` : ''}</div>`);
+    <div class="row"><div class="grow"><div class="tr" style="font-size:22px;color:var(--primary-2);margin-top:4px">${esc(wod.tr)}</div>${kana(wod.tr)}<div style="font-weight:800">${esc(wod.ja)}</div></div>${sayBtn(wod.tr)}</div>
+    ${wod.ex ? `<div class="row small" style="margin-top:8px;background:var(--card-2);padding:8px 12px;border-radius:12px"><div class="grow"><span class="tr">${esc(wod.ex)}</span><br><span class="muted">${esc(wod.exJa)}</span></div>${sayBtn(wod.ex, 'e', 'sm')}</div>` : ''}</div>`);
 }
 
 function viewWords() {
@@ -534,7 +564,7 @@ function viewCategory(id) {
   <div class="legend"><span><i class="dot"></i>未学習</span><span><i class="dot learning"></i>学習中</span><span><i class="dot master"></i>マスター</span></div>
   <div class="card">${ws.map(w => `<div class="word-row"><span class="dot ${wordStatus(w.key)}"></span>
     <div class="grow"><span class="tr" style="font-size:18px;color:var(--primary)">${esc(w.tr)}</span>${kana(w.tr)}<div style="font-weight:700">${esc(w.ja)}</div>
-    ${w.ex ? `<div class="small muted"><span class="tr">${esc(w.ex)}</span> — ${esc(w.exJa)}</div>` : ''}</div></div>`).join('')}</div>`);
+    ${w.ex ? `<div class="small muted"><span class="tr">${esc(w.ex)}</span> — ${esc(w.exJa)}</div>` : ''}</div>${sayBtn(w.tr, 'e', 'sm')}</div>`).join('')}</div>`);
 }
 
 function viewGrammarList() {
@@ -563,7 +593,7 @@ function viewLesson(id) {
   render(`<a href="#/grammar" class="back">‹ 文法</a>
   <div class="lesson-head hero card"><div class="tiny" style="opacity:.85;font-weight:800;letter-spacing:.08em">LESSON ${i + 1}${s.done ? ' ・ ★ CLEAR' : ''}</div><h1 style="color:#fff;margin:2px 0">${esc(g.title)}</h1><div class="small" style="opacity:.9;font-weight:700">${esc(g.sub)}</div></div>
   <div class="card lesson">${g.body}</div>
-  <h2>📝 例文</h2><div class="card">${g.ex.map(e => `<div class="ex-line"><div class="tr">${esc(nameFix(e[0]))}</div>${kana(nameFix(e[0]))}<div class="small muted">${esc(nameFix(e[1]))}</div></div>`).join('')}</div>
+  <h2>📝 例文</h2><div class="card">${g.ex.map(e => `<div class="ex-line row"><div class="grow"><div class="tr">${esc(nameFix(e[0]))}</div>${kana(nameFix(e[0]))}<div class="small muted">${esc(nameFix(e[1]))}</div></div>${sayBtn(e[0], 'e', 'sm')}</div>`).join('')}</div>
   <button class="btn btn-main btn-block btn-lg" data-act="gquiz" data-arg="${g.id}">練習問題にチャレンジ(${g.quiz.length}問)▶</button>
   <div class="row" style="margin-top:14px">${i > 0 ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i - 1].id}">‹ 前へ</a>` : ''}${GRAMMAR[i + 1] ? `<a class="btn grow" href="#/grammar/${GRAMMAR[i + 1].id}">次へ ›</a>` : ''}</div>`);
 }
@@ -588,7 +618,7 @@ function viewTalk() {
         <div class="grow"><b>${esc(d.title)}</b><div class="small muted">${esc(d.desc)} ・ ${d.lines.length}行</div>${st.dialogs[d.id] ? '<span class="badge teal">✓ 練習済</span>' : ''}</div><div class="chev">›</div></a>`).join('');
     }).join('');
   } else {
-    body = `<p class="small muted">トルコ人がよく使う決まり文句。覚えると一気に「トルコ通」に!</p>${PHRASES.map(p => `<div class="card phrase"><div class="tr">${esc(p[0])}</div>${kana(p[0])}<div style="font-weight:800">${esc(p[1])}</div><div class="small muted">${esc(p[2])}</div></div>`).join('')}`;
+    body = `<p class="small muted">トルコ人がよく使う決まり文句。覚えると一気に「トルコ通」に!</p>${PHRASES.map(p => `<div class="card phrase row"><div class="grow"><div class="tr">${esc(p[0])}</div>${kana(p[0])}<div style="font-weight:800">${esc(p[1])}</div><div class="small muted">${esc(p[2])}</div></div>${sayBtn(p[0], 'e', 'sm')}</div>`).join('')}`;
   }
   render(`<h1>会話 💬</h1>${seg}${body}`);
 }
@@ -600,13 +630,14 @@ function viewDialog(id) {
   const lines = d.lines.map((l, k) => {
     const me = l[0] === 'B';
     const hide = dlgHide === 'tr' && me ? 'hide-tr' : dlgHide === 'ja' ? 'hide-ja' : '';
-    return `<button class="bubble ${me ? 'me' : ''} ${hide}" style="animation-delay:${k * 60}ms" data-act="line"><span class="who">${esc(me ? (st.settings.name || d.who.B) : d.who[l[0]])}</span>
+    return `<button class="bubble ${me ? 'me' : ''} ${hide}" style="animation-delay:${k * 60}ms" data-act="line" data-arg="${k}" id="ln${k}"><span class="who">${esc(me ? (st.settings.name || d.who.B) : d.who[l[0]])}</span>
       <span class="tr">${esc(nameFix(l[1]))}</span>${kana(nameFix(l[1]))}<span class="ja">${esc(nameFix(l[2]))}</span></button>`;
   }).join('');
   render(`<a href="#/talk" class="back">‹ 会話</a>
   <div class="lesson-head" style="background:${tileBg(i)};color:#2A2238;box-shadow:var(--shadow)"><div style="font-size:42px;line-height:1.1">${d.icon}</div><h1 style="margin:4px 0 0">${esc(d.title)}</h1><div class="small" style="font-weight:800;opacity:.75">${esc(d.desc)}</div></div>
+  <button class="btn btn-alt btn-block" id="playAllBtn" data-act="playall" style="margin-top:12px">▶ 会話を全部再生</button>
   <div class="seg"><button class="${dlgHide === 'none' ? 'on' : ''}" data-act="hide" data-arg="none">全部表示</button><button class="${dlgHide === 'tr' ? 'on' : ''}" data-act="hide" data-arg="tr">🎭 自分のセリフを隠す</button><button class="${dlgHide === 'ja' ? 'on' : ''}" data-act="hide" data-arg="ja">日本語を隠す</button></div>
-  ${dlgHide === 'tr' ? '<p class="small muted">ロールプレイ:右側のセリフを自分で言ってから、タップして答え合わせ!</p>' : dlgHide === 'ja' ? '<p class="small muted">意味を考えてから、タップして答え合わせ!</p>' : ''}
+  ${dlgHide === 'tr' ? '<p class="small muted">ロールプレイ:右側のセリフを自分で言ってから、タップして答え合わせ!</p>' : dlgHide === 'ja' ? '<p class="small muted">聞いて意味を考えてから、タップして答え合わせ!</p>' : '<p class="small muted">吹き出しをタップすると、そのセリフを再生します。</p>'}
   <div class="bubbles">${lines}</div>
   ${d.tips && d.tips.length ? `<h2>💡 ポイント</h2><div class="card">${d.tips.map(t => `<div class="word-row"><div class="grow"><span class="tr" style="color:var(--primary)">${esc(t[0])}</span><div class="small muted">${esc(t[1])}</div></div></div>`).join('')}</div>` : ''}
   <button class="btn btn-main btn-block btn-lg" style="margin-top:8px" data-act="dlg-done" data-arg="${d.id}">練習した!(+10 XP)</button>`);
@@ -647,6 +678,9 @@ function viewMe() {
     <input type="text" id="nameIn" value="${esc(s.name)}" placeholder="例:Yuki" maxlength="20">
     <div class="setting"><div><b>1日の新しい単語</b></div><select data-set="daily">${[5, 10, 15, 20].map(n => `<option value="${n}" ${s.daily === n ? 'selected' : ''}>${n}語</option>`).join('')}</select></div>
     ${sw('kana', 'カタカナ読みを表示', '発音の目安です')}
+    ${sw('autoplay', '自動で読み上げる', 'カードやクイズを開いたときに再生')}
+    <div class="setting"><div><b>再生スピード</b></div><select data-set="speed">${[[.75, 'ゆっくり'], [.9, '少しゆっくり'], [1, 'ふつう']].map(([v, l]) => `<option value="${v}" ${s.speed === v ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
+    <button class="btn btn-sm" data-act="say" data-say="Merhaba! Türkçe öğreniyorum." data-v="e">🔊 音声テスト</button>
   </div>
 
   <h2>📲 アプリとして使う</h2>
@@ -685,6 +719,7 @@ function go(hash, replace) {
 }
 function route() {
   const [a, b] = location.hash.replace(/^#\/?/, '').split('/');
+  stopAudio();
   if (a !== 'study' && S && S.idx < S.queue.length) S = null;
   if (a !== 'quiz' && Q) Q = null;
   switch (a) {
@@ -764,7 +799,33 @@ const ACT = {
   },
   seg: s => { talkSeg = s; viewTalk(); },
   hide: h => { dlgHide = h; viewDialog(location.hash.split('/')[2]); },
-  line: (_, el) => el.classList.remove('hide-tr', 'hide-ja'),
+  say: (_, el) => {
+    stopAudio(); el.classList.add('playing');
+    play(el.dataset.say, el.dataset.v || 'e', () => el.classList.remove('playing'));
+  },
+  line: (i, el) => {
+    const d = DIALOGS.find(x => x.id === location.hash.split('/')[2]); if (!d) return;
+    const l = d.lines[+i];
+    stopAudio(); el.classList.remove('hide-tr', 'hide-ja'); el.classList.add('playing');
+    play(l[1], AUDIO.voiceFor(d, l[0]), () => el.classList.remove('playing'));
+  },
+  playall: (_, btn) => {
+    const d = DIALOGS.find(x => x.id === location.hash.split('/')[2]); if (!d) return;
+    if (btn.dataset.on) { stopAudio(); btn.dataset.on = ''; btn.textContent = '▶ 会話を全部再生'; return; }
+    stopAudio(); btn.dataset.on = '1'; btn.textContent = '⏸ 停止';
+    let i = 0;
+    const next = () => {
+      document.querySelectorAll('.bubble.playing').forEach(b => b.classList.remove('playing'));
+      const el = $('#ln' + i);
+      if (i >= d.lines.length || !el || !btn.isConnected) { btn.dataset.on = ''; btn.textContent = '▶ 会話を全部再生'; return; }
+      const l = d.lines[i++];
+      el.classList.add('playing');
+      if (dlgHide !== 'tr') el.classList.remove('hide-ja');
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      play(l[1], AUDIO.voiceFor(d, l[0]), () => setTimeout(next, 450));
+    };
+    next();
+  },
   'dlg-done': id => {
     if (!st.dialogs[id]) st.dialogs[id] = true;
     ensureDay(); st.day.d = true; save();
