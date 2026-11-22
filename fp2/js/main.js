@@ -15,6 +15,7 @@ import { renderReference } from './views/reference.js';
 import { renderCalendar } from './views/calendar.js';
 import { renderExamInfo } from './views/examinfo.js';
 import { renderSettings } from './views/settings.js';
+import { renderInstall } from './views/install.js';
 
 store.load();
 applySkin();
@@ -35,6 +36,7 @@ const NAV = [
     ['reference', '公式・数値集', '§', renderReference],
     ['calendar', '学習カレンダー', '▦', renderCalendar],
     ['exam', '試験情報（公式）', 'ⓘ', renderExamInfo],
+    ['install', 'ホーム画面に追加', '⊕', renderInstall],
     ['data', '設定・テーマ', '⚙', renderSettings],
   ]],
 ];
@@ -121,6 +123,10 @@ function route() {
 }
 
 shell();
+// オフライン対応（共有ページなど service worker が使えない環境では何もしない）
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
 window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
 window.addEventListener('fp2:render', route);
 route();

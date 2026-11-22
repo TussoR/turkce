@@ -7,6 +7,7 @@ import { EXAM } from '../../data/exam.js';
 import { esc, pct, today, daysBetween, jpDate, num, addDays } from '../util.js';
 import { startSession } from './session.js';
 import { buildPlan } from './calendar.js';
+import { shouldShowHint, dismissHint, platform } from './install.js';
 
 export function renderDashboard(root) {
   const st = store.get();
@@ -26,6 +27,11 @@ export function renderDashboard(root) {
       <p>${left != null ? (left >= 0 ? `試験日 ${jpDate(st.profile.examDate)} まで <b class="num">あと${left}日</b>` : '設定した試験日を過ぎています。新しい試験日を設定してください。') : '<a href="#calendar">試験日を設定</a>すると、残り日数に合わせた学習計画を作成します。'}</p></div>
       <div class="row"><a class="btn" href="#review">今日の復習 <span class="num">${a.due.length}</span>問</a><a class="btn primary" href="${nl ? '#lesson-' + nl.lesson.id : '#practice'}">${nl ? '次のレッスンへ' : '演習を続ける'}</a></div>
     </div>
+
+    ${shouldShowHint() ? `<div class="callout" id="ins-hint" style="margin-bottom:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <img src="icons/icon-192.png" alt="" width="40" height="40" style="border-radius:9px;flex:none">
+      <div style="flex:1;min-width:180px"><b>ホーム画面に追加できます。</b>${platform() === 'ios' ? '共有ボタン □↑ →「ホーム画面に追加」' : 'メニュー ⋮ →「ホーム画面に追加」'}で、アプリのように全画面で開けます。</div>
+      <div class="row"><a class="btn sm primary" href="#install">やり方を見る</a><button class="btn sm ghost" id="ins-close" aria-label="この案内を閉じる">閉じる</button></div></div>` : ''}
 
     ${fresh ? `<div class="callout gold" style="margin-bottom:16px"><b>はじめての方へ：</b>まず「<a href="#exam">試験情報</a>」で試験の仕組みを確認し、学習モードの入門レッスンから始めましょう。最初に<a href="#" data-act="diag">診断テスト（学科12問）</a>を解くと、現在の実力に合わせて推奨が調整されます。</div>` : ''}
 
@@ -99,6 +105,8 @@ export function renderDashboard(root) {
     const ids = pickWeak(sid, 10);
     startSession({ ids, title: `${subjName(sid)}の弱点演習`, back: '#home' });
   }));
+  const ic = root.querySelector('#ins-close');
+  if (ic) ic.onclick = () => { dismissHint(); root.querySelector('#ins-hint').remove(); };
   const diag = root.querySelector('[data-act=diag]');
   if (diag) diag.onclick = (e) => {
     e.preventDefault();
