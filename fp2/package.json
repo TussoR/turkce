@@ -1,0 +1,1 @@
+{ "name": "fp2-master", "private": true, "type": "module", "scripts": { "validate": "node tests/validate.mjs", "test": "node tests/validate.mjs && node tests/logic.mjs" } }
