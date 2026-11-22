@@ -47,7 +47,7 @@ export function renderReview(root) {
           ${bySubj.map(({ s, ids }) => `<li><div class="grow"><div class="t">${esc(s.name)}</div><div class="m">${s.exam === 'gakka' ? '学科' : '実技'}</div></div><button class="btn sm" data-subj="${s.id}">${ids.length}問</button></li>`).join('') || '<li class="small muted">今日の復習はありません</li>'}
         </ul></div></div>
         <div class="panel"><div class="panel-h"><h3>今後14日間の復習量</h3></div><div class="panel-b">
-          <div style="display:flex;align-items:flex-end;gap:4px;height:90px">${fut.map(([d, n]) => `<div title="${d}：${n}問" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%"><span class="small muted num" style="font-size:10px">${n || ''}</span><i style="display:block;width:100%;height:${(n / max) * 70}px;background:var(--navy-700);border-radius:2px 2px 0 0;min-height:${n ? 2 : 0}px"></i></div>`).join('')}</div>
+          <div style="display:flex;align-items:flex-end;gap:4px;height:90px">${fut.map(([d, n]) => `<div title="${d}：${n}問" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%"><span class="small muted num" style="font-size:10px">${n || ''}</span><i style="display:block;width:100%;height:${(n / max) * 70}px;background:var(--chart);border-radius:2px 2px 0 0;min-height:${n ? 2 : 0}px"></i></div>`).join('')}</div>
           <div style="display:flex;gap:4px;margin-top:4px">${fut.map(([d]) => `<span class="small muted" style="flex:1;text-align:center;font-size:10px">${Number(d.slice(8))}</span>`).join('')}</div>
         </div></div>
       </div>
@@ -57,11 +57,11 @@ export function renderReview(root) {
     const k = b.dataset.go;
     const ids = (k === 'due' || k === 'overdue' ? sortIds(lists[k].ids) : shuffle(lists[k].ids)).slice(0, 30);
     if (!ids.length) return toast('対象の問題がありません');
-    startSession({ ids: groupCases(ids), mode: 'review', title: lists[k].name, back: '#/review' });
+    startSession({ ids: groupCases(ids), mode: 'review', title: lists[k].name, back: '#review' });
   }));
   root.querySelectorAll('[data-subj]').forEach((b) => (b.onclick = () => {
     const ids = a.due.filter((id) => bank.byId[id].subject === b.dataset.subj).slice(0, 30);
-    startSession({ ids: groupCases(ids), mode: 'review', title: `${subjName(b.dataset.subj)}の復習`, back: '#/review' });
+    startSession({ ids: groupCases(ids), mode: 'review', title: `${subjName(b.dataset.subj)}の復習`, back: '#review' });
   }));
 }
 

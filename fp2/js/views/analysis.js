@@ -14,7 +14,7 @@ export function renderAnalysis(root) {
   const topicRow = (t, extra) => {
     const l = lessonFor(t.id);
     return `<li><div class="grow"><div class="t">${esc(t.name)}</div><div class="m">${esc(subjName(t.subject))} ・ ${extra}</div></div>
-      ${l ? `<a class="btn sm ghost" href="#/learn/${l.id}">レッスン</a>` : ''}<button class="btn sm" data-topic="${t.id}">演習</button></li>`;
+      ${l ? `<a class="btn sm ghost" href="#lesson-${l.id}">レッスン</a>` : ''}<button class="btn sm" data-topic="${t.id}">演習</button></li>`;
   };
   root.innerHTML = `<div class="page">
     <div class="page-head"><div><div class="eyebrow">ANALYSIS</div><h1>弱点分析</h1>
@@ -61,12 +61,12 @@ export function renderAnalysis(root) {
   </div>`;
   root.querySelectorAll('[data-topic]').forEach((b) => (b.onclick = () => {
     const ids = shuffle(bank.all.filter((q) => q.topic === b.dataset.topic).map((q) => q.id)).slice(0, 10);
-    startSession({ ids, title: '論点別の弱点演習', back: '#/analysis' });
+    startSession({ ids, title: '論点別の弱点演習', back: '#analysis' });
   }));
   root.querySelectorAll('[data-tag]').forEach((b) => (b.onclick = () => {
     const ids = shuffle(bank.all.filter((q) => (q.tags || []).includes(b.dataset.tag)).map((q) => q.id)).slice(0, 10);
-    startSession({ ids, title: `「${b.dataset.tag}」の確認`, back: '#/analysis' });
+    startSession({ ids, title: `「${b.dataset.tag}」の確認`, back: '#analysis' });
   }));
   const c = root.querySelector('[data-calc]');
-  if (c) c.onclick = () => startSession({ ids: shuffle(bank.all.filter((q) => q.calc || q.type === 'num').map((q) => q.id)).slice(0, 10), title: '計算問題演習', back: '#/analysis' });
+  if (c) c.onclick = () => startSession({ ids: shuffle(bank.all.filter((q) => q.calc || q.type === 'num').map((q) => q.id)).slice(0, 10), title: '計算問題演習', back: '#analysis' });
 }

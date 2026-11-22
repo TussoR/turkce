@@ -34,7 +34,7 @@ export function renderLearnList(root) {
           <div class="panel-b tight"><ul class="list">
           ${items.map((l) => {
             const r = st.lessons[l.id];
-            return `<li><a class="item" href="#/learn/${l.id}"><span class="tag ${r?.done ? 'ok' : ''}" style="min-width:3.6em;text-align:center">${r?.done ? '修了' : esc(LEVEL[l.level])}</span>
+            return `<li><a class="item" href="#lesson-${l.id}"><span class="tag ${r?.done ? 'ok' : ''}" style="min-width:3.6em;text-align:center">${r?.done ? '修了' : esc(LEVEL[l.level])}</span>
               <div class="grow"><div class="t">${esc(l.title)}</div><div class="m">${lvSteps(l.level)} 約${l.minutes || 15}分${r?.quiz != null ? ` ・ 確認テスト ${pct(r.quiz)}` : ''}</div></div></a></li>`;
           }).join('') || '<li class="small muted">該当するレッスンはありません</li>'}
           </ul></div></div>`;
@@ -69,7 +69,7 @@ const html = (s) => String(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n
 export function renderLesson(root, id) {
   settleQuiz();
   const l = bank.lessonById[id];
-  if (!l) { root.innerHTML = `<div class="page"><div class="empty">レッスンが見つかりません。<a href="#/learn">一覧へ</a></div></div>`; return; }
+  if (!l) { root.innerHTML = `<div class="page"><div class="empty">レッスンが見つかりません。<a href="#learn">一覧へ</a></div></div>`; return; }
   const st = store.get();
   const rec = st.lessons[l.id];
   const same = bank.lessons.filter((x) => x.subject === l.subject);
@@ -79,7 +79,7 @@ export function renderLesson(root, id) {
   const refs = (l.refs || []).map((r) => REF.find((x) => x.id === r)).filter(Boolean);
   const heads = (l.body || []).filter((b) => b.h);
   root.innerHTML = `<div class="page">
-    <div class="crumb"><a href="#/learn">学習モード</a> ／ ${esc(subjName(l.subject))}</div>
+    <div class="crumb"><a href="#learn">学習モード</a> ／ ${esc(subjName(l.subject))}</div>
     <div class="grid" style="grid-template-columns:minmax(0,1fr) 240px;gap:28px" id="lesson-grid">
       <article class="lesson">
         <div class="q-meta">${examTag(l.exam)}<span class="tag lv">${esc(LEVEL[l.level])}</span>${lvSteps(l.level)}<span class="small muted">約${l.minutes || 15}分</span>${rec?.done ? '<span class="tag ok">修了</span>' : ''}</div>
@@ -88,21 +88,21 @@ export function renderLesson(root, id) {
         ${(l.body || []).map(block).join('')}
         ${l.terms?.length ? `<h2>重要用語</h2><dl class="terms">${l.terms.map(([t, r, d]) => `<dt>${r ? `<ruby>${esc(t)}<rt>${esc(r)}</rt></ruby>` : esc(t)}</dt><dd>${html(d)}</dd>`).join('')}</dl>` : ''}
         ${l.traps?.length ? `<h2>試験でのひっかけ</h2>${l.traps.map((t) => `<div class="note trap" style="margin:8px 0">${html(t)}</div>`).join('')}` : ''}
-        ${refs.length ? `<h2>根拠となる数値・出典</h2><ul>${refs.map((r) => `<li><a href="#/reference/${r.id}">${esc(r.title)}</a> <span class="small muted">（基準：${esc(r.asOf || '—')}）</span></li>`).join('')}</ul>` : ''}
+        ${refs.length ? `<h2>根拠となる数値・出典</h2><ul>${refs.map((r) => `<li><a href="#ref-${r.id}">${esc(r.title)}</a> <span class="small muted">（基準：${esc(r.asOf || '—')}）</span></li>`).join('')}</ul>` : ''}
         <h2>確認テスト</h2>
         ${quiz.length ? `<p>このレッスンの内容から${quiz.length}問。8割以上の正解で修了になります（解答は復習スケジュールに登録されます）。</p>
           <div class="row"><button class="btn primary" data-act="quiz">確認テストを始める（${quiz.length}問）</button>${rec?.quiz != null ? `<span class="small muted">前回 ${pct(rec.quiz)}</span>` : ''}</div>`
           : '<p class="small muted">このレッスンには確認テストがありません。</p>'}
         <div class="row" style="margin-top:22px;border-top:1px solid var(--line);padding-top:16px">
           <button class="btn" data-act="done">${rec?.done ? '修了を取り消す' : '読了にする'}</button>
-          ${next ? `<a class="btn primary" href="#/learn/${next.id}">次のレッスン：${esc(next.title)}</a>` : ''}
+          ${next ? `<a class="btn primary" href="#lesson-${next.id}">次のレッスン：${esc(next.title)}</a>` : ''}
         </div>
       </article>
       <aside class="toc" style="position:sticky;top:20px;align-self:start" id="lesson-toc">
         <div class="small muted" style="letter-spacing:.1em;margin-bottom:6px">目次</div>
         ${heads.map((h, i) => `<a href="javascript:void 0" data-h="${i}">${esc(h.h)}</a>`).join('')}
         <hr class="sep"><div class="small muted">同じ科目のレッスン</div>
-        ${same.map((x) => `<a href="#/learn/${x.id}" style="${x === l ? 'color:var(--navy-900);font-weight:600' : ''}">${st.lessons[x.id]?.done ? '✓ ' : ''}${esc(x.title)}</a>`).join('')}
+        ${same.map((x) => `<a href="#lesson-${x.id}" style="${x === l ? 'color:var(--heading);font-weight:600' : ''}">${st.lessons[x.id]?.done ? '✓ ' : ''}${esc(x.title)}</a>`).join('')}
       </aside>
     </div></div>`;
   if (matchMedia('(max-width: 860px)').matches) { root.querySelector('#lesson-grid').style.gridTemplateColumns = '1fr'; root.querySelector('#lesson-toc').style.position = 'static'; }
@@ -110,7 +110,7 @@ export function renderLesson(root, id) {
   const qb = root.querySelector('[data-act=quiz]');
   if (qb) qb.onclick = () => {
     pendingQuiz = { lesson: l.id, ids: quiz, since: store.get().log.length };
-    startSession({ ids: quiz, mode: 'lesson', title: `確認テスト：${l.title}`, back: `#/learn/${l.id}` });
+    startSession({ ids: quiz, mode: 'lesson', title: `確認テスト：${l.title}`, back: `#lesson-${l.id}` });
   };
   root.querySelector('[data-act=done]').onclick = () => {
     const s = store.get();

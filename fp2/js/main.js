@@ -1,6 +1,7 @@
 // ルーター・画面の外枠
 import * as store from './store.js';
-import { $, $$, esc } from './util.js';
+import { $, $$, esc, toast } from './util.js';
+import { SKINS, getSkin, setSkin, skinName, applySkin } from './skin.js';
 import { stats } from './core.js';
 import { renderSession } from './views/session.js';
 import { renderDashboard } from './views/dashboard.js';
@@ -16,10 +17,11 @@ import { renderExamInfo } from './views/examinfo.js';
 import { renderSettings } from './views/settings.js';
 
 store.load();
+applySkin();
 
 const NAV = [
   ['学習', [
-    ['', 'ダッシュボード', '◧', renderDashboard],
+    ['home', 'ダッシュボード', '◧', renderDashboard],
     ['learn', '学習モード', '◫', renderLearnList],
     ['practice', '問題演習', '✎', renderPractice],
     ['jitsugi', '実技試験対策', '▤', renderJitsugiList],
@@ -33,41 +35,65 @@ const NAV = [
     ['reference', '公式・数値集', '§', renderReference],
     ['calendar', '学習カレンダー', '▦', renderCalendar],
     ['exam', '試験情報（公式）', 'ⓘ', renderExamInfo],
-    ['settings', '設定・データ', '⚙', renderSettings],
+    ['data', '設定・テーマ', '⚙', renderSettings],
   ]],
 ];
-const TABS = [['', 'ホーム', '◧'], ['learn', '学習', '◫'], ['practice', '演習', '✎'], ['jitsugi', '実技', '▤'], ['mock', '模試', '⏱']];
+const TABS = [['home', 'ホーム', '◧'], ['learn', '学習', '◫'], ['practice', '演習', '✎'], ['jitsugi', '実技', '▤'], ['mock', '模試', '⏱']];
 
 function shell() {
   const app = $('#app');
   app.innerHTML = `
-    <div class="topbar"><button id="menu-btn" aria-label="メニュー">☰</button><div class="mark">FP2級 <b>MASTER</b></div></div>
+    <div class="topbar"><button id="menu-btn" aria-label="メニューを開く">☰</button><div class="mark">FP2級 <b>MASTER</b></div><button id="skin-btn" class="skin-btn" aria-label="テーマを切り替える" title="テーマを切り替える">◐</button></div>
     <div class="scrim" id="scrim"></div>
     <div class="shell">
       <aside class="side" id="side">
         <div class="brand"><div class="mark">FP2級 <b>MASTER</b></div><div class="sub">きんざい 学科 ＋ 実技（生保顧客資産相談業務）</div></div>
         <nav class="nav" aria-label="メイン">
-          ${NAV.map(([g, items]) => `<div class="grp">${g}</div>${items.map(([k, name, ico]) => `<a href="#/${k}" data-nav="${k}"><span class="ico">${ico}</span>${name}${k === 'review' ? '<span class="badge" id="due-badge" hidden></span>' : ''}</a>`).join('')}`).join('')}
+          ${NAV.map(([g, items]) => `<div class="grp">${g}</div>${items.map(([k, name, ico]) => `<a href="#${k}" data-nav="${k}"><span class="ico">${ico}</span>${name}${k === 'review' ? '<span class="badge" id="due-badge" hidden></span>' : ''}</a>`).join('')}`).join('')}
         </nav>
+        <button class="skin-side" id="skin-side" type="button"><span class="ico">◐</span>テーマ：<span id="skin-name"></span></button>
         <div class="foot">本アプリの問題はすべてオリジナルです。数値は各出典の基準日時点。試験の公式情報は「試験情報」をご確認ください。</div>
       </aside>
       <main class="main" id="view" tabindex="-1"></main>
     </div>
-    <nav class="tabbar" aria-label="タブ">${TABS.map(([k, n, i]) => `<a href="#/${k}" data-nav="${k}"><span class="ico">${i}</span>${n}</a>`).join('')}</nav>`;
+    <nav class="tabbar" aria-label="タブ">${TABS.map(([k, n, i]) => `<a href="#${k}" data-nav="${k}"><span class="ico">${i}</span>${n}</a>`).join('')}</nav>`;
   const side = $('#side'), scrim = $('#scrim');
   const close = () => { side.classList.remove('open'); scrim.classList.remove('open'); };
   $('#menu-btn').onclick = () => { side.classList.add('open'); scrim.classList.add('open'); };
   scrim.onclick = close;
   side.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+  const cycle = () => { const i = SKINS.findIndex((x) => x[0] === getSkin()); setSkin(SKINS[(i + 1) % SKINS.length][0]); toast(`テーマ：${skinName()}`); };
+  $('#skin-btn').onclick = cycle;
+  $('#skin-side').onclick = cycle;
+  updateSkinLabel();
+}
+
+// 表示テーマ：auto はビューア（OS）の明暗設定に従う
+function updateSkinLabel() { const el = $('#skin-name'); if (el) el.textContent = skinName(); }
+window.addEventListener('fp2:skin', updateSkinLabel);
+
+// URLのハッシュ（#lesson-xxx など）を画面と引数に変換する。旧形式（#/learn/xxx）も受け付ける
+function parseHash() {
+  const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
+  if (h.includes('/')) { const [p, a, b] = h.split('/'); return [p || 'home', a, b]; }
+  if (h === 'mock-run') return ['mock', 'run'];
+  const m = h.match(/^(lesson|case|result|ref)-(.+)$/);
+  if (m) {
+    if (m[1] === 'lesson') return ['learn', m[2]];
+    if (m[1] === 'case') return ['jitsugi', m[2]];
+    if (m[1] === 'result') return ['mock', 'result', m[2]];
+    return ['reference', m[2]];
+  }
+  if (h === 'settings') return ['data'];
+  return [h || 'home'];
 }
 
 let prevMockRun = false;
 function route() {
-  const h = location.hash.replace(/^#\/?/, '');
-  const [p, a, b] = h.split('/');
+  const [p, a, b] = parseHash();
   const view = $('#view');
   document.onkeydown = null;
-  const top = p || '';
+  const top = p;
   // 模擬試験の画面を離れたら時間を保存して一時停止
   const isMockRun = p === 'mock' && a === 'run';
   if (prevMockRun && !isMockRun) leaveMock();

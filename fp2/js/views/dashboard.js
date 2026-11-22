@@ -23,11 +23,11 @@ export function renderDashboard(root) {
   root.innerHTML = `<div class="page">
     <div class="page-head">
       <div><div class="eyebrow">DASHBOARD</div><h1>${st.profile.name ? esc(st.profile.name) + 'さんの' : ''}学習状況</h1>
-      <p>${left != null ? (left >= 0 ? `試験日 ${jpDate(st.profile.examDate)} まで <b class="num">あと${left}日</b>` : '設定した試験日を過ぎています。新しい試験日を設定してください。') : '<a href="#/calendar">試験日を設定</a>すると、残り日数に合わせた学習計画を作成します。'}</p></div>
-      <div class="row"><a class="btn" href="#/review">今日の復習 <span class="num">${a.due.length}</span>問</a><a class="btn primary" href="${nl ? '#/learn/' + nl.lesson.id : '#/practice'}">${nl ? '次のレッスンへ' : '演習を続ける'}</a></div>
+      <p>${left != null ? (left >= 0 ? `試験日 ${jpDate(st.profile.examDate)} まで <b class="num">あと${left}日</b>` : '設定した試験日を過ぎています。新しい試験日を設定してください。') : '<a href="#calendar">試験日を設定</a>すると、残り日数に合わせた学習計画を作成します。'}</p></div>
+      <div class="row"><a class="btn" href="#review">今日の復習 <span class="num">${a.due.length}</span>問</a><a class="btn primary" href="${nl ? '#lesson-' + nl.lesson.id : '#practice'}">${nl ? '次のレッスンへ' : '演習を続ける'}</a></div>
     </div>
 
-    ${fresh ? `<div class="callout gold" style="margin-bottom:16px"><b>はじめての方へ：</b>まず「<a href="#/exam">試験情報</a>」で試験の仕組みを確認し、学習モードの入門レッスンから始めましょう。最初に<a href="#" data-act="diag">診断テスト（学科12問）</a>を解くと、現在の実力に合わせて推奨が調整されます。</div>` : ''}
+    ${fresh ? `<div class="callout gold" style="margin-bottom:16px"><b>はじめての方へ：</b>まず「<a href="#exam">試験情報</a>」で試験の仕組みを確認し、学習モードの入門レッスンから始めましょう。最初に<a href="#" data-act="diag">診断テスト（学科12問）</a>を解くと、現在の実力に合わせて推奨が調整されます。</div>` : ''}
 
     <div class="kpis">
       <div class="kpi"><div class="l">総合進捗</div><div class="v">${Math.round(a.overall * 100)}<small>%</small></div>${bar(a.overall, 'gold')}<div class="d">レッスン・演習・定着の合成</div></div>
@@ -52,7 +52,7 @@ export function renderDashboard(root) {
                 <div class="small muted" style="margin-top:2px">合格見込み ${pct(a.jitsugi.pass)} ・ 進捗 ${pct(a.jitsugi.prog.total)}</div>
               </div>
             </div>
-            <p class="small muted" style="margin:14px 0 0">判定：<span class="tag ${rc}">${rl}</span>　未学習の論点は「当て推量」水準として計算するため、学習初期は低く表示されます。公式の合否とは無関係の目安です。<a href="#/analysis">算出方法</a></p>
+            <p class="small muted" style="margin:14px 0 0">判定：<span class="tag ${rc}">${rl}</span>　未学習の論点は「当て推量」水準として計算するため、学習初期は低く表示されます。公式の合否とは無関係の目安です。<a href="#analysis">算出方法</a></p>
           </div>
         </div>
 
@@ -68,24 +68,24 @@ export function renderDashboard(root) {
         <div class="panel">
           <div class="panel-h"><h3>次に学ぶこと</h3></div>
           <div class="panel-b">
-            ${nl ? `<a href="#/learn/${nl.lesson.id}" style="text-decoration:none;color:inherit"><div class="small muted">${esc(subjName(nl.lesson.subject))} ・ ${esc(LEVEL[nl.lesson.level])}</div>
-              <div class="serif" style="font-size:16.5px;color:var(--navy-900);margin:2px 0 4px">${esc(nl.lesson.title)}</div></a>
+            ${nl ? `<a href="#lesson-${nl.lesson.id}" style="text-decoration:none;color:inherit"><div class="small muted">${esc(subjName(nl.lesson.subject))} ・ ${esc(LEVEL[nl.lesson.level])}</div>
+              <div class="serif" style="font-size:16.5px;color:var(--heading);margin:2px 0 4px">${esc(nl.lesson.title)}</div></a>
               <div class="small muted">理由：${esc(nl.reason)}</div>
-              <a class="btn primary sm" style="margin-top:10px" href="#/learn/${nl.lesson.id}">レッスンを開く</a>`
+              <a class="btn primary sm" style="margin-top:10px" href="#lesson-${nl.lesson.id}">レッスンを開く</a>`
             : '<div class="small">全レッスンを修了しました。模擬試験で仕上げましょう。</div>'}
           </div>
         </div>
         <div class="panel">
-          <div class="panel-h"><h3>苦手な科目</h3><a class="act" href="#/analysis">詳しく</a></div>
+          <div class="panel-h"><h3>苦手な科目</h3><a class="act" href="#analysis">詳しく</a></div>
           <div class="panel-b tight"><ul class="list">
             ${weak.length ? weak.map((s) => `<li><div class="grow"><div class="t">${esc(s.name)}</div><div class="m">推定正答率 ${pct(s.p)} ・ ${s.n}問解答</div></div><button class="btn sm" data-weak="${s.id}">10問演習</button></li>`).join('')
               : '<li class="small muted">各科目5問以上解くと表示されます</li>'}
           </ul></div>
         </div>
         <div class="panel">
-          <div class="panel-h"><h3>今後の復習・学習予定</h3><a class="act" href="#/calendar">カレンダー</a></div>
+          <div class="panel-h"><h3>今後の復習・学習予定</h3><a class="act" href="#calendar">カレンダー</a></div>
           <div class="panel-b tight"><ul class="list">
-            <li><div class="grow"><div class="t">今日の復習</div><div class="m">期限切れ ${a.overdue.length}問を含む</div></div><a class="btn sm" href="#/review">${a.due.length}問</a></li>
+            <li><div class="grow"><div class="t">今日の復習</div><div class="m">期限切れ ${a.overdue.length}問を含む</div></div><a class="btn sm" href="#review">${a.due.length}問</a></li>
             ${[1, 2, 3].map((k) => { const dd = addDays(today(), k); const n = Object.values(st.qs).filter((s) => s.due === dd).length; return `<li><div class="grow"><div class="t">${jpDate(dd)}</div></div><span class="small muted">復習 ${n}問</span></li>`; }).join('')}
             ${plan.length ? `<li><div class="grow"><div class="t">計画：${esc(plan[0].label)}</div><div class="m">${jpDate(plan[0].date)}</div></div></li>` : ''}
           </ul></div>
@@ -97,13 +97,13 @@ export function renderDashboard(root) {
   root.querySelectorAll('[data-weak]').forEach((b) => (b.onclick = () => {
     const sid = b.dataset.weak;
     const ids = pickWeak(sid, 10);
-    startSession({ ids, title: `${subjName(sid)}の弱点演習`, back: '#/' });
+    startSession({ ids, title: `${subjName(sid)}の弱点演習`, back: '#home' });
   }));
   const diag = root.querySelector('[data-act=diag]');
   if (diag) diag.onclick = (e) => {
     e.preventDefault();
     const ids = GAKKA.flatMap((s) => bank.all.filter((q) => q.subject === s.id && q.level <= 3).sort(() => Math.random() - 0.5).slice(0, 2).map((q) => q.id));
-    startSession({ ids, title: '診断テスト', back: '#/' });
+    startSession({ ids, title: '診断テスト', back: '#home' });
   };
 }
 

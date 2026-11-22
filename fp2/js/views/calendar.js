@@ -75,10 +75,10 @@ export function renderCalendar(root) {
       <div class="stack">
         <div class="panel"><div class="panel-h"><h3>${y}年${m}月</h3><div class="row"><button class="btn sm ghost" data-mv="-1">← 前月</button><button class="btn sm ghost" data-mv="0">今月</button><button class="btn sm ghost" data-mv="1">翌月 →</button></div></div>
           <div class="panel-b"><div class="cal">${'日月火水木金土'.split('').map((w) => `<div class="h">${w}</div>`).join('')}${cells.join('')}</div>
-          <div class="legend"><span><i style="background:var(--ok)"></i>学習した日</span><span><i style="background:var(--gold-2)"></i>計画あり</span><span><i style="background:var(--navy-800)"></i>試験日</span></div></div></div>
+          <div class="legend"><span><i style="background:var(--ok)"></i>学習した日</span><span><i style="background:var(--gold-2)"></i>計画あり</span><span><i style="background:var(--accent)"></i>試験日</span></div></div></div>
         <div class="panel"><div class="panel-h"><h3>これからの学習計画（14日分）</h3></div><div class="panel-b tight"><ul class="list">
           ${plan.filter((x) => x.date >= t).slice(0, 16).map((x) => `<li><span class="tag ${x.kind === 'mock' || x.kind === 'exam' ? 'jitsugi' : x.kind === 'review' ? 'warn' : 'gakka'}" style="min-width:4.5em;text-align:center">${{ lesson: 'レッスン', practice: '演習', mock: '模試', review: '復習', exam: '試験' }[x.kind]}</span>
-            <div class="grow"><div class="t">${esc(x.label)}</div><div class="m">${jpDate(x.date)}</div></div>${x.kind === 'lesson' ? `<a class="btn sm" href="#/learn/${x.ids[0]}">開く</a>` : x.kind === 'mock' ? '<a class="btn sm" href="#/mock">模試へ</a>' : x.kind === 'review' ? '<a class="btn sm" href="#/review">復習へ</a>' : ''}</li>`).join('')}
+            <div class="grow"><div class="t">${esc(x.label)}</div><div class="m">${jpDate(x.date)}</div></div>${x.kind === 'lesson' ? `<a class="btn sm" href="#lesson-${x.ids[0]}">開く</a>` : x.kind === 'mock' ? '<a class="btn sm" href="#mock">模試へ</a>' : x.kind === 'review' ? '<a class="btn sm" href="#review">復習へ</a>' : ''}</li>`).join('')}
         </ul></div></div>
       </div>
       <div class="stack">
@@ -91,7 +91,7 @@ export function renderCalendar(root) {
           <p class="small muted" style="margin-top:10px">休止期間（受検不可）：${esc(holidays ? holidays.v : '')}。${p.examDate && inHoliday(p.examDate) ? '<b style="color:var(--ng)">選択した日は休止期間です。</b>' : ''}</p>
         </div></div>
         <div class="panel"><div class="panel-h"><h3>残りの準備時間</h3></div><div class="panel-b">
-          ${left != null ? `<div class="serif" style="font-size:30px;color:var(--navy-900)">あと${Math.max(0, left)}日</div>` : '<div class="small muted">試験日が未設定です（計画は60日後を仮の試験日として作成しています）</div>'}
+          ${left != null ? `<div class="serif" style="font-size:30px;color:var(--heading)">あと${Math.max(0, left)}日</div>` : '<div class="small muted">試験日が未設定です（計画は60日後を仮の試験日として作成しています）</div>'}
           <table class="tbl" style="margin-top:8px"><tbody>
             <tr><td>未修了レッスン</td><td class="r">${bank.lessons.filter((l) => !st.lessons[l.id]?.done).length}件（約${fmtDur(lessonMin * 60000)}）</td></tr>
             <tr><td>必要学習時間の見積り</td><td class="r">約${Math.round(needMin / 60)}時間</td></tr>

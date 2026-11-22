@@ -13,14 +13,14 @@ export function renderJitsugiList(root) {
   root.innerHTML = `<div class="page">
     <div class="page-head"><div><div class="eyebrow">PRACTICAL EXAM</div><h1>実技試験対策 ― 生保顧客資産相談業務</h1>
       <p>本試験は事例形式5題（15問）・${EXAM.jitsugi.minutes}分・${EXAM.jitsugi.max}点満点中${EXAM.jitsugi.passScore}点以上で合格。解答形式は〇×・語句群/数値群からの選択・数値の記入です。</p></div>
-      <a class="btn gold" href="#/mock" >本番形式の実技模擬試験（90分）</a></div>
+      <a class="btn gold" href="#mock" >本番形式の実技模擬試験（90分）</a></div>
     <div class="callout" style="margin-bottom:16px">各事例は、顧客の家族構成・年金加入歴・保険証券・財産の状況などの資料を読み取り、3問に答える構成です。左の資料を参照しながら解答し、最後にまとめて採点します。計算問題は画面の電卓を使う本試験に合わせ、途中計算を自分で書き出す練習をしてください。</div>
     ${JITSUGI.map((s) => {
       const cs = bank.caseList.filter((c) => c.subject === s.id);
       return `<div class="panel" style="margin-bottom:16px"><div class="panel-h"><div><div class="small muted">出題領域 ${esc(s.no)}</div><h3>${esc(s.name)}</h3></div><span class="small muted">推定正答率 ${pct(a.subj[s.id].p)}</span></div>
         <div class="panel-b tight"><ul class="list">${cs.map((c) => {
           const r = st.cases[c.id];
-          return `<li><a class="item" href="#/jitsugi/${c.id}"><span class="tag ${r ? (r.best >= 0.6 ? 'ok' : 'warn') : ''}" style="min-width:4.2em;text-align:center">${r ? '最高' + pct(r.best) : '未着手'}</span>
+          return `<li><a class="item" href="#case-${c.id}"><span class="tag ${r ? (r.best >= 0.6 ? 'ok' : 'warn') : ''}" style="min-width:4.2em;text-align:center">${r ? '最高' + pct(r.best) : '未着手'}</span>
             <div class="grow"><div class="t">${esc(c.title)}</div><div class="m">${lvSteps(c.level || 5)} ${esc(c.theme || '')}</div></div></a></li>`;
         }).join('') || '<li class="small muted">事例を準備中です</li>'}</ul></div></div>`;
     }).join('')}
@@ -34,7 +34,7 @@ let C = null; // 実行中の事例 {id, resp:{}, cur, graded, started}
 
 export function renderCase(root, id) {
   const c = bank.cases[id];
-  if (!c) { root.innerHTML = `<div class="page"><div class="empty">事例が見つかりません。<a href="#/jitsugi">一覧へ</a></div></div>`; return; }
+  if (!c) { root.innerHTML = `<div class="page"><div class="empty">事例が見つかりません。<a href="#jitsugi">一覧へ</a></div></div>`; return; }
   if (!C || C.id !== id) C = { id, resp: {}, cur: 0, graded: false, started: Date.now() };
   const qs = c.questions.map((q) => bank.byId[q.id]);
   const q = qs[C.cur];
@@ -42,7 +42,7 @@ export function renderCase(root, id) {
   const gr = C.graded ? qs.map((x) => grade(x, C.resp[x.id])) : null;
   const total = gr ? gr.reduce((a, g) => a + g.score, 0) / qs.length : 0;
   root.innerHTML = `<div class="page" style="max-width:1280px">
-    <div class="crumb"><a href="#/jitsugi">実技試験対策</a> ／ ${esc(subjName(c.subject))}</div>
+    <div class="crumb"><a href="#jitsugi">実技試験対策</a> ／ ${esc(subjName(c.subject))}</div>
     <div class="row between" style="margin-bottom:12px"><h1 style="font-size:19px">${esc(c.title)}</h1>
       <div class="row">${C.graded ? `<span class="tag ${total >= 0.6 ? 'ok' : 'ng'}">得点率 ${pct(total)}</span><button class="btn sm" data-act="again">もう一度解く</button>` : `<span class="small muted" id="cs-time"></span>`}</div></div>
     <div class="case">
@@ -57,7 +57,7 @@ export function renderCase(root, id) {
         ${C.graded ? renderExplain(q, gr[C.cur]) : ''}
         <div class="row between" style="margin-top:18px">
           <button class="btn ghost" data-act="prev" ${C.cur ? '' : 'disabled'}>← 前の問</button>
-          ${C.cur < qs.length - 1 ? '<button class="btn" data-act="next">次の問 →</button>' : C.graded ? '<a class="btn" href="#/jitsugi">事例一覧へ</a>' : `<button class="btn primary" data-act="grade">採点する（${qs.filter((x) => isAnswered(x, C.resp[x.id])).length}/${qs.length}問回答済み）</button>`}
+          ${C.cur < qs.length - 1 ? '<button class="btn" data-act="next">次の問 →</button>' : C.graded ? '<a class="btn" href="#jitsugi">事例一覧へ</a>' : `<button class="btn primary" data-act="grade">採点する（${qs.filter((x) => isAnswered(x, C.resp[x.id])).length}/${qs.length}問回答済み）</button>`}
         </div>
       </div>
     </div></div>`;

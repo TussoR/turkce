@@ -60,7 +60,7 @@ export function renderPractice(root) {
   root.querySelector('#go').onclick = () => {
     const ids = order(filterPool(store.get()), st).slice(0, F.n);
     const per = F.exam === 'gakka' ? 120 : 360;
-    startSession({ ids, title: '問題演習', timeLimit: F.timed ? ids.length * per : 0, back: '#/practice' });
+    startSession({ ids, title: '問題演習', timeLimit: F.timed ? ids.length * per : 0, back: '#practice' });
   };
   root.querySelectorAll('[data-q]').forEach((b) => (b.onclick = () => {
     const k = b.dataset.q;
@@ -70,7 +70,7 @@ export function renderPractice(root) {
     if (k === 'calc') ids = shuffle(bank.all.filter((q) => q.calc || q.type === 'num').map((q) => q.id)).slice(0, 10);
     if (k === 'rand') ids = shuffle(bank.all.filter((q) => q.exam === 'gakka').map((q) => q.id)).slice(0, 10);
     if (!ids.length) return toast('対象の問題がありません');
-    startSession({ ids, title: { wrong: '前回不正解の解き直し', bm: 'ブックマーク演習', calc: '計算問題演習', rand: '学科ランダム演習' }[k], back: '#/practice' });
+    startSession({ ids, title: { wrong: '前回不正解の解き直し', bm: 'ブックマーク演習', calc: '計算問題演習', rand: '学科ランダム演習' }[k], back: '#practice' });
   }));
 }
 

@@ -51,13 +51,17 @@ export function exportJSON() { return JSON.stringify(get(), null, 0); }
 export function importJSON(text) {
   const obj = JSON.parse(text);
   if (!obj || obj.v !== 1 || !Array.isArray(obj.log)) throw new Error('形式が正しくありません');
-  localStorage.setItem(KEY, JSON.stringify(obj));
+  try { localStorage.setItem(KEY, JSON.stringify(obj)); } catch (e) { /* 保存できない環境でもメモリ上で復元する */ }
+  st = null;
   load();
+  if (!raw0(KEY)) Object.assign(st, obj);
   save();
 }
 
+const raw0 = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+
 export function reset() {
-  localStorage.removeItem(KEY);
+  try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
   load();
   save();
 }

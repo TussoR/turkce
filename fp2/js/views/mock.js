@@ -79,7 +79,7 @@ export function renderMockHome(root) {
     <div class="page-head"><div><div class="eyebrow">MOCK EXAM</div><h1>模擬試験</h1>
       <p>本試験（CBT方式）と同じ問題数・制限時間で実施します。終了するまで正解・解説は表示されません。</p></div></div>
     ${act ? `<div class="callout gold" style="margin-bottom:16px"><b>実施中の模擬試験があります：</b>${esc(KINDS[act.kind].name)}（${jpDate(act.date)}開始）
-      <div class="row" style="margin-top:8px"><a class="btn primary sm" href="#/mock/run">再開する</a><button class="btn sm ghost" data-act="discard">破棄する</button></div></div>` : ''}
+      <div class="row" style="margin-top:8px"><a class="btn primary sm" href="#mock-run">再開する</a><button class="btn sm ghost" data-act="discard">破棄する</button></div></div>` : ''}
     <div class="grid g3">${Object.entries(KINDS).map(([k, v]) => `<div class="panel"><div class="panel-b" style="padding:20px">
       <div class="small muted">${k === 'sogo' ? '学科＋実技' : k === 'gakka' ? '学科試験' : '実技試験'}</div>
       <h3 style="margin:4px 0 6px">${esc(v.name)}</h3><p class="small">${esc(v.desc)}<br>合格基準：${k === 'jitsugi' ? `${EXAM.jitsugi.passScore}/${EXAM.jitsugi.max}点` : k === 'gakka' ? `${EXAM.gakka.passScore}/${EXAM.gakka.max}点` : `学科${EXAM.gakka.passScore}点・実技${EXAM.jitsugi.passScore}点の両方`}</p>
@@ -88,7 +88,7 @@ export function renderMockHome(root) {
       ${st.mocks.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>実施日</th><th>種類</th><th class="r">学科</th><th class="r">実技</th><th>判定</th><th>所要時間</th><th></th></tr></thead><tbody>
         ${st.mocks.slice().reverse().map((m) => { const g = m.sections.find((s) => s.kind === 'gakka'), j = m.sections.find((s) => s.kind === 'jitsugi');
           return `<tr><td>${jpDate(m.date)}</td><td>${esc(KINDS[m.kind].name)}</td><td class="r">${g ? `${g.result.score}/${g.result.max}` : '—'}</td><td class="r">${j ? `${j.result.score}/${j.result.max}` : '—'}</td>
-          <td>${m.passed ? '<span class="tag ok">合格基準到達</span>' : '<span class="tag ng">基準未達</span>'}</td><td class="small">${m.sections.map((s) => fmtTime(s.used)).join(' / ')}</td><td><a href="#/mock/result/${m.id}">結果と解説</a></td></tr>`; }).join('')}
+          <td>${m.passed ? '<span class="tag ok">合格基準到達</span>' : '<span class="tag ng">基準未達</span>'}</td><td class="small">${m.sections.map((s) => fmtTime(s.used)).join(' / ')}</td><td><a href="#result-${m.id}">結果と解説</a></td></tr>`; }).join('')}
       </tbody></table></div>` : '<div class="empty">まだ模擬試験を受けていません</div>'}</div></div>
     <p class="small muted" style="margin-top:12px">※ 実技の1問あたりの配点は公表されていないため、均等配点（50点÷15問）と部分点で推定採点しています。学科は1問1点です。</p>
   </div>`;
@@ -104,7 +104,7 @@ export function renderMockHome(root) {
       resumed: Date.now(),
     };
     store.save();
-    location.hash = '#/mock/run';
+    location.hash = '#mock-run';
   }));
   const d = root.querySelector('[data-act=discard]');
   if (d) d.onclick = async () => { if (await confirmDialog('模擬試験を破棄', '実施中の解答はすべて失われます。', '破棄する')) { store.get().active = null; store.save(); renderMockHome(root); } };
@@ -119,10 +119,10 @@ export function renderMockRun(root) {
   clearInterval(timer);
   const st = store.get();
   const a = st.active;
-  if (!a) { location.hash = '#/mock'; return; }
+  if (!a) { location.hash = '#mock'; return; }
   // 問題データが更新されて保存中の模試の問題が見つからない場合は、実施中の模試を破棄する
   if (!a.sections?.length || a.sections.some((s) => !s.ids.length || s.ids.some((id) => !bank.byId[id]))) {
-    st.active = null; store.save(); toast('問題データが更新されたため、実施中の模擬試験を終了しました'); location.hash = '#/mock'; return;
+    st.active = null; store.save(); toast('問題データが更新されたため、実施中の模擬試験を終了しました'); location.hash = '#mock'; return;
   }
   if (!a.resumed || a.left) { a.resumed = Date.now(); if (a.left) { a.paused++; a.left = false; } }
   const sec = a.sections[a.sec];
@@ -136,7 +136,7 @@ export function renderMockRun(root) {
       <div class="timer" id="mk-timer" aria-live="off">${fmtTime(limit - elapsed(a))}</div></div>
     <div class="cbt-body">
       <div class="cbt-q">
-        <div class="row between" style="margin-bottom:10px"><div class="serif" style="font-size:17px;color:var(--navy-900)">問題 ${a.i + 1}${q.case ? `<span class="small muted" style="font-family:var(--sans)">　【第${Math.floor(a.i / 3) + 1}問】《問${a.i + 1}》</span>` : ''}</div>
+        <div class="row between" style="margin-bottom:10px"><div class="serif" style="font-size:17px;color:var(--heading)">問題 ${a.i + 1}${q.case ? `<span class="small muted" style="font-family:var(--sans)">　【第${Math.floor(a.i / 3) + 1}問】《問${a.i + 1}》</span>` : ''}</div>
           <label class="check small"><input type="checkbox" id="mk-flag" ${a.flags[q.id] ? 'checked' : ''}> 見直しマークをつける</label></div>
         ${c ? `<details class="note" style="margin-bottom:14px" ${a.docOpen !== false ? 'open' : ''} id="mk-doc"><summary style="cursor:pointer;font-weight:600">《設例》${esc(c.title)}（クリックで開閉）</summary><div style="margin-top:8px">${renderDoc(c)}</div></details>` : ''}
         <div class="q-stem">${rich(q.stem)}</div>${tableHTML(q.table)}
@@ -145,7 +145,7 @@ export function renderMockRun(root) {
       <aside class="cbt-side">
         <div class="small muted" style="margin-bottom:6px">問題一覧</div>
         <div class="qgrid">${a.sections.map((s, si) => (si === a.sec ? sectionGrid(a, s) : '')).join('')}</div>
-        <div class="legend"><span><i style="background:var(--navy-100)"></i>回答済</span><span><i></i>未回答</span><span><i style="border-color:var(--ng);border-width:0 0 0 0;background:linear-gradient(225deg,var(--ng) 30%,#fff 30%)"></i>見直し</span></div>
+        <div class="legend"><span><i style="background:var(--accent-soft)"></i>回答済</span><span><i></i>未回答</span><span><i style="border-color:var(--ng);background:linear-gradient(225deg,var(--ng) 30%,var(--surface) 30%)"></i>見直し</span></div>
         <hr class="sep">
         <button class="btn block sm" data-act="sheet">解答一覧（見直し）</button>
         <button class="btn block sm" style="margin-top:6px" data-act="suspend">中断して保存</button>
@@ -213,7 +213,7 @@ async function action(root, a, k) {
   const sec = a.sections[a.sec];
   if (k === 'prev') return go(root, a, a.i - 1);
   if (k === 'next') return go(root, a, a.i + 1);
-  if (k === 'suspend') { persistTime(a); a.left = true; store.save(); clearInterval(timer); window.onbeforeunload = null; location.hash = '#/mock'; return; }
+  if (k === 'suspend') { persistTime(a); a.left = true; store.save(); clearInterval(timer); window.onbeforeunload = null; location.hash = '#mock'; return; }
   if (k === 'sheet') return sheet(root, a);
   if (k === 'end') {
     const un = sec.ids.filter((id) => !isAnswered(bank.byId[id], a.resp[id])).length;
@@ -245,7 +245,7 @@ function endSection(root, a, timeout) {
   if (a.sec < a.sections.length - 1) {
     a.sec++; a.i = 0; a.resumed = Date.now(); store.save();
     confirmDialog('学科試験が終了しました', `<p>続いて実技試験（${EXAM.jitsugi.minutes}分）を開始します。準備ができたら開始してください。</p>`, '実技試験を開始', 'あとで再開').then((go2) => {
-      a.resumed = Date.now(); if (!go2) { a.left = true; store.save(); location.hash = '#/mock'; return; }
+      a.resumed = Date.now(); if (!go2) { a.left = true; store.save(); location.hash = '#mock'; return; }
       store.save(); renderMockRun(root);
     });
     return;
@@ -271,24 +271,24 @@ function finishMock(a) {
   if (st.mocks.length > 30) st.mocks = st.mocks.slice(-30);
   st.active = null;
   store.save();
-  location.hash = `#/mock/result/${m.id}`;
+  location.hash = `#result-${m.id}`;
 }
 
 // ===== 結果 =====
 export function renderMockResult(root, id) {
   const st = store.get();
   const m = st.mocks.find((x) => x.id === id);
-  if (!m) { root.innerHTML = `<div class="page"><div class="empty">結果が見つかりません。<a href="#/mock">模擬試験へ</a></div></div>`; return; }
+  if (!m) { root.innerHTML = `<div class="page"><div class="empty">結果が見つかりません。<a href="#mock">模擬試験へ</a></div></div>`; return; }
   const view = new URLSearchParams(location.hash.split('?')[1] || '');
   root.innerHTML = `<div class="page">
-    <div class="crumb"><a href="#/mock">模擬試験</a> ／ 結果</div>
+    <div class="crumb"><a href="#mock">模擬試験</a> ／ 結果</div>
     <div class="page-head"><div><div class="eyebrow">RESULT</div><h1>${esc(KINDS[m.kind].name)}の結果</h1><p>${jpDate(m.date)}実施${m.paused ? `（中断${m.paused}回あり）` : ''}</p></div>
       <div>${m.passed ? '<span class="tag ok" style="font-size:15px;padding:4px 14px">合格基準に到達</span>' : '<span class="tag ng" style="font-size:15px;padding:4px 14px">合格基準に未達</span>'}</div></div>
     <div class="grid ${m.sections.length > 1 ? 'g2' : ''}">${m.sections.map((s) => sectionSummary(s)).join('')}</div>
     <div class="callout" style="margin-top:16px">${advice(m)}</div>
     ${m.sections.map((s, si) => `<div class="panel" style="margin-top:16px"><div class="panel-h"><h3>${s.kind === 'gakka' ? '学科' : '実技'}：全問題の解答と解説</h3><span class="small muted">クリックで解説を表示</span></div>
       <div class="panel-b tight">${s.result.items.map((it, i) => reviewItem(m, s, it, i)).join('')}</div></div>`).join('')}
-    <div class="row" style="margin-top:18px"><a class="btn primary" href="#/review">間違えた問題を復習する</a><a class="btn" href="#/analysis">弱点分析を見る</a><a class="btn ghost" href="#/mock">模擬試験トップ</a></div>
+    <div class="row" style="margin-top:18px"><a class="btn primary" href="#review">間違えた問題を復習する</a><a class="btn" href="#analysis">弱点分析を見る</a><a class="btn ghost" href="#mock">模擬試験トップ</a></div>
   </div>`;
   root.querySelectorAll('details[data-q]').forEach((d) => d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.loaded) return;
@@ -305,7 +305,7 @@ function sectionSummary(s) {
   const isG = s.kind === 'gakka';
   const rows = Object.entries(r.bySubj).map(([sid, b]) => `<tr><td>${esc(SUBJ[sid].name)}</td><td class="r">${isG ? `${b.pts}/${b.n}` : `${b.pts.toFixed(1)}/${b.max.toFixed(1)}`}</td><td style="width:40%"><div class="bar ${b.pts / b.max < 0.6 ? 'ng' : 'ok'}"><i style="width:${(b.pts / b.max) * 100}%"></i></div></td></tr>`).join('');
   return `<div class="panel"><div class="panel-h"><h3>${isG ? '学科試験' : '実技試験（生保顧客資産相談業務）'}</h3>${r.passed ? '<span class="tag ok">基準到達</span>' : '<span class="tag ng">基準未達</span>'}</div>
-    <div class="panel-b"><div class="row" style="gap:24px;align-items:baseline"><div class="serif" style="font-size:36px;color:var(--navy-900)">${r.score}<span class="small muted"> / ${r.max}点</span></div>
+    <div class="panel-b"><div class="row" style="gap:24px;align-items:baseline"><div class="serif" style="font-size:36px;color:var(--heading)">${r.score}<span class="small muted"> / ${r.max}点</span></div>
       <div class="small muted">合格基準 ${r.pass}点 ・ 所要 ${fmtTime(s.used)}${s.timeout ? '（時間切れ）' : ''}<br>未回答 ${r.items.filter((x) => !x.answered).length}問${isG ? '' : ' ・ 推定配点'}</div></div>
     <div class="bar" style="margin:10px 0 14px"><i style="width:${(r.score / r.max) * 100}%"></i><span class="mark" style="left:${(r.pass / r.max) * 100}%"></span></div>
     <table class="tbl"><thead><tr><th>${isG ? '科目' : '出題領域'}</th><th class="r">得点</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;

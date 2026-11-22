@@ -9,17 +9,17 @@ import { renderDoc } from './casedoc.js';
 let S = null; // 実行中のセッション
 let tick = null;
 
-export function startSession({ ids, mode = 'practice', title = '問題演習', timeLimit = 0, back = '#/practice' }) {
+export function startSession({ ids, mode = 'practice', title = '問題演習', timeLimit = 0, back = '#practice' }) {
   ids = ids.filter((id) => bank.byId[id]);
   S = { ids, i: 0, resp: null, graded: null, results: [], mode, title, back, started: Date.now(), qStart: Date.now(), timeLimit, done: false };
-  if (location.hash === '#/session') window.dispatchEvent(new Event('fp2:render'));
-  else location.hash = '#/session';
+  if (location.hash === '#session') window.dispatchEvent(new Event('fp2:render'));
+  else location.hash = '#session';
 }
 export const hasSession = () => !!S;
 
 export function renderSession(root) {
   clearInterval(tick);
-  if (!S) { root.innerHTML = `<div class="page"><div class="empty">実行中の演習はありません。<br><a href="#/practice">問題演習へ</a></div></div>`; return; }
+  if (!S) { root.innerHTML = `<div class="page"><div class="empty">実行中の演習はありません。<br><a href="#practice">問題演習へ</a></div></div>`; return; }
   if (S.done) return renderSummary(root);
   const q = bank.byId[S.ids[S.i]];
   const st = store.get();
@@ -52,7 +52,7 @@ export function renderSession(root) {
 function progressDots() {
   return `<div class="row" style="gap:3px">${S.ids.map((id, i) => {
     const r = S.results.find((x) => x.i === i);
-    const bg = r ? (r.ok ? 'var(--ok)' : r.score > 0 ? 'var(--warn)' : 'var(--ng)') : i === S.i ? 'var(--gold)' : '#e2ddd2';
+    const bg = r ? (r.ok ? 'var(--ok)' : r.score > 0 ? 'var(--warn)' : 'var(--ng)') : i === S.i ? 'var(--gold)' : 'var(--track)';
     return `<i style="flex:1;max-width:28px;height:4px;border-radius:2px;background:${bg}"></i>`;
   }).join('')}</div>`;
 }
@@ -76,7 +76,7 @@ function qBody(q, marked, hist) {
 function refLinks(q) {
   const ls = bank.lessons.filter((l) => l.topics?.includes(q.topic)).slice(0, 2);
   if (!ls.length) return '';
-  return `<div class="src">関連レッスン：${ls.map((l) => `<a href="#/learn/${l.id}">${esc(l.title)}</a>`).join('　')}</div>`;
+  return `<div class="src">関連レッスン：${ls.map((l) => `<a href="#lesson-${l.id}">${esc(l.title)}</a>`).join('　')}</div>`;
 }
 
 function bind(root, q) {
@@ -93,7 +93,7 @@ function bind(root, q) {
   ans.addEventListener('input', update);
   root.querySelectorAll('[data-act]').forEach((b) => b.addEventListener('click', () => act(b.dataset.act, root, q)));
   document.onkeydown = (e) => {
-    if (location.hash !== '#/session' || e.target.matches('input,select,textarea')) {
+    if (location.hash !== '#session' || e.target.matches('input,select,textarea')) {
       if (e.key === 'Enter' && e.target.matches('input')) { const c = $('[data-act=check]', root); if (c && !c.disabled) c.click(); }
       return;
     }
@@ -146,7 +146,7 @@ function renderSummary(root) {
     </ul></div></div>
     <div class="row" style="margin-top:18px">
       ${wrong.length ? `<button class="btn primary" data-act="retry">間違えた${wrong.length}問をもう一度</button>` : ''}
-      <a class="btn" href="${esc(S.back)}">戻る</a><a class="btn ghost" href="#/">ダッシュボード</a>
+      <a class="btn" href="${esc(S.back)}">戻る</a><a class="btn ghost" href="#home">ダッシュボード</a>
     </div>
     <p class="small muted" style="margin-top:14px">間違えた問題は復習スケジュール（翌日）に自動で追加されました。</p>
   </div>`;
